@@ -1,0 +1,67 @@
+<style>
+  html {
+    box-sizing: border-box;
+    background-color: var(--vscode-editor-background, #1e1e1e);
+    color: var(--vscode-editor-foreground, #d4d4d4);
+  }
+  .markdown-body {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* 标题之间的间距 */
+  }
+
+  /* 标题字号缩放：改 --heading-scale 这一个数，所有标题同步缩放 */
+  :root {
+    --heading-scale: 2.0;
+  }
+  h1 { font-size: calc(2em * var(--heading-scale)); margin: 0; }
+  h2 { font-size: calc(1.5em * var(--heading-scale)); margin: 0; }
+  h3 { font-size: calc(1.17em * var(--heading-scale)); margin: 0; }
+
+  /* —— 友好配色 —— */
+  /* 主标题：流动渐变（珊瑚 → 粉 → 紫），更有活力 */
+  h1 {
+    background-image: linear-gradient(120deg, #ff9a56, #ff6b81, #a06bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradient-flow 5s linear infinite;
+  }
+  h2 { color: #ffc94d; }  /* 暖琥珀 */
+  h3 { color: #8be9fd; }  /* 清爽天蓝 */
+
+  @keyframes gradient-flow {
+    0%   { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+
+</style>
+
+<div class="markdown-body">
+<h1>题库Harness工程</h1>
+<h2>第3集</h2>
+<h1>创建knowledge命令生成课程知识体系</h1>
+<h3>2026年8月15日</h3>
+</div>
+
+<script>
+  // 主标题逐字打印特效
+  (function () {
+    const el = document.querySelector('.markdown-body h1');
+    if (!el) return;
+    const text = el.textContent.trim();
+    el.textContent = '';
+    let i = 0;
+    const timer = setInterval(function () {
+      el.textContent = text.slice(0, ++i);
+      if (i >= text.length) clearInterval(timer);
+    }, 90);
+  })();
+</script>
