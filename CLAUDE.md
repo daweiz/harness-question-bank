@@ -15,8 +15,9 @@
 
 - 试题以带 YAML 前置元数据的 Markdown 文件存储。
 - 通过 SHA-256 内容哈希建立索引，实现试题去重。
-- 课程名称保存在 `.harness/data/<课程名>-KA.json` 文件内。
-- 课程知识体系保存在 `.harness/data/课程名-KA.json` 文件内。
+- 课程名称保存在 `.harness/data/courses.json` 文件内。
+- 课程知识体系保存在 `.harness/data/<课程名>-KA.json` 文件内。
+- 试题文件保存在 `questions/<课程名>/` 目录下（`<领域>/<知识点>/<题型>-<时间>.md`，图片在同级 `images/`）。
 
 ## 目录结构
 
@@ -28,7 +29,8 @@
 | `.claude/rules/` | 自动生成的规则文件 |
 | `.claude/memory/` | 从 skill/命令中分离出的记忆 |
 | `.harness/tools/` | 工具脚本（Python、JavaScript、JSONL 等可执行脚本） |
-| `.harness/data/` | 课程名称与知识体系数据（`<课程名>-KA.json`） |
+| `.harness/data/` | 课程名称与知识体系数据（`courses.json`、`<课程名>-KA.json`） |
+| `questions/` | 题库试题文件（`<课程名>/<领域>/<知识点>/<题型>-<时间>.md`，图片在同级 `images/`） |
 | `.harness/temp/` | 临时文件（运行时产生的中间数据、缓存等） |
 | `.harness/logs/` | 日志文件 |
 | `.harness/prompt/` | 初始化与流程提示文件 |

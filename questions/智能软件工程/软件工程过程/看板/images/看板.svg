@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="800" height="420" fill="#ffffff"/>
+  <text x="400" y="30" font-size="18" font-weight="bold" fill="#1f2937" text-anchor="middle">看板：可视化工作流 + 在制品限制（WIP）+ 拉式生产</text>
+
+  <!-- 看板底板 -->
+  <rect x="14" y="48" width="772" height="320" rx="10" fill="#f3f4f6" stroke="#d1d5db"/>
+
+  <!-- 列 -->
+  <g>
+    <!-- 待办 -->
+    <rect x="25" y="60" width="176" height="296" rx="8" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="113" y="84" font-size="14" font-weight="bold" fill="#374151" text-anchor="middle">待办</text>
+    <rect x="38" y="100" width="150" height="44" rx="6" fill="#e5e7eb"/>
+    <text x="113" y="126" font-size="12" fill="#374151" text-anchor="middle">数据标注任务</text>
+    <rect x="38" y="152" width="150" height="44" rx="6" fill="#e5e7eb"/>
+    <text x="113" y="178" font-size="12" fill="#374151" text-anchor="middle">训练模型 V2</text>
+    <rect x="38" y="204" width="150" height="44" rx="6" fill="#e5e7eb"/>
+    <text x="113" y="230" font-size="12" fill="#374151" text-anchor="middle">编写测试用例</text>
+    <rect x="38" y="256" width="150" height="44" rx="6" fill="#e5e7eb"/>
+    <text x="113" y="282" font-size="12" fill="#374151" text-anchor="middle">构建 CI 流水线</text>
+
+    <!-- 进行中 -->
+    <rect x="211" y="60" width="176" height="296" rx="8" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="299" y="84" font-size="14" font-weight="bold" fill="#b45309" text-anchor="middle">进行中（WIP ≤ 3）</text>
+    <rect x="224" y="100" width="150" height="44" rx="6" fill="#fde68a"/>
+    <text x="299" y="126" font-size="12" fill="#78350f" text-anchor="middle">训练模型 V2</text>
+    <rect x="224" y="152" width="150" height="44" rx="6" fill="#fde68a"/>
+    <text x="299" y="178" font-size="12" fill="#78350f" text-anchor="middle">清洗训练数据</text>
+
+    <!-- 评审 -->
+    <rect x="397" y="60" width="176" height="296" rx="8" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="485" y="84" font-size="14" font-weight="bold" fill="#1d4ed8" text-anchor="middle">评审/测试（WIP ≤ 2）</text>
+    <rect x="410" y="100" width="150" height="44" rx="6" fill="#bfdbfe"/>
+    <text x="485" y="126" font-size="12" fill="#1e3a8a" text-anchor="middle">评测模型 V2</text>
+
+    <!-- 完成 -->
+    <rect x="583" y="60" width="176" height="296" rx="8" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="671" y="84" font-size="14" font-weight="bold" fill="#047857" text-anchor="middle">完成</text>
+    <rect x="596" y="100" width="150" height="44" rx="6" fill="#86efac"/>
+    <text x="671" y="126" font-size="12" fill="#064e3b" text-anchor="middle">✓ 部署模型 V1</text>
+    <rect x="596" y="152" width="150" height="44" rx="6" fill="#86efac"/>
+    <text x="671" y="178" font-size="12" fill="#064e3b" text-anchor="middle">✓ 数据集 V1</text>
+  </g>
+
+  <!-- 拉取箭头 -->
+  <g stroke="#059669" stroke-width="2" fill="none">
+    <path d="M 201 320 L 205 320" marker-end="url(#p)"/>
+    <path d="M 387 320 L 391 320" marker-end="url(#p)"/>
+    <path d="M 573 320 L 577 320" marker-end="url(#p)"/>
+  </g>
+  <defs>
+    <marker id="p" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#059669"/>
+    </marker>
+  </defs>
+  <text x="400" y="346" font-size="12" fill="#059669" text-anchor="middle">下游有容量时向前「拉取」工作项，保持持续流动</text>
+</svg>

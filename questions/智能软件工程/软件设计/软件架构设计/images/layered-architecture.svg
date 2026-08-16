@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="520" viewBox="0 0 640 520" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="640" height="520" fill="#ffffff"/>
+  <text x="320" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">智能问答应用分层架构示意图</text>
+
+  <!-- 表现层 -->
+  <rect x="56" y="58" width="420" height="86" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="80" y="92" font-size="16" font-weight="bold" fill="#4338ca">表现层</text>
+  <text x="80" y="118" font-size="13" fill="#3730a3">Web 页面 · 移动端对话界面 · 用户输入输出</text>
+
+  <!-- 应用层 -->
+  <rect x="56" y="158" width="420" height="86" rx="8" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+  <text x="80" y="192" font-size="16" font-weight="bold" fill="#0e7490">应用层</text>
+  <text x="80" y="218" font-size="13" fill="#155e75">会话管理 · 提示词编排 · RAG 检索调度 · 结果后处理</text>
+
+  <!-- 能力层 -->
+  <rect x="56" y="258" width="420" height="86" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="80" y="292" font-size="16" font-weight="bold" fill="#166534">能力层</text>
+  <text x="80" y="318" font-size="13" fill="#14532d">大模型统一调用 · 向量检索 · 知识库访问（适配器封装）</text>
+
+  <!-- 数据层 -->
+  <rect x="56" y="358" width="420" height="86" rx="8" fill="#fdf4ff" stroke="#d946ef" stroke-width="2"/>
+  <text x="80" y="392" font-size="16" font-weight="bold" fill="#86198f">数据层</text>
+  <text x="80" y="418" font-size="13" fill="#701a75">业务数据库 · 向量库 · 缓存 · 日志与审计</text>
+
+  <!-- 右侧横切关注点 -->
+  <line x1="504" y1="60" x2="504" y2="442" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="522" y="86" font-size="13" font-weight="bold" fill="#b45309">横切关注点</text>
+  <text x="522" y="110" font-size="12" fill="#92400e">安全与内容审核</text>
+  <text x="522" y="132" font-size="12" fill="#92400e">可观测性与监控</text>
+  <text x="522" y="154" font-size="12" fill="#92400e">超时 · 重试 · 熔断降级</text>
+  <text x="522" y="176" font-size="12" fill="#92400e">缓存与成本控制</text>
+
+  <!-- 层间箭头 -->
+  <path d="M 266 150 L 266 156" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 266 250 L 266 256" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 266 350 L 266 356" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="261,152 266,158 271,152" fill="#94a3b8"/>
+  <polygon points="261,252 266,258 271,252" fill="#94a3b8"/>
+  <polygon points="261,352 266,358 271,352" fill="#94a3b8"/>
+</svg>

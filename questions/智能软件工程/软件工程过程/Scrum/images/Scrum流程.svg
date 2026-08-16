@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="360" viewBox="0 0 780 360" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="780" height="360" fill="#ffffff"/>
+  <text x="390" y="30" font-size="18" font-weight="bold" fill="#1f2937" text-anchor="middle">Scrum：固定时间盒的敏捷框架</text>
+
+  <!-- 事件流 -->
+  <g>
+    <rect x="10" y="70" width="112" height="64" rx="8" fill="#93c5fd"/>
+    <text x="66" y="96" font-size="13" fill="#1e3a8a" text-anchor="middle">产品待办列表</text>
+    <text x="66" y="116" font-size="11" fill="#1e3a8a" text-anchor="middle">梳理与排序</text>
+
+    <rect x="138" y="70" width="112" height="64" rx="8" fill="#60a5fa"/>
+    <text x="194" y="96" font-size="13" fill="#ffffff" text-anchor="middle">Sprint 计划会</text>
+    <text x="194" y="116" font-size="11" fill="#ffffff" text-anchor="middle">制定冲刺目标</text>
+
+    <rect x="266" y="70" width="112" height="64" rx="8" fill="#2563eb"/>
+    <text x="322" y="96" font-size="13" fill="#ffffff" text-anchor="middle">Sprint 冲刺</text>
+    <text x="322" y="116" font-size="11" fill="#ffffff" text-anchor="middle">2~4 周时间盒</text>
+
+    <rect x="394" y="70" width="112" height="64" rx="8" fill="#60a5fa"/>
+    <text x="450" y="96" font-size="13" fill="#ffffff" text-anchor="middle">每日站会</text>
+    <text x="450" y="116" font-size="11" fill="#ffffff" text-anchor="middle">同步进展与障碍</text>
+
+    <rect x="522" y="70" width="112" height="64" rx="8" fill="#60a5fa"/>
+    <text x="578" y="96" font-size="13" fill="#ffffff" text-anchor="middle">Sprint 评审会</text>
+    <text x="578" y="116" font-size="11" fill="#ffffff" text-anchor="middle">演示功能增量</text>
+
+    <rect x="650" y="70" width="112" height="64" rx="8" fill="#34d399"/>
+    <text x="706" y="96" font-size="13" fill="#064e3b" text-anchor="middle">Sprint 回顾会</text>
+    <text x="706" y="116" font-size="11" fill="#064e3b" text-anchor="middle">改进过程</text>
+  </g>
+
+  <!-- 事件间箭头 -->
+  <g stroke="#6b7280" stroke-width="2" fill="none">
+    <path d="M 122 102 L 138 102" marker-end="url(#a)"/>
+    <path d="M 250 102 L 266 102" marker-end="url(#a)"/>
+    <path d="M 378 102 L 394 102" marker-end="url(#a)"/>
+    <path d="M 506 102 L 522 102" marker-end="url(#a)"/>
+    <path d="M 634 102 L 650 102" marker-end="url(#a)"/>
+  </g>
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <!-- 反馈回路 -->
+  <path d="M 706 134 L 706 170 L 194 170 L 194 134" stroke="#34d399" stroke-width="1.8" fill="none" stroke-dasharray="5 3" marker-end="url(#a)"/>
+  <text x="450" y="164" font-size="12" fill="#059669" text-anchor="middle">反馈进入下一 Sprint，循环迭代</text>
+
+  <!-- 工件说明 -->
+  <text x="322" y="200" font-size="12" fill="#6b7280" text-anchor="middle">Sprint 结束必须产出可用的「功能增量」</text>
+
+  <!-- 角色 -->
+  <g>
+    <rect x="20" y="220" width="230" height="70" rx="8" fill="#fef3c7" stroke="#fbbf24"/>
+    <text x="135" y="248" font-size="13" font-weight="bold" fill="#78350f" text-anchor="middle">产品负责人（PO）</text>
+    <text x="135" y="270" font-size="12" fill="#78350f" text-anchor="middle">决定需求优先级，对接客户</text>
+
+    <rect x="275" y="220" width="230" height="70" rx="8" fill="#fce7f3" stroke="#f472b6"/>
+    <text x="390" y="248" font-size="13" font-weight="bold" fill="#831843" text-anchor="middle">Scrum Master</text>
+    <text x="390" y="270" font-size="12" fill="#831843" text-anchor="middle">保障流程，移除障碍</text>
+
+    <rect x="530" y="220" width="230" height="70" rx="8" fill="#d1fae5" stroke="#34d399"/>
+    <text x="645" y="248" font-size="13" font-weight="bold" fill="#064e3b" text-anchor="middle">开发团队</text>
+    <text x="645" y="270" font-size="12" fill="#064e3b" text-anchor="middle">自组织实现功能增量</text>
+  </g>
+
+  <text x="390" y="330" font-size="12" fill="#9ca3af" text-anchor="middle">角色（谁做）＋ 事件（何时做）＋ 工件（做什么），构成 Scrum 的三大支柱</text>
+</svg>

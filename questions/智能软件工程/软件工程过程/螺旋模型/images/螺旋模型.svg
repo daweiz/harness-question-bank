@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="470" viewBox="0 0 540 470" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="540" height="470" fill="#ffffff"/>
+  <text x="270" y="30" font-size="18" font-weight="bold" fill="#1f2937" text-anchor="middle">螺旋模型：以风险分析为核心的迭代过程</text>
+
+  <!-- 象限分隔线 -->
+  <line x1="250" y1="60" x2="250" y2="420" stroke="#cbd5e1" stroke-width="1.5"/>
+  <line x1="60" y1="240" x2="470" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+  <circle cx="250" cy="240" r="5" fill="#374151"/>
+  <text x="260" y="236" font-size="12" fill="#6b7280">项目起点</text>
+
+  <!-- 螺旋路径 -->
+  <path d="M 250 240
+    A 20 20 0 0 1 250 220
+    A 30 30 0 0 1 220 220
+    A 40 40 0 0 1 220 260
+    A 50 50 0 0 1 300 260
+    A 60 60 0 0 1 300 200
+    A 70 70 0 0 1 230 200
+    A 80 80 0 0 1 230 280
+    A 90 90 0 0 1 340 280
+    A 100 100 0 0 1 340 180
+    A 110 110 0 0 1 230 180
+    A 120 120 0 0 1 230 300
+    A 130 130 0 0 1 380 300"
+    fill="none" stroke="#2563eb" stroke-width="2.6"/>
+  <polygon points="396,298 380,294 378,304" fill="#2563eb"/>
+
+  <!-- 四个象限标签 -->
+  <g font-size="13" fill="#1f2937">
+    <rect x="298" y="78" width="190" height="62" rx="8" fill="#dbeafe" stroke="#60a5fa"/>
+    <text x="310" y="100">① 制定计划</text>
+    <text x="310" y="122">确定目标、方案与约束</text>
+
+    <rect x="8" y="78" width="190" height="62" rx="8" fill="#fef3c7" stroke="#fbbf24"/>
+    <text x="20" y="100">② 风险分析</text>
+    <text x="20" y="122">识别风险，用原型化解</text>
+
+    <rect x="8" y="330" width="190" height="62" rx="8" fill="#fce7f3" stroke="#f472b6"/>
+    <text x="20" y="352">③ 工程实施与验证</text>
+    <text x="20" y="374">构造产品，验证正确性</text>
+
+    <rect x="298" y="330" width="190" height="62" rx="8" fill="#d1fae5" stroke="#34d399"/>
+    <text x="310" y="352">④ 评审与规划</text>
+    <text x="310" y="374">评审成果，规划下一圈</text>
+  </g>
+
+  <text x="270" y="450" font-size="12" fill="#9ca3af" text-anchor="middle">沿径向发散：每圈规模与成本递增，风险逐渐收敛</text>
+</svg>

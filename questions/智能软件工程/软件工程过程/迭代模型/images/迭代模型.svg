@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="300" viewBox="0 0 660 300" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="660" height="300" fill="#ffffff"/>
+  <text x="330" y="30" font-size="18" font-weight="bold" fill="#1f2937" text-anchor="middle">迭代模型：多轮细化循环，版本逐轮逼近目标</text>
+
+  <!-- 迭代循环 -->
+  <g stroke="#6b7280" stroke-width="1.8" fill="none">
+    <line x1="165" y1="105" x2="165" y2="190"/>
+    <line x1="235" y1="190" x2="235" y2="105"/>
+    <path d="M 205 105 L 165 105 L 165 102" />
+    <path d="M 165 190 L 165 188 L 165 190 L 235 190"/>
+  </g>
+  <g>
+    <rect x="130" y="72" width="90" height="34" rx="6" fill="#3b82f6"/>
+    <text x="175" y="94" font-size="13" fill="#ffffff" text-anchor="middle">分析</text>
+    <rect x="130" y="190" width="90" height="34" rx="6" fill="#8b5cf6"/>
+    <text x="175" y="212" font-size="13" fill="#ffffff" text-anchor="middle">设计</text>
+    <rect x="235" y="190" width="90" height="34" rx="6" fill="#f59e0b"/>
+    <text x="280" y="212" font-size="13" fill="#ffffff" text-anchor="middle">实现与测试</text>
+    <rect x="235" y="72" width="90" height="34" rx="6" fill="#10b981"/>
+    <text x="280" y="94" font-size="13" fill="#ffffff" text-anchor="middle">评估</text>
+  </g>
+  <text x="130" y="62" font-size="12" fill="#374151">每一轮迭代</text>
+  <path d="M 280 72 L 280 55 L 185 55 L 185 66" stroke="#10b981" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- 右侧版本条 -->
+  <g>
+    <rect x="430" y="80" width="150" height="26" rx="6" fill="#93c5fd"/>
+    <text x="446" y="97" font-size="13" fill="#1e3a8a">V1（核心骨架）</text>
+    <rect x="430" y="120" width="210" height="26" rx="6" fill="#60a5fa"/>
+    <text x="446" y="137" font-size="13" fill="#ffffff">V2（功能扩充）</text>
+    <rect x="430" y="160" width="270" height="26" rx="6" fill="#2563eb"/>
+    <text x="446" y="177" font-size="13" fill="#ffffff">V3（接近完整）</text>
+    <line x1="420" y1="93" x2="420" y2="133" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <line x1="420" y1="133" x2="420" y2="173" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4 3"/>
+  </g>
+  <text x="430" y="215" font-size="12" fill="#6b7280">可运行版本逐步逼近完整目标</text>
+
+  <text x="330" y="270" font-size="12" fill="#9ca3af" text-anchor="middle">每轮迭代均产出可运行软件，并基于评估反馈调整后续设计</text>
+</svg>

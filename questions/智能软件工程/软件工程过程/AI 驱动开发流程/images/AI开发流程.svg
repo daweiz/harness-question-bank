@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="450" y="30" font-size="18" font-weight="bold" fill="#1f2937" text-anchor="middle">AI 驱动开发流程：数据驱动的端到端闭环</text>
+
+  <!-- 主流程 -->
+  <g>
+    <rect x="12" y="70" width="104" height="66" rx="8" fill="#f59e0b"/>
+    <text x="64" y="98" font-size="13" fill="#ffffff" text-anchor="middle">需求定义</text>
+    <text x="64" y="116" font-size="11" fill="#ffffff" text-anchor="middle">目标与指标</text>
+
+    <rect x="130" y="70" width="104" height="66" rx="8" fill="#8b5cf6"/>
+    <text x="182" y="98" font-size="13" fill="#ffffff" text-anchor="middle">数据收集</text>
+    <text x="182" y="116" font-size="11" fill="#ffffff" text-anchor="middle">清洗与版本化</text>
+
+    <rect x="248" y="70" width="104" height="66" rx="8" fill="#8b5cf6"/>
+    <text x="300" y="98" font-size="13" fill="#ffffff" text-anchor="middle">特征工程</text>
+    <text x="300" y="116" font-size="11" fill="#ffffff" text-anchor="middle">与标注</text>
+
+    <rect x="366" y="70" width="104" height="66" rx="8" fill="#3b82f6"/>
+    <text x="418" y="98" font-size="13" fill="#ffffff" text-anchor="middle">模型训练</text>
+    <text x="418" y="116" font-size="11" fill="#ffffff" text-anchor="middle">实验追踪</text>
+
+    <rect x="484" y="70" width="104" height="66" rx="8" fill="#3b82f6"/>
+    <text x="536" y="98" font-size="13" fill="#ffffff" text-anchor="middle">评估与调优</text>
+    <text x="536" y="116" font-size="11" fill="#ffffff" text-anchor="middle">精度/召回等</text>
+
+    <rect x="602" y="70" width="104" height="66" rx="8" fill="#10b981"/>
+    <text x="654" y="98" font-size="13" fill="#ffffff" text-anchor="middle">部署与监控</text>
+    <text x="654" y="116" font-size="11" fill="#ffffff" text-anchor="middle">漂移检测</text>
+
+    <rect x="720" y="70" width="104" height="66" rx="8" fill="#10b981"/>
+    <text x="772" y="98" font-size="13" fill="#ffffff" text-anchor="middle">再训练</text>
+    <text x="772" y="116" font-size="11" fill="#ffffff" text-anchor="middle">与更新</text>
+  </g>
+
+  <!-- 箭头 -->
+  <g stroke="#6b7280" stroke-width="2" fill="none">
+    <path d="M 116 103 L 130 103" marker-end="url(#c)"/>
+    <path d="M 234 103 L 248 103" marker-end="url(#c)"/>
+    <path d="M 352 103 L 366 103" marker-end="url(#c)"/>
+    <path d="M 470 103 L 484 103" marker-end="url(#c)"/>
+    <path d="M 588 103 L 602 103" marker-end="url(#c)"/>
+    <path d="M 706 103 L 720 103" marker-end="url(#c)"/>
+  </g>
+  <defs>
+    <marker id="c" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <!-- 反馈回路 -->
+  <path d="M 772 136 L 772 210 L 418 210 L 418 136" stroke="#10b981" stroke-width="1.8" fill="none" stroke-dasharray="5 3" marker-end="url(#c)"/>
+  <text x="595" y="204" font-size="12" fill="#059669" text-anchor="middle">监控发现数据漂移/性能衰减 → 触发再训练</text>
+
+  <!-- 支撑要素 -->
+  <g>
+    <rect x="20" y="240" width="260" height="56" rx="8" fill="#f3e8ff" stroke="#a855f7"/>
+    <text x="150" y="266" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">数据管理</text>
+    <text x="150" y="284" font-size="11" fill="#6b21a8" text-anchor="middle">质量、标注与版本管理</text>
+
+    <rect x="320" y="240" width="260" height="56" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+    <text x="450" y="266" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">MLOps 工程化</text>
+    <text x="450" y="284" font-size="11" fill="#1d4ed8" text-anchor="middle">模型版本化、可复现性</text>
+
+    <rect x="620" y="240" width="260" height="56" rx="8" fill="#d1fae5" stroke="#10b981"/>
+    <text x="750" y="266" font-size="13" font-weight="bold" fill="#065f46" text-anchor="middle">人机协同</text>
+    <text x="750" y="284" font-size="11" fill="#065f46" text-anchor="middle">AI 辅助编码与自动反馈</text>
+  </g>
+</svg>
