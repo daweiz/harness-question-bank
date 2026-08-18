@@ -19,7 +19,7 @@ cat 正文.txt | node .harness/tools/question-hash.mjs
 
 ## 输出
 
-- 40 位 SHA-256 十六进制摘要（小写），写入试题 YAML 的 `hash` 字段
+- 64 位 SHA-256 十六进制摘要（小写），写入试题 YAML 的 `hash` 字段
 
 ## 约定
 

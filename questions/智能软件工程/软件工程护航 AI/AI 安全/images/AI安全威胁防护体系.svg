@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="600" viewBox="0 0 760 600" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="760" height="600" fill="#ffffff"/>
+  <text x="380" y="32" font-size="18" font-weight="bold" fill="#1f2937" text-anchor="middle">智能客服系统 AI 安全：威胁分层识别与防护机制对照</text>
+
+  <!-- 应用层 -->
+  <g>
+    <rect x="40" y="60" width="110" height="92" rx="8" fill="#1d4ed8"/>
+    <text x="95" y="106" font-size="14" fill="#ffffff" text-anchor="middle">应用层</text>
+    <rect x="170" y="60" width="250" height="92" rx="8" fill="#fef3c7" stroke="#d97706"/>
+    <text x="295" y="80" font-size="13" font-weight="bold" fill="#92400e" text-anchor="middle">主要威胁</text>
+    <text x="295" y="100" font-size="12" fill="#78350f" text-anchor="middle">提示注入操纵输出</text>
+    <text x="295" y="118" font-size="12" fill="#78350f" text-anchor="middle">越权访问 / 输出有害内容</text>
+    <rect x="440" y="60" width="280" height="92" rx="8" fill="#d1fae5" stroke="#059669"/>
+    <text x="580" y="80" font-size="13" font-weight="bold" fill="#065f46" text-anchor="middle">防护机制</text>
+    <text x="580" y="100" font-size="12" fill="#064e3b" text-anchor="middle">输入净化、提示词白名单</text>
+    <text x="580" y="118" font-size="12" fill="#064e3b" text-anchor="middle">最小权限 + 输出内容安全审核</text>
+  </g>
+
+  <!-- 推理层 -->
+  <g>
+    <rect x="40" y="166" width="110" height="92" rx="8" fill="#2563eb"/>
+    <text x="95" y="212" font-size="14" fill="#ffffff" text-anchor="middle">推理层</text>
+    <rect x="170" y="166" width="250" height="92" rx="8" fill="#fef3c7" stroke="#d97706"/>
+    <text x="295" y="186" font-size="13" font-weight="bold" fill="#92400e" text-anchor="middle">主要威胁</text>
+    <text x="295" y="206" font-size="12" fill="#78350f" text-anchor="middle">对抗样本攻击</text>
+    <text x="295" y="224" font-size="12" fill="#78350f" text-anchor="middle">被诱导泄露敏感信息</text>
+    <rect x="440" y="166" width="280" height="92" rx="8" fill="#d1fae5" stroke="#059669"/>
+    <text x="580" y="186" font-size="13" font-weight="bold" fill="#065f46" text-anchor="middle">防护机制</text>
+    <text x="580" y="206" font-size="12" fill="#064e3b" text-anchor="middle">输入异常与对抗样本检测</text>
+    <text x="580" y="224" font-size="12" fill="#064e3b" text-anchor="middle">模型护栏 + 安全提示词</text>
+  </g>
+
+  <!-- 训练/模型层 -->
+  <g>
+    <rect x="40" y="272" width="110" height="92" rx="8" fill="#2563eb"/>
+    <text x="95" y="318" font-size="14" fill="#ffffff" text-anchor="middle">训练/模型层</text>
+    <rect x="170" y="272" width="250" height="92" rx="8" fill="#fef3c7" stroke="#d97706"/>
+    <text x="295" y="292" font-size="13" font-weight="bold" fill="#92400e" text-anchor="middle">主要威胁</text>
+    <text x="295" y="312" font-size="12" fill="#78350f" text-anchor="middle">数据投毒 / 后门植入</text>
+    <text x="295" y="330" font-size="12" fill="#78350f" text-anchor="middle">模型窃取与逆向推断</text>
+    <rect x="440" y="272" width="280" height="92" rx="8" fill="#d1fae5" stroke="#059669"/>
+    <text x="580" y="292" font-size="13" font-weight="bold" fill="#065f46" text-anchor="middle">防护机制</text>
+    <text x="580" y="312" font-size="12" fill="#064e3b" text-anchor="middle">数据来源校验、对抗训练</text>
+    <text x="580" y="330" font-size="12" fill="#064e3b" text-anchor="middle">差分隐私 + 模型访问控制</text>
+  </g>
+
+  <!-- 数据层 -->
+  <g>
+    <rect x="40" y="378" width="110" height="92" rx="8" fill="#2563eb"/>
+    <text x="95" y="424" font-size="14" fill="#ffffff" text-anchor="middle">数据层</text>
+    <rect x="170" y="378" width="250" height="92" rx="8" fill="#fef3c7" stroke="#d97706"/>
+    <text x="295" y="398" font-size="13" font-weight="bold" fill="#92400e" text-anchor="middle">主要威胁</text>
+    <text x="295" y="418" font-size="12" fill="#78350f" text-anchor="middle">敏感数据泄露</text>
+    <text x="295" y="436" font-size="12" fill="#78350f" text-anchor="middle">RAG 检索数据被投毒</text>
+    <rect x="440" y="378" width="280" height="92" rx="8" fill="#d1fae5" stroke="#059669"/>
+    <text x="580" y="398" font-size="13" font-weight="bold" fill="#065f46" text-anchor="middle">防护机制</text>
+    <text x="580" y="418" font-size="12" fill="#064e3b" text-anchor="middle">数据脱敏与分级、加密存储</text>
+    <text x="580" y="436" font-size="12" fill="#064e3b" text-anchor="middle">RAG 检索权限绑定</text>
+  </g>
+
+  <!-- 治理与运营横切层 -->
+  <g>
+    <rect x="40" y="500" width="680" height="72" rx="8" fill="#312e81" stroke="#4f46e5"/>
+    <text x="380" y="524" font-size="14" font-weight="bold" fill="#e0e7ff" text-anchor="middle">AI 治理与 LLMOps（横切支撑层）</text>
+    <text x="380" y="546" font-size="12" fill="#c7d2fe" text-anchor="middle">风险清单与合规审计｜红队测试与对抗演练｜模型灰度上线｜全链路留痕监控告警</text>
+  </g>
+
+  <text x="380" y="590" font-size="12" fill="#9ca3af" text-anchor="middle">威胁建模覆盖「数据—训练—推理—应用」全生命周期，防护与治理闭环落地</text>
+</svg>

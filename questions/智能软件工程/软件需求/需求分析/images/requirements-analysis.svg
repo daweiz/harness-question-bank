@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="660" viewBox="0 0 900 660" font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-dash" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e67e22"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="660" fill="#ffffff"/>
+  <text x="450" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#1f2937">智能助教问答系统 · 需求分析建模体系</text>
+
+  <!-- 需求获取 -->
+  <rect x="310" y="64" width="280" height="66" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="450" y="91" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e3a8a">需求获取</text>
+  <text x="450" y="113" text-anchor="middle" font-size="12" fill="#1e3a8a">访谈 · 问卷 · 历史答疑记录</text>
+
+  <line x1="450" y1="130" x2="450" y2="162" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 三视角建模 -->
+  <text x="450" y="186" text-anchor="middle" font-size="15" font-weight="bold" fill="#e67e22">需求分析：三视角并行建模</text>
+
+  <rect x="55" y="200" width="215" height="150" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="162" y="226" text-anchor="middle" font-size="14" font-weight="bold" fill="#9d174d">功能模型</text>
+  <text x="162" y="246" text-anchor="middle" font-size="12" fill="#9d174d">用例图</text>
+  <text x="162" y="270" text-anchor="middle" font-size="12" fill="#4c0519">U1 自动应答</text>
+  <text x="162" y="292" text-anchor="middle" font-size="12" fill="#4c0519">U2 转人工</text>
+  <text x="162" y="314" text-anchor="middle" font-size="12" fill="#4c0519">U3 知识沉淀</text>
+
+  <rect x="335" y="200" width="215" height="150" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="442" y="226" text-anchor="middle" font-size="14" font-weight="bold" fill="#075985">数据模型</text>
+  <text x="442" y="246" text-anchor="middle" font-size="12" fill="#075985">ER 图</text>
+  <text x="442" y="270" text-anchor="middle" font-size="12" fill="#0c4a6e">用户 / 问题</text>
+  <text x="442" y="292" text-anchor="middle" font-size="12" fill="#0c4a6e">答案 / 会话</text>
+  <text x="442" y="314" text-anchor="middle" font-size="12" fill="#0c4a6e">知识条目</text>
+
+  <rect x="615" y="200" width="215" height="150" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="722" y="226" text-anchor="middle" font-size="14" font-weight="bold" fill="#14532d">行为模型</text>
+  <text x="722" y="246" text-anchor="middle" font-size="12" fill="#14532d">状态图</text>
+  <text x="722" y="270" text-anchor="middle" font-size="12" fill="#052e16">提问 → 自动应答</text>
+  <text x="722" y="292" text-anchor="middle" font-size="12" fill="#052e16">→ 转人工 → 解答</text>
+  <text x="722" y="314" text-anchor="middle" font-size="12" fill="#052e16">→ 关闭 / 沉淀</text>
+
+  <line x1="162" y1="350" x2="400" y2="382" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="442" y1="350" x2="450" y2="382" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="722" y1="350" x2="500" y2="382" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 需求规格说明 -->
+  <rect x="250" y="382" width="400" height="62" rx="10" fill="#f3e8ff" stroke="#9333ea" stroke-width="1.5"/>
+  <text x="450" y="407" text-anchor="middle" font-size="14" font-weight="bold" fill="#5b21b6">需求规格说明（SRS）</text>
+  <text x="450" y="429" text-anchor="middle" font-size="12" fill="#5b21b6">用例规格 + 数据字典 + 需求追踪矩阵</text>
+
+  <line x1="450" y1="444" x2="450" y2="472" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 需求验证 -->
+  <rect x="250" y="472" width="400" height="62" rx="10" fill="#f3e8ff" stroke="#9333ea" stroke-width="1.5"/>
+  <text x="450" y="497" text-anchor="middle" font-size="14" font-weight="bold" fill="#5b21b6">需求验证</text>
+  <text x="450" y="519" text-anchor="middle" font-size="12" fill="#5b21b6">评审 · 原型确认 · 可追踪性检查</text>
+
+  <!-- 迭代修正回馈 -->
+  <line x1="310" y1="503" x2="310" y2="133" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arrow-dash)"/>
+  <text x="322" y="330" font-size="11" fill="#b45309">迭代修正</text>
+
+  <!-- 需求管理贯穿 -->
+  <rect x="100" y="568" width="700" height="58" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="450" y="595" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">需求管理（需求变更控制 · 版本追踪）</text>
+  <text x="450" y="616" text-anchor="middle" font-size="12" fill="#92400e">变更请求 → 影响分析 → 评审 → 更新基线 —— 贯穿需求分析全过程</text>
+</svg>

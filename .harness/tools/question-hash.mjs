@@ -15,13 +15,14 @@ function stripFrontmatter(text) {
   return text.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
 }
 
-// 按 --- 分割正文各部分，排除「解析」部分
+// 按 --- 分割正文各部分，排除「解析」「评分标准」部分
 function extractContent(body) {
   const sections = body.split(/^\s*---\s*$/m);
   return sections
     .map((s) => s.trim())
     .filter((s) => s.length > 0)
     .filter((s) => !/^解析/.test(s))
+    .filter((s) => !/^评分标准/.test(s))
     .join('\n');
 }
 
