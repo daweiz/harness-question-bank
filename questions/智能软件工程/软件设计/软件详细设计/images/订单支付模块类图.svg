@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="600" viewBox="0 0 920 600" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="920" height="600" fill="#ffffff"/>
+  <text x="460" y="30" font-size="18" font-weight="bold" fill="#1f2937" text-anchor="middle">订单支付模块详细设计类图（分层依赖 + 数据实体）</text>
+
+  <!-- OrderController -->
+  <rect x="330" y="48" width="300" height="124" rx="6" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+  <rect x="330" y="48" width="300" height="26" fill="#2563eb"/>
+  <rect x="330" y="70" width="300" height="6" fill="#ffffff"/>
+  <text x="342" y="66" font-size="13" font-weight="bold" fill="#ffffff">OrderController（控制层）</text>
+  <text x="342" y="92" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ orderService: OrderService</text>
+  <line x1="330" y1="100" x2="630" y2="100" stroke="#9ca3af" stroke-width="1"/>
+  <text x="342" y="118" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ submitOrder(userId, items): Order</text>
+  <text x="342" y="136" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ cancelOrder(orderId): boolean</text>
+  <text x="342" y="154" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ queryOrder(orderId): Order</text>
+
+  <!-- OrderService -->
+  <rect x="40" y="220" width="300" height="140" rx="6" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+  <rect x="40" y="220" width="300" height="26" fill="#1d4ed8"/>
+  <rect x="40" y="242" width="300" height="6" fill="#ffffff"/>
+  <text x="52" y="238" font-size="13" font-weight="bold" fill="#ffffff">OrderService（业务服务层）</text>
+  <text x="52" y="264" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">- orderRepository: OrderRepository</text>
+  <text x="52" y="282" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">- paymentService: PaymentService</text>
+  <line x1="40" y1="290" x2="340" y2="290" stroke="#9ca3af" stroke-width="1"/>
+  <text x="52" y="308" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ createOrder(userId, items): Order</text>
+  <text x="52" y="326" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ cancelOrder(orderId): boolean</text>
+  <text x="52" y="344" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ payOrder(orderId): PaymentRecord</text>
+
+  <!-- PaymentService -->
+  <rect x="600" y="220" width="300" height="106" rx="6" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+  <rect x="600" y="220" width="300" height="26" fill="#1d4ed8"/>
+  <rect x="600" y="242" width="300" height="6" fill="#ffffff"/>
+  <text x="612" y="238" font-size="13" font-weight="bold" fill="#ffffff">PaymentService（支付网关服务）</text>
+  <text x="612" y="264" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ pay(orderId, amount): PaymentRecord</text>
+  <text x="612" y="282" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ refund(orderId, amount): boolean</text>
+
+  <!-- OrderRepository -->
+  <rect x="40" y="430" width="260" height="124" rx="6" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+  <rect x="40" y="430" width="260" height="26" fill="#1e3a8a"/>
+  <rect x="40" y="452" width="260" height="6" fill="#ffffff"/>
+  <text x="52" y="448" font-size="13" font-weight="bold" fill="#ffffff">OrderRepository（数据访问）</text>
+  <text x="52" y="474" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ save(order: Order): Order</text>
+  <text x="52" y="492" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ findById(id): Order</text>
+  <text x="52" y="510" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ update(order: Order): void</text>
+
+  <!-- Order -->
+  <rect x="330" y="430" width="280" height="140" rx="6" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+  <rect x="330" y="430" width="280" height="26" fill="#1e3a8a"/>
+  <rect x="330" y="452" width="280" height="6" fill="#ffffff"/>
+  <text x="342" y="448" font-size="13" font-weight="bold" fill="#ffffff">Order（实体）</text>
+  <text x="342" y="474" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">- orderId: string</text>
+  <text x="342" y="492" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">- userId: string</text>
+  <text x="342" y="510" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">- totalAmount: double</text>
+  <text x="342" y="528" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">- status: string</text>
+  <line x1="330" y1="536" x2="610" y2="536" stroke="#9ca3af" stroke-width="1"/>
+  <text x="342" y="554" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">+ changeStatus(s): void</text>
+
+  <!-- PaymentRecord -->
+  <rect x="650" y="430" width="250" height="140" rx="6" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+  <rect x="650" y="430" width="250" height="26" fill="#1e3a8a"/>
+  <rect x="650" y="452" width="250" height="6" fill="#ffffff"/>
+  <text x="662" y="448" font-size="13" font-weight="bold" fill="#ffffff">PaymentRecord（实体）</text>
+  <text x="662" y="474" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">- paymentId: string</text>
+  <text x="662" y="492" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">- orderId: string</text>
+  <text x="662" y="510" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">- amount: double</text>
+  <text x="662" y="528" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">- channel: string</text>
+  <text x="662" y="546" font-size="11" fill="#374151" font-family="Consolas, Microsoft YaHei, monospace">- payTime: Date</text>
+
+  <!-- 关联线 -->
+  <line x1="480" y1="172" x2="190" y2="220" stroke="#059669" stroke-width="1.5"/>
+  <text x="330" y="194" font-size="11" fill="#059669" text-anchor="middle">调用</text>
+
+  <line x1="340" y1="290" x2="600" y2="290" stroke="#059669" stroke-width="1.5"/>
+  <text x="470" y="282" font-size="11" fill="#059669" text-anchor="middle">委托支付</text>
+
+  <line x1="120" y1="360" x2="160" y2="430" stroke="#059669" stroke-width="1.5"/>
+  <text x="122" y="398" font-size="11" fill="#059669" text-anchor="middle">数据访问</text>
+
+  <line x1="300" y1="490" x2="330" y2="490" stroke="#d97706" stroke-width="1.5"/>
+  <text x="315" y="482" font-size="11" fill="#d97706" text-anchor="middle">1..*</text>
+
+  <line x1="750" y1="326" x2="750" y2="430" stroke="#059669" stroke-width="1.5"/>
+  <text x="762" y="382" font-size="11" fill="#059669" text-anchor="middle">创建 1..*</text>
+
+  <line x1="650" y1="500" x2="610" y2="500" stroke="#d97706" stroke-width="1.5"/>
+  <text x="630" y="492" font-size="11" fill="#d97706" text-anchor="middle">n:1</text>
+</svg>

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="560" viewBox="0 0 880 560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="880" height="560" fill="#ffffff"/>
+  <text x="440" y="30" font-size="18" font-weight="bold" fill="#1f2937" text-anchor="middle">编码规范体系：规范条目 + 工具支撑 + 执行机制</text>
+
+  <!-- 层标签 -->
+  <rect x="30" y="60" width="72" height="238" rx="8" fill="#1e3a8a"/>
+  <text x="66" y="185" font-size="14" fill="#ffffff" text-anchor="middle">规范层</text>
+  <rect x="30" y="318" width="72" height="96" rx="8" fill="#065f46"/>
+  <text x="66" y="372" font-size="14" fill="#ffffff" text-anchor="middle">工具层</text>
+  <rect x="30" y="434" width="72" height="96" rx="8" fill="#7c2d12"/>
+  <text x="66" y="488" font-size="14" fill="#ffffff" text-anchor="middle">执行层</text>
+
+  <!-- 规范行 1 -->
+  <rect x="130" y="60" width="230" height="110" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="130" y="60" width="230" height="26" rx="8" fill="#2563eb"/>
+  <rect x="130" y="82" width="230" height="6" fill="#ffffff"/>
+  <text x="142" y="80" font-size="13" font-weight="bold" fill="#ffffff">命名规范</text>
+  <text x="142" y="104" font-size="11" fill="#374151">类/接口：大驼峰 PascalCase</text>
+  <text x="142" y="122" font-size="11" fill="#374151">变量/方法：小驼峰 camelCase</text>
+  <text x="142" y="140" font-size="11" fill="#374151">常量：全大写 + 下划线</text>
+  <text x="142" y="158" font-size="11" fill="#6b7280">MUST：语义化、禁止拼音缩写</text>
+
+  <rect x="380" y="60" width="230" height="110" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="380" y="60" width="230" height="26" rx="8" fill="#2563eb"/>
+  <rect x="380" y="82" width="230" height="6" fill="#ffffff"/>
+  <text x="392" y="80" font-size="13" font-weight="bold" fill="#ffffff">格式与排版</text>
+  <text x="392" y="104" font-size="11" fill="#374151">缩进：2/4 空格，统一风格</text>
+  <text x="392" y="122" font-size="11" fill="#374151">行宽 ≤ 120、空行分区</text>
+  <text x="392" y="140" font-size="11" fill="#374151">语句块大括号独占一行</text>
+  <text x="392" y="158" font-size="11" fill="#6b7280">SHOULD：由格式化工具兜底</text>
+
+  <rect x="630" y="60" width="220" height="110" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="630" y="60" width="220" height="26" rx="8" fill="#2563eb"/>
+  <rect x="630" y="82" width="220" height="6" fill="#ffffff"/>
+  <text x="642" y="80" font-size="13" font-weight="bold" fill="#ffffff">注释与文档</text>
+  <text x="642" y="104" font-size="11" fill="#374151">头注释：模块/作者/变更记录</text>
+  <text x="642" y="122" font-size="11" fill="#374151">公共接口写 JSDoc/文档注释</text>
+  <text x="642" y="140" font-size="11" fill="#374151">禁止注释掉代码（用版本控制）</text>
+  <text x="642" y="158" font-size="11" fill="#6b7280">MUST：解释「为什么」而非「是什么」</text>
+
+  <!-- 规范行 2 -->
+  <rect x="130" y="188" width="230" height="110" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="130" y="188" width="230" height="26" rx="8" fill="#2563eb"/>
+  <rect x="130" y="210" width="230" height="6" fill="#ffffff"/>
+  <text x="142" y="208" font-size="13" font-weight="bold" fill="#ffffff">错误处理</text>
+  <text x="142" y="232" font-size="11" fill="#374151">统一异常类型与错误码体系</text>
+  <text x="142" y="250" font-size="11" fill="#374151">禁止吞异常、必须记录日志</text>
+  <text x="142" y="268" font-size="11" fill="#374151">外部接口调用设超时与重试</text>
+  <text x="142" y="286" font-size="11" fill="#6b7280">MUST：错误码可追踪到日志</text>
+
+  <rect x="380" y="188" width="230" height="110" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="380" y="188" width="230" height="26" rx="8" fill="#2563eb"/>
+  <rect x="380" y="210" width="230" height="6" fill="#ffffff"/>
+  <text x="392" y="208" font-size="13" font-weight="bold" fill="#ffffff">安全编码</text>
+  <text x="392" y="232" font-size="11" fill="#374151">输入校验、参数化查询防注入</text>
+  <text x="392" y="250" font-size="11" fill="#374151">密钥不入库、敏感数据脱敏</text>
+  <text x="392" y="268" font-size="11" fill="#374151">权限校验在服务端强制执行</text>
+  <text x="392" y="286" font-size="11" fill="#6b7280">MUST：通过安全静态扫描</text>
+
+  <rect x="630" y="188" width="220" height="110" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="630" y="188" width="220" height="26" rx="8" fill="#2563eb"/>
+  <rect x="630" y="210" width="220" height="6" fill="#ffffff"/>
+  <text x="642" y="208" font-size="13" font-weight="bold" fill="#ffffff">AI 生成代码审查</text>
+  <text x="642" y="232" font-size="11" fill="#374151">逐行审查、不盲信生成结果</text>
+  <text x="642" y="250" font-size="11" fill="#374151">核对许可证与版权合规</text>
+  <text x="642" y="268" font-size="11" fill="#374151">重点复核测试是否真实有效</text>
+  <text x="642" y="286" font-size="11" fill="#6b7280">MUST：AI 代码走人工评审</text>
+
+  <!-- 工具层 -->
+  <rect x="130" y="318" width="170" height="72" rx="8" fill="#d1fae5" stroke="#059669"/>
+  <text x="215" y="342" font-size="13" font-weight="bold" fill="#065f46" text-anchor="middle">ESLint</text>
+  <text x="215" y="362" font-size="11" fill="#065f46" text-anchor="middle">代码风格与潜在缺陷</text>
+  <text x="215" y="380" font-size="11" fill="#065f46" text-anchor="middle">规则随规范库同步</text>
+  <rect x="320" y="318" width="170" height="72" rx="8" fill="#d1fae5" stroke="#059669"/>
+  <text x="405" y="342" font-size="13" font-weight="bold" fill="#065f46" text-anchor="middle">Prettier</text>
+  <text x="405" y="362" font-size="11" fill="#065f46" text-anchor="middle">统一格式、消除争议</text>
+  <text x="405" y="380" font-size="11" fill="#065f46" text-anchor="middle">保存即格式化</text>
+  <rect x="510" y="318" width="180" height="72" rx="8" fill="#d1fae5" stroke="#059669"/>
+  <text x="600" y="342" font-size="13" font-weight="bold" fill="#065f46" text-anchor="middle">SonarQube</text>
+  <text x="600" y="362" font-size="11" fill="#065f46" text-anchor="middle">复杂度/坏味道/安全漏洞</text>
+  <text x="600" y="380" font-size="11" fill="#065f46" text-anchor="middle">质量门禁阈值</text>
+  <rect x="710" y="318" width="140" height="72" rx="8" fill="#d1fae5" stroke="#059669"/>
+  <text x="780" y="342" font-size="13" font-weight="bold" fill="#065f46" text-anchor="middle">代码评审工具</text>
+  <text x="780" y="362" font-size="11" fill="#065f46" text-anchor="middle">评审记录留痕</text>
+  <text x="780" y="380" font-size="11" fill="#065f46" text-anchor="middle">AI 辅助审查</text>
+
+  <!-- 执行层 -->
+  <rect x="130" y="434" width="210" height="72" rx="8" fill="#ffedd5" stroke="#ea580c"/>
+  <text x="235" y="458" font-size="13" font-weight="bold" fill="#7c2d12" text-anchor="middle">CI 质量门禁</text>
+  <text x="235" y="478" font-size="11" fill="#7c2d12" text-anchor="middle">静态检查在流水线中执行</text>
+  <text x="235" y="496" font-size="11" fill="#7c2d12" text-anchor="middle">不达标即失败</text>
+  <line x1="340" y1="470" x2="380" y2="470" stroke="#ea580c" stroke-width="2"/>
+  <polygon points="386,470 378,465 378,475" fill="#ea580c"/>
+  <rect x="392" y="434" width="210" height="72" rx="8" fill="#ffedd5" stroke="#ea580c"/>
+  <text x="497" y="458" font-size="13" font-weight="bold" fill="#7c2d12" text-anchor="middle">合并前代码评审</text>
+  <text x="497" y="478" font-size="11" fill="#7c2d12" text-anchor="middle">至少 1 名评审人通过</text>
+  <text x="497" y="496" font-size="11" fill="#7c2d12" text-anchor="middle">AI 生成代码重点复核</text>
+  <line x1="602" y1="470" x2="642" y2="470" stroke="#ea580c" stroke-width="2"/>
+  <polygon points="648,470 640,465 640,475" fill="#ea580c"/>
+  <rect x="654" y="434" width="196" height="72" rx="8" fill="#ffedd5" stroke="#ea580c"/>
+  <text x="752" y="458" font-size="13" font-weight="bold" fill="#7c2d12" text-anchor="middle">违规即阻塞合并</text>
+  <text x="752" y="478" font-size="11" fill="#7c2d12" text-anchor="middle">MUST 违反者必须修复</text>
+  <text x="752" y="496" font-size="11" fill="#7c2d12" text-anchor="middle">修复后回归验证</text>
+</svg>

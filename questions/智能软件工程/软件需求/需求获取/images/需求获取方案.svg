@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="580" viewBox="0 0 820 580" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="820" height="580" fill="#ffffff"/>
+  <text x="410" y="32" font-size="18" font-weight="bold" fill="#1f2937" text-anchor="middle">需求获取方案：目标 → 干系人 → 方法 → 记录 → 评审确认</text>
+
+  <!-- 1 目标与干系人 -->
+  <rect x="220" y="52" width="380" height="46" rx="8" fill="#2563eb"/>
+  <text x="410" y="70" font-size="13" fill="#ffffff" text-anchor="middle">获取目标：明确问题域、识别全部干系人</text>
+  <text x="410" y="90" font-size="12" fill="#dbeafe" text-anchor="middle">业务方 · 最终用户 · 领域专家 · 一线操作 · 维护/管理员</text>
+  <line x1="410" y1="98" x2="410" y2="118" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="410,124 405,116 415,116" fill="#6b7280"/>
+
+  <!-- 2 方法行 -->
+  <rect x="60" y="130" width="160" height="58" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="140" y="154" font-size="13" fill="#1e40af" text-anchor="middle">直接法</text>
+  <text x="140" y="172" font-size="11" fill="#1e40af" text-anchor="middle">面谈 · 联合评审 JAD</text>
+  <rect x="240" y="130" width="160" height="58" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="320" y="154" font-size="13" fill="#1e40af" text-anchor="middle">间接法</text>
+  <text x="320" y="172" font-size="11" fill="#1e40af" text-anchor="middle">问卷 · 观察 · 文档分析</text>
+  <rect x="420" y="130" width="160" height="58" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="500" y="154" font-size="13" fill="#1e40af" text-anchor="middle">原型法</text>
+  <text x="500" y="172" font-size="11" fill="#1e40af" text-anchor="middle">低保真/高保真原型确认</text>
+  <rect x="600" y="130" width="160" height="58" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="680" y="154" font-size="13" fill="#1e40af" text-anchor="middle">AI 辅助获取</text>
+  <text x="680" y="172" font-size="11" fill="#1e40af" text-anchor="middle">访谈脚本 · 候选需求生成</text>
+  <text x="410" y="206" font-size="11" fill="#6b7280" text-anchor="middle">方法按干系人组合使用、多源交叉验证</text>
+  <line x1="410" y1="214" x2="410" y2="234" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="410,240 405,232 415,232" fill="#6b7280"/>
+
+  <!-- 3 获取记录 -->
+  <rect x="180" y="246" width="460" height="52" rx="8" fill="#fef3c7" stroke="#d97706"/>
+  <text x="410" y="266" font-size="13" fill="#92400e" text-anchor="middle">需求获取记录（统一模板）</text>
+  <text x="410" y="286" font-size="11" fill="#92400e" text-anchor="middle">来源 · 干系人 · 原始陈述 · 需求类型 · 优先级建议 · 冲突标注</text>
+  <line x1="410" y1="298" x2="410" y2="318" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="410,324 405,316 415,316" fill="#6b7280"/>
+
+  <!-- 4 整理与冲突消解 -->
+  <rect x="180" y="330" width="460" height="46" rx="8" fill="#e5e7eb" stroke="#9ca3af"/>
+  <text x="410" y="349" font-size="13" fill="#374151" text-anchor="middle">整理分类 · 冲突消解</text>
+  <text x="410" y="367" font-size="11" fill="#6b7280" text-anchor="middle">按主题聚类、干系人矩阵评审消解不一致</text>
+  <line x1="410" y1="376" x2="410" y2="396" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="410,402 405,394 415,394" fill="#6b7280"/>
+
+  <!-- 5 评审确认 -->
+  <rect x="220" y="408" width="380" height="46" rx="8" fill="#059669"/>
+  <text x="410" y="427" font-size="13" fill="#ffffff" text-anchor="middle">需求评审与确认</text>
+  <text x="410" y="445" font-size="11" fill="#d1fae5" text-anchor="middle">评审会/原型确认，干系人签字认可</text>
+  <line x1="410" y1="454" x2="410" y2="474" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="410,480 405,472 415,472" fill="#6b7280"/>
+
+  <!-- 6 需求基线 -->
+  <rect x="250" y="486" width="320" height="40" rx="8" fill="#1f2937"/>
+  <text x="410" y="511" font-size="13" fill="#ffffff" text-anchor="middle">需求基线（进入规格说明，全程追踪管理）</text>
+
+  <!-- 回环：验证不通过回退 -->
+  <path d="M 250 506 L 30 506 L 30 75 L 212 75" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <polygon points="220,75 212,71 212,79" fill="#d97706"/>
+  <text x="26" y="300" font-size="11" fill="#d97706" transform="rotate(-90 26 300)">验证不通过：回退至对应环节</text>
+</svg>

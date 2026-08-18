@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="600" viewBox="0 0 880 600" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="880" height="600" fill="#ffffff"/>
+  <text x="440" y="30" font-size="18" font-weight="bold" fill="#1f2937" text-anchor="middle">单元测试方案：用例设计 → 隔离 → 编写 → 覆盖 → 集成</text>
+
+  <!-- 主流程（左） -->
+  <rect x="60" y="56" width="480" height="64" rx="8" fill="#2563eb"/>
+  <text x="300" y="78" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">1. 被测模块接口分析</text>
+  <text x="300" y="100" font-size="11" fill="#dbeafe" text-anchor="middle">输入/输出契约、前置状态、可能异常与返回码</text>
+  <line x1="300" y1="120" x2="300" y2="140" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="300,146 295,138 305,138" fill="#6b7280"/>
+
+  <rect x="60" y="150" width="480" height="64" rx="8" fill="#2563eb"/>
+  <text x="300" y="172" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">2. 输入域与行为划分</text>
+  <text x="300" y="194" font-size="11" fill="#dbeafe" text-anchor="middle">等价类划分、边界值分析、异常与错误注入</text>
+  <line x1="300" y1="214" x2="300" y2="234" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="300,240 295,232 305,232" fill="#6b7280"/>
+
+  <rect x="60" y="244" width="480" height="64" rx="8" fill="#1d4ed8"/>
+  <text x="300" y="266" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">3. 设计测试用例（正向 / 边界 / 异常）</text>
+  <text x="300" y="288" font-size="11" fill="#dbeafe" text-anchor="middle">每个用例含前提、输入、期望输出与断言</text>
+  <line x1="300" y1="308" x2="300" y2="328" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="300,334 295,326 305,326" fill="#6b7280"/>
+
+  <rect x="60" y="338" width="480" height="64" rx="8" fill="#1d4ed8"/>
+  <text x="300" y="360" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">4. 隔离外部依赖</text>
+  <text x="300" y="382" font-size="11" fill="#dbeafe" text-anchor="middle">Mock 对象 / Stub 桩函数，保证测试独立、可重复</text>
+  <line x1="300" y1="402" x2="300" y2="422" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="300,428 295,420 305,420" fill="#6b7280"/>
+
+  <rect x="60" y="432" width="480" height="64" rx="8" fill="#059669"/>
+  <text x="300" y="454" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">5. 编写测试代码（Arrange-Act-Assert）</text>
+  <text x="300" y="476" font-size="11" fill="#d1fae5" text-anchor="middle">命名：test_方法_场景_期望；断言聚焦输出与副作用</text>
+  <line x1="300" y1="496" x2="300" y2="516" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="300,522 295,514 305,514" fill="#6b7280"/>
+
+  <rect x="60" y="526" width="480" height="56" rx="8" fill="#1f2937"/>
+  <text x="300" y="550" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">6. 运行与覆盖率分析（行 ≥ 85%、分支 ≥ 70%）</text>
+  <text x="300" y="570" font-size="11" fill="#9ca3af" text-anchor="middle">未达标回退补充用例；通过后纳入 CI</text>
+
+  <!-- 策略面板（右） -->
+  <rect x="600" y="56" width="240" height="200" rx="10" fill="#f0f9ff" stroke="#0ea5e9"/>
+  <text x="720" y="80" font-size="14" font-weight="bold" fill="#0c4a6e" text-anchor="middle">单元测试策略</text>
+  <text x="616" y="108" font-size="12" fill="#0c4a6e">· 框架：JUnit / Jest / pytest</text>
+  <text x="616" y="130" font-size="12" fill="#0c4a6e">· 覆盖面：核心逻辑 100% 分支</text>
+  <text x="616" y="152" font-size="12" fill="#0c4a6e">· 隔离：依赖倒置 + Mock/Stub</text>
+  <text x="616" y="174" font-size="12" fill="#0c4a6e">· 独立性：测试互不依赖</text>
+  <text x="616" y="196" font-size="12" fill="#0c4a6e">· 速度：秒级运行、全量可跑</text>
+  <text x="616" y="218" font-size="12" fill="#0c4a6e">· 纳管：合并前必跑、失败阻塞</text>
+
+  <rect x="600" y="280" width="240" height="130" rx="10" fill="#ecfdf5" stroke="#10b981"/>
+  <text x="720" y="304" font-size="14" font-weight="bold" fill="#064e3b" text-anchor="middle">用例覆盖维度</text>
+  <text x="616" y="330" font-size="12" fill="#064e3b">① 等价类：有效/无效划分</text>
+  <text x="616" y="352" font-size="12" fill="#064e3b">② 边界值：上点/内点/离点</text>
+  <text x="616" y="374" font-size="12" fill="#064e3b">③ 异常：非法输入、超界、越权</text>
+  <text x="616" y="396" font-size="12" fill="#064e3b">④ 状态：前置条件分支全覆盖</text>
+
+  <rect x="600" y="434" width="240" height="148" rx="10" fill="#fff7ed" stroke="#f97316"/>
+  <text x="720" y="458" font-size="14" font-weight="bold" fill="#7c2d12" text-anchor="middle">质量度量</text>
+  <text x="616" y="484" font-size="12" fill="#7c2d12">· 行覆盖 ≥ 85%</text>
+  <text x="616" y="506" font-size="12" fill="#7c2d12">· 分支覆盖 ≥ 70%</text>
+  <text x="616" y="528" font-size="12" fill="#7c2d12">· 核心类 100%</text>
+  <text x="616" y="550" font-size="12" fill="#7c2d12">· 通过率 100% 方可合并</text>
+  <text x="616" y="572" font-size="12" fill="#7c2d12">· 未覆盖分支给出原因说明</text>
+</svg>

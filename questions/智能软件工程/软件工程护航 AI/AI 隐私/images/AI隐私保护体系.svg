@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="620" fill="#ffffff"/>
+
+  <text x="480" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1f2937">AI 系统隐私保护体系（数据全生命周期）</text>
+
+  <!-- 治理与合规层 -->
+  <rect x="60" y="56" width="840" height="54" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="480" y="80" font-size="14" font-weight="bold" text-anchor="middle" fill="#5b21b6">治理与合规层：隐私政策 · 隐私影响评估 PIA · 数据主体权利响应 · GDPR/PIPL 合规 · 问责机制</text>
+  <text x="480" y="100" font-size="13" text-anchor="middle" fill="#5b21b6">自上而下约束各环节，明确责任人与违规处置</text>
+
+  <!-- 数据收集层 -->
+  <rect x="60" y="170" width="190" height="150" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="155" y="196" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">1 数据收集</text>
+  <text x="80" y="224" font-size="13" fill="#334155">最小化收集</text>
+  <text x="80" y="248" font-size="13" fill="#334155">知情同意与授权</text>
+  <text x="80" y="272" font-size="13" fill="#334155">目的限定与合法依据</text>
+  <text x="80" y="296" font-size="13" fill="#334155">来源合规审计</text>
+
+  <!-- 数据存储与处理层 -->
+  <rect x="280" y="170" width="190" height="150" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="375" y="196" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">2 存储与处理</text>
+  <text x="300" y="224" font-size="13" fill="#334155">去标识化/假名化</text>
+  <text x="300" y="248" font-size="13" fill="#334155">数据加密与脱敏</text>
+  <text x="300" y="272" font-size="13" fill="#334155">分级分类与访问控制</text>
+  <text x="300" y="296" font-size="13" fill="#334155">最小权限与留痕</text>
+
+  <!-- 模型训练层 -->
+  <rect x="500" y="170" width="190" height="150" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="595" y="196" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">3 模型训练</text>
+  <text x="520" y="224" font-size="13" fill="#334155">差分隐私（DP）</text>
+  <text x="520" y="248" font-size="13" fill="#334155">联邦学习（FL）</text>
+  <text x="520" y="272" font-size="13" fill="#334155">同态加密/安全多方计算</text>
+  <text x="520" y="296" font-size="13" fill="#334155">梯度与参数保护</text>
+
+  <!-- 推理与部署层 -->
+  <rect x="720" y="170" width="190" height="150" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="815" y="196" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">4 推理与部署</text>
+  <text x="740" y="224" font-size="13" fill="#334155">输出结果脱敏</text>
+  <text x="740" y="248" font-size="13" fill="#334155">推理日志脱敏</text>
+  <text x="740" y="272" font-size="13" fill="#334155">防止成员推理/越权</text>
+  <text x="740" y="296" font-size="13" fill="#334155">部署环境隔离</text>
+
+  <!-- 阶段间箭头 -->
+  <line x1="250" y1="245" x2="274" y2="245" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="470" y1="245" x2="494" y2="245" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="690" y1="245" x2="714" y2="245" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 监控与响应层 -->
+  <rect x="60" y="376" width="840" height="54" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="480" y="400" font-size="14" font-weight="bold" text-anchor="middle" fill="#92400e">监控与响应层：隐私泄露监测 · 数据主体权利响应（删除/导出/更正） · 事件响应与通知 · 定期再评估</text>
+  <text x="480" y="420" font-size="13" text-anchor="middle" fill="#92400e">发现异常触发处置并回溯至源头，形成闭环</text>
+
+  <!-- 隐私技术手段 -->
+  <rect x="60" y="456" width="840" height="54" rx="8" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="480" y="480" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f766e">隐私技术手段：匿名化/假名化 · 差分隐私（噪声/预算） · 联邦学习（数据不出域） · 同态加密与安全多方计算 · 机密计算</text>
+  <text x="480" y="500" font-size="13" text-anchor="middle" fill="#0f766e">按数据敏感度与应用场景组合选用，平衡隐私强度与模型效用</text>
+
+  <!-- 底部说明 -->
+  <rect x="60" y="536" width="840" height="54" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="480" y="560" font-size="13" text-anchor="middle" fill="#334155">隐私保护贯穿收集—存储—训练—推理全生命周期，接受治理与合规层约束，监控响应驱动持续改进</text>
+  <text x="480" y="580" font-size="13" text-anchor="middle" fill="#475569">安全（防攻击/防泄露）与隐私（合规/最小化）相互支撑，共同构成 AI 可信基石</text>
+</svg>

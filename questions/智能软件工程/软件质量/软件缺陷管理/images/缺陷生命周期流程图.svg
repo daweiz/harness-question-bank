@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" font-family="'PingFang SC','Microsoft YaHei','SimHei',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f2937">企业级软件缺陷管理体系——缺陷生命周期流程图</text>
+
+  <!-- 状态机 -->
+  <rect x="60" y="44" width="780" height="28" rx="6" fill="#f9fafb" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="450" y="63" text-anchor="middle" font-size="12" fill="#374151">缺陷状态机：新建 → 已确认 → 修复中 → 待验证 → 已关闭　|　重新打开（回归未通过）</text>
+
+  <!-- 主流程（左列） -->
+  <g fill="#e8f0fe" stroke="#3b82f6" stroke-width="1.5">
+    <rect x="80" y="96" width="220" height="60" rx="6"/>
+    <rect x="80" y="196" width="220" height="60" rx="6"/>
+    <rect x="80" y="296" width="220" height="60" rx="6"/>
+    <rect x="80" y="396" width="220" height="60" rx="6"/>
+    <rect x="80" y="496" width="220" height="60" rx="6"/>
+    <rect x="80" y="596" width="220" height="60" rx="6"/>
+  </g>
+  <g fill="#1f2937" font-size="14" text-anchor="middle">
+    <text x="190" y="120">缺陷发现</text>
+    <text x="190" y="220">提交缺陷报告</text>
+    <text x="190" y="320">评审与分类分级</text>
+    <text x="190" y="420">指派修复</text>
+    <text x="190" y="520">修复缺陷</text>
+    <text x="190" y="620">验证与回归测试</text>
+  </g>
+  <g fill="#4b5563" font-size="11" text-anchor="middle">
+    <text x="190" y="140">测试发现 · 生产监控 · 用户反馈</text>
+    <text x="190" y="240">优先级 · 重现步骤 · 环境</text>
+    <text x="190" y="340">等级 · 模块 · 责任方</text>
+    <text x="190" y="440">负责人 · 里程碑</text>
+    <text x="190" y="540">关联代码版本 · 测试用例</text>
+    <text x="190" y="640">通过 → 关闭 / 未通过 → 重新打开</text>
+  </g>
+
+  <!-- 主流程箭头 -->
+  <line x1="190" y1="156" x2="190" y2="196" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="190" y1="256" x2="190" y2="296" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="190" y1="356" x2="190" y2="396" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="190" y1="456" x2="190" y2="496" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="190" y1="556" x2="190" y2="596" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 评审分级 → 无效/重复关闭 -->
+  <line x1="300" y1="326" x2="410" y2="326" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="410" y1="326" x2="410" y2="360" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="470" y="330" width="280" height="60" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="610" y="354" text-anchor="middle" font-size="13" fill="#1f2937">直接关闭：驳回无效缺陷</text>
+  <text x="610" y="374" text-anchor="middle" font-size="13" fill="#1f2937">合并重复缺陷（AI 辅助去重）</text>
+
+  <!-- 验证与回归 → 关闭并度量 -->
+  <line x1="300" y1="626" x2="410" y2="626" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="410" y1="626" x2="410" y2="640" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="410" y1="640" x2="470" y2="640" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="470" y="610" width="280" height="70" rx="6" fill="#e7f6ec" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="610" y="634" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">关闭并度量审计</text>
+  <text x="610" y="656" text-anchor="middle" font-size="12" fill="#4b5563">缺陷外泄率 · 修复周期 · 复开率 · 重复率</text>
+
+  <!-- 重新打开反馈 -->
+  <line x1="300" y1="630" x2="390" y2="630" stroke="#f97316" stroke-width="1.5"/>
+  <line x1="390" y1="630" x2="390" y2="530" stroke="#f97316" stroke-width="1.5"/>
+  <line x1="390" y1="530" x2="300" y2="530" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="397" y="584" font-size="11" fill="#f97316">重新打开（回归未通过）</text>
+
+  <!-- AI 辅助能力 -->
+  <rect x="630" y="180" width="220" height="130" rx="8" fill="#fef3e2" stroke="#b45309" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="740" y="204" text-anchor="middle" font-size="14" font-weight="bold" fill="#9a3412">AI 辅助能力</text>
+  <text x="740" y="226" text-anchor="middle" font-size="12" fill="#4b5563">智能测试 · 智能运维</text>
+  <text x="740" y="248" text-anchor="middle" font-size="12" fill="#4b5563">缺陷自动去重</text>
+  <text x="740" y="268" text-anchor="middle" font-size="12" fill="#4b5563">缺陷智能分派</text>
+  <text x="740" y="288" text-anchor="middle" font-size="12" fill="#4b5563">代码语义定位 · 日志关联</text>
+
+  <!-- AI 辅助连接：去重→提交/评审，分派→分配 -->
+  <line x1="630" y1="210" x2="300" y2="228" stroke="#b45309" stroke-width="1.3" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <line x1="630" y1="265" x2="300" y2="426" stroke="#b45309" stroke-width="1.3" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <text x="566" y="214" font-size="10" fill="#92400e">重复检测</text>
+  <text x="560" y="352" font-size="10" fill="#92400e">智能分派</text>
+</svg>

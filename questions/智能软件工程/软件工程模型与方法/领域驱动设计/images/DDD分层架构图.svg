@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="640" fill="#ffffff"/>
+
+  <text x="480" y="30" font-size="22" font-weight="bold" text-anchor="middle" fill="#1f2937">领域驱动设计（DDD）分层架构与战略/战术要素</text>
+
+  <!-- 战略设计：限界上下文 -->
+  <text x="40" y="58" font-size="15" font-weight="bold" fill="#1f2937">战略设计：限界上下文（Bounded Context）划分</text>
+  <rect x="40" y="66" width="880" height="64" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="60" y="78" width="158" height="40" rx="6" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.2"/>
+  <text x="139" y="102" font-size="13" font-weight="bold" text-anchor="middle" fill="#5b21b6">客户上下文</text>
+  <rect x="230" y="78" width="158" height="40" rx="6" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.2"/>
+  <text x="309" y="102" font-size="13" font-weight="bold" text-anchor="middle" fill="#5b21b6">订单上下文</text>
+  <rect x="400" y="78" width="158" height="40" rx="6" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.2"/>
+  <text x="479" y="102" font-size="13" font-weight="bold" text-anchor="middle" fill="#5b21b6">库存上下文</text>
+  <rect x="570" y="78" width="158" height="40" rx="6" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.2"/>
+  <text x="649" y="102" font-size="13" font-weight="bold" text-anchor="middle" fill="#5b21b6">支付结算上下文</text>
+  <rect x="740" y="78" width="158" height="40" rx="6" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.2"/>
+  <text x="819" y="102" font-size="13" font-weight="bold" text-anchor="middle" fill="#5b21b6">物流配送上下文</text>
+
+  <line x1="480" y1="130" x2="480" y2="144" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 战术设计：四层架构 -->
+  <text x="40" y="158" font-size="15" font-weight="bold" fill="#1f2937">战术设计：四层分层架构（依赖方向由外向内）</text>
+
+  <rect x="40" y="168" width="880" height="44" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="480" y="196" font-size="13" font-weight="bold" text-anchor="middle" fill="#075985">用户接口层 User Interface：REST 控制器 / 页面 / 消息适配器 —— 只做输入输出转换</text>
+
+  <line x1="480" y1="212" x2="480" y2="226" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="228" width="880" height="44" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="480" y="256" font-size="13" font-weight="bold" text-anchor="middle" fill="#075985">应用层 Application：应用服务 —— 用例编排 · 事务边界 · 权限校验（不含业务规则）</text>
+
+  <line x1="480" y1="272" x2="480" y2="286" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 领域层（核心） -->
+  <rect x="40" y="288" width="880" height="180" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.6"/>
+  <text x="480" y="314" font-size="14" font-weight="bold" text-anchor="middle" fill="#065f46">领域层 Domain（核心，承载全部业务规则）</text>
+
+  <rect x="60" y="328" width="200" height="66" rx="6" fill="#ffffff" stroke="#10b981" stroke-width="1.2"/>
+  <text x="160" y="352" font-size="13" font-weight="bold" text-anchor="middle" fill="#065f46">实体 Entity</text>
+  <text x="160" y="374" font-size="12" text-anchor="middle" fill="#047857">Order 等，具唯一标识与状态</text>
+
+  <rect x="274" y="328" width="200" height="66" rx="6" fill="#ffffff" stroke="#10b981" stroke-width="1.2"/>
+  <text x="374" y="352" font-size="13" font-weight="bold" text-anchor="middle" fill="#065f46">值对象 Value Object</text>
+  <text x="374" y="374" font-size="12" text-anchor="middle" fill="#047857">Money / Address，不可变无标识</text>
+
+  <rect x="488" y="328" width="200" height="66" rx="6" fill="#ffffff" stroke="#10b981" stroke-width="1.2"/>
+  <text x="588" y="352" font-size="13" font-weight="bold" text-anchor="middle" fill="#065f46">聚合与聚合根</text>
+  <text x="588" y="374" font-size="12" text-anchor="middle" fill="#047857">Order Aggregate，封装不变量</text>
+
+  <rect x="702" y="328" width="196" height="66" rx="6" fill="#ffffff" stroke="#10b981" stroke-width="1.2"/>
+  <text x="800" y="352" font-size="13" font-weight="bold" text-anchor="middle" fill="#065f46">领域服务 + 领域事件</text>
+  <text x="800" y="374" font-size="12" text-anchor="middle" fill="#047857">PricingService · OrderPlaced</text>
+
+  <text x="480" y="414" font-size="12" text-anchor="middle" fill="#047857">仓储接口 Repository（定义持久化存取契约，不依赖实现）</text>
+
+  <line x1="480" y1="468" x2="480" y2="482" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 基础设施层 -->
+  <rect x="40" y="484" width="880" height="44" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="480" y="512" font-size="13" font-weight="bold" text-anchor="middle" fill="#92400e">基础设施层 Infrastructure：仓储实现 · 数据库 · 消息队列 · 外部网关 —— 反向依赖领域层接口</text>
+
+  <!-- 依赖规则说明 -->
+  <rect x="40" y="550" width="880" height="62" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="480" y="576" font-size="13" font-weight="bold" text-anchor="middle" fill="#1f2937">依赖规则：UI → 应用 → 领域；基础设施通过接口「反依赖」领域层，领域层不依赖任何外部技术</text>
+  <text x="480" y="598" font-size="12" text-anchor="middle" fill="#334155">统一语言贯穿各限界上下文，上下文间以防腐层/共享内核等映射协同，支撑微服务边界划分与软件复用</text>
+</svg>

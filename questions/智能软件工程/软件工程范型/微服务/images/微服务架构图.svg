@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="620" fill="#ffffff"/>
+
+  <text x="480" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1f2937">电商系统微服务架构图</text>
+
+  <!-- 接入层 -->
+  <rect x="60" y="52" width="840" height="54" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="480" y="76" font-size="14" font-weight="bold" text-anchor="middle" fill="#92400e">接入层：客户端（Web/App）→ API 网关</text>
+  <text x="480" y="96" font-size="13" text-anchor="middle" fill="#92400e">统一路由 · 认证鉴权 · 限流降级 · 灰度发布</text>
+
+  <!-- 治理支撑带 -->
+  <rect x="60" y="128" width="840" height="34" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="480" y="150" font-size="13" font-weight="bold" text-anchor="middle" fill="#5b21b6">服务治理支撑：服务注册与发现 · 配置中心 · 服务网格（熔断/限流/重试） · 分布式追踪 · 日志聚合</text>
+
+  <line x1="480" y1="106" x2="480" y2="122" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="162" x2="480" y2="182" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 服务层 行1 -->
+  <rect x="60" y="188" width="260" height="74" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="190" y="214" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">用户服务</text>
+  <text x="80" y="238" font-size="13" fill="#334155">注册登录、用户资料</text>
+  <text x="80" y="258" font-size="13" fill="#334155">权限与安全</text>
+
+  <rect x="350" y="188" width="260" height="74" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="480" y="214" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">商品服务</text>
+  <text x="370" y="238" font-size="13" fill="#334155">商品信息、上下架</text>
+  <text x="370" y="258" font-size="13" fill="#334155">类目与搜索索引</text>
+
+  <rect x="640" y="188" width="260" height="74" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="770" y="214" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">订单服务</text>
+  <text x="660" y="238" font-size="13" fill="#334155">下单、订单状态机</text>
+  <text x="660" y="258" font-size="13" fill="#334155">订单查询与取消</text>
+
+  <!-- 服务层 行2 -->
+  <rect x="60" y="296" width="260" height="74" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="190" y="322" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">支付服务</text>
+  <text x="80" y="346" font-size="13" fill="#334155">支付渠道接入</text>
+  <text x="80" y="366" font-size="13" fill="#334155">交易对账、退款</text>
+
+  <rect x="350" y="296" width="260" height="74" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="480" y="322" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">库存服务</text>
+  <text x="370" y="346" font-size="13" fill="#334155">库存扣减与回补</text>
+  <text x="370" y="366" font-size="13" fill="#334155">超卖防护与锁定</text>
+
+  <rect x="640" y="296" width="260" height="74" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="770" y="322" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">物流服务</text>
+  <text x="660" y="346" font-size="13" fill="#334155">配送单、路由规划</text>
+  <text x="660" y="366" font-size="13" fill="#334155">轨迹与签收</text>
+
+  <!-- 服务间调用（示例箭头） -->
+  <line x1="320" y1="225" x2="344" y2="225" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="610" y1="225" x2="634" y2="225" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="320" y1="333" x2="344" y2="333" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="610" y1="333" x2="634" y2="333" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="480" y1="262" x2="480" y2="290" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="190" y1="262" x2="190" y2="290" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="770" y1="262" x2="770" y2="290" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <line x1="480" y1="370" x2="480" y2="412" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 数据层 -->
+  <rect x="60" y="418" width="840" height="54" rx="8" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="480" y="442" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f766e">数据层：每个服务独立数据库（Database per Service），服务间不直接共享库表</text>
+  <text x="480" y="462" font-size="13" text-anchor="middle" fill="#0f766e">跨服务数据一致性由「事件驱动 + Saga 补偿」保障，本地事务最小化</text>
+
+  <!-- 事件总线与支撑 -->
+  <rect x="60" y="498" width="840" height="54" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="480" y="522" font-size="13" font-weight="bold" text-anchor="middle" fill="#334155">异步支撑：消息队列（事件发布/订阅 · 削峰解耦） · 订单→支付→库存→物流的 Saga 编排</text>
+  <text x="480" y="542" font-size="13" text-anchor="middle" fill="#475569">DevOps 支撑：CI/CD 流水线 · 容器化与编排 · 服务独立部署、独立扩展 · 蓝绿/金丝雀发布</text>
+</svg>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="620" fill="#ffffff"/>
+
+  <text x="480" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1f2937">大语言模型软件工程化应用框架（全流程）</text>
+
+  <!-- 应用场景层 -->
+  <rect x="60" y="56" width="840" height="54" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="480" y="80" font-size="14" font-weight="bold" text-anchor="middle" fill="#92400e">软件工程应用场景：需求分析 · 代码生成 · 缺陷检测 · 测试用例 · 智能运维</text>
+  <text x="480" y="100" font-size="13" text-anchor="middle" fill="#92400e">以「提示词 + 领域上下文」接入大语言模型</text>
+
+  <!-- 技术选型三通道 -->
+  <rect x="60" y="170" width="190" height="140" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="155" y="196" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">提示工程</text>
+  <text x="80" y="224" font-size="13" fill="#334155">任务模板与角色设定</text>
+  <text x="80" y="248" font-size="13" fill="#334155">思维链与示例引导</text>
+  <text x="80" y="272" font-size="13" fill="#334155">零样本/少样本提示</text>
+  <text x="80" y="296" font-size="13" fill="#334155">成本低、迭代快</text>
+
+  <rect x="280" y="170" width="190" height="140" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="375" y="196" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">RAG 检索增强生成</text>
+  <text x="300" y="224" font-size="13" fill="#334155">领域文档向量化</text>
+  <text x="300" y="248" font-size="13" fill="#334155">相关片段检索</text>
+  <text x="300" y="272" font-size="13" fill="#334155">外挂知识库问答</text>
+  <text x="300" y="296" font-size="13" fill="#334155">可溯源、易更新</text>
+
+  <rect x="500" y="170" width="190" height="140" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="595" y="196" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">模型微调</text>
+  <text x="520" y="224" font-size="13" fill="#334155">领域数据监督微调</text>
+  <text x="520" y="248" font-size="13" fill="#334155">指令对齐与偏好学习</text>
+  <text x="520" y="272" font-size="13" fill="#334155">LoRA 等参数高效微调</text>
+  <text x="520" y="296" font-size="13" fill="#334155">能力固化、定制化</text>
+
+  <rect x="720" y="170" width="190" height="140" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="815" y="196" font-size="14" font-weight="bold" text-anchor="middle" fill="#1e3a8a">基础大模型</text>
+  <text x="740" y="224" font-size="13" fill="#334155">通义/文心/DeepSeek</text>
+  <text x="740" y="248" font-size="13" fill="#334155">对话补全/代码/多模态</text>
+  <text x="740" y="272" font-size="13" fill="#334155">上下文窗口管理</text>
+  <text x="740" y="296" font-size="13" fill="#334155">工具调用能力</text>
+
+  <line x1="250" y1="240" x2="274" y2="240" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="470" y1="240" x2="494" y2="240" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="690" y1="240" x2="714" y2="240" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="480" y="140" font-size="13" text-anchor="middle" fill="#475569">依据任务复杂度、数据规模、时效性与成本在三种方式间决策（含组合）</text>
+  <line x1="480" y1="120" x2="480" y2="164" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 评估与门禁层 -->
+  <rect x="60" y="376" width="840" height="54" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="480" y="400" font-size="14" font-weight="bold" text-anchor="middle" fill="#5b21b6">评估与门禁层：能力评测集 · 幻觉与错误检测 · 安全合规评估 · 性能与成本基准</text>
+  <text x="480" y="420" font-size="13" text-anchor="middle" fill="#5b21b6">评测不达标不得上线，形成可量化的「完成」标准</text>
+
+  <!-- 部署与护栏层 -->
+  <rect x="60" y="456" width="840" height="54" rx="8" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="480" y="480" font-size="14" font-weight="bold" text-anchor="middle" fill="#0f766e">部署与护栏层：模型服务与提示词模板管理 · 输入输出内容过滤 · 审计日志 · 人机协同审核</text>
+  <text x="480" y="500" font-size="13" text-anchor="middle" fill="#0f766e">关键决策由人确认，防止生成结果直接进入生产流程</text>
+
+  <!-- 运行监控与反馈层 -->
+  <rect x="60" y="536" width="840" height="54" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="480" y="560" font-size="14" font-weight="bold" text-anchor="middle" fill="#334155">运行与监控反馈：线上质量监控 · 成本与延迟监控 · 数据漂移检测 · 结果回流扩充评测集</text>
+  <text x="480" y="580" font-size="13" text-anchor="middle" fill="#475569">闭环驱动提示词、检索库与模型的持续迭代</text>
+
+  <line x1="480" y1="310" x2="480" y2="370" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="430" x2="480" y2="450" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="510" x2="480" y2="530" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

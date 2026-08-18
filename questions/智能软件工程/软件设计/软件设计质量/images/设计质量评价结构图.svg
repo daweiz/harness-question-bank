@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="620" fill="#FFFFFF"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333333">在线支付网关 · 软件设计质量评价结构图</text>
+
+  <!-- 输入 -->
+  <rect x="200" y="55" width="600" height="50" rx="8" fill="#F5F7FA" stroke="#8A94A6" stroke-width="1.3"/>
+  <text x="500" y="85" text-anchor="middle" font-size="14" fill="#333333">设计产物输入：12 个类的详细设计 + 3 个外部系统接口设计 + 数据设计</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,105 L500,140"/>
+  </g>
+
+  <!-- 四个质量属性维度 -->
+  <g stroke="#4A90D9" stroke-width="1.4">
+    <rect x="45"  y="140" width="205" height="180" rx="8" fill="#E3F0FB"/>
+    <rect x="265" y="140" width="205" height="180" rx="8" fill="#E3F0FB"/>
+    <rect x="485" y="140" width="205" height="180" rx="8" fill="#E3F0FB"/>
+    <rect x="705" y="140" width="205" height="180" rx="8" fill="#E3F0FB"/>
+  </g>
+  <g fill="#1F4E79" text-anchor="middle">
+    <text x="147" y="166" font-size="14" font-weight="bold">性能</text>
+    <text x="367" y="166" font-size="14" font-weight="bold">可靠性</text>
+    <text x="587" y="166" font-size="14" font-weight="bold">可维护性</text>
+    <text x="807" y="166" font-size="14" font-weight="bold">安全性</text>
+  </g>
+  <g fill="#444444" text-anchor="middle" font-size="12">
+    <text x="147" y="196">平均事务延迟</text>
+    <text x="367" y="196">MTBF / 可用率</text>
+    <text x="587" y="196">耦合度 / 内聚度</text>
+    <text x="807" y="196">敏感数据加密</text>
+    <text x="147" y="224">并发吞吐量</text>
+    <text x="367" y="224">故障恢复时间</text>
+    <text x="587" y="224">圈复杂度</text>
+    <text x="807" y="224">认证与授权强度</text>
+    <text x="147" y="252">资源占用率</text>
+    <text x="367" y="252">容错与重试机制</text>
+    <text x="587" y="252">文档完整度 / 命名规范</text>
+    <text x="807" y="252">输入校验与防注入</text>
+  </g>
+  <g fill="#4A90D9" text-anchor="middle" font-size="11.5">
+    <text x="147" y="286">P95 延迟 &lt; 500ms、吞吐 ≥ 1000 TPS</text>
+    <text x="367" y="286">系统可用率 ≥ 99.95%</text>
+    <text x="587" y="286">圈复杂度 ≤ 10、职责单一</text>
+    <text x="807" y="286">通过渗透测试、密文存储</text>
+  </g>
+  <g fill="#8A94A6" text-anchor="middle" font-size="11">
+    <text x="147" y="310">度量指标 → 可测</text>
+    <text x="367" y="310">度量指标 → 可测</text>
+    <text x="587" y="310">度量指标 → 可测</text>
+    <text x="807" y="310">度量指标 → 可测</text>
+  </g>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M147,320 L230,355"/>
+    <path d="M367,320 L440,355"/>
+    <path d="M587,320 L560,355"/>
+    <path d="M807,320 L770,355"/>
+  </g>
+
+  <!-- 评审检查单 -->
+  <rect x="200" y="355" width="600" height="50" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.4"/>
+  <text x="500" y="377" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#7A5B00">设计评审检查单（逐项核对）</text>
+  <text x="500" y="396" text-anchor="middle" font-size="12" fill="#7A5B00">职责清晰 / 接口一致 / 边界与异常处理 / 满足各质量目标</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,405 L500,440"/>
+  </g>
+
+  <!-- 评分模型 -->
+  <rect x="200" y="440" width="600" height="60" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+  <text x="500" y="464" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#2E7D32">加权量化评分模型</text>
+  <text x="500" y="486" text-anchor="middle" font-size="12.5" fill="#2E7D32">综合评分 = Σ wᵢ × sᵢ（wᵢ：性能 0.3 / 可靠性 0.3 / 可维护性 0.2 / 安全性 0.2）</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,500 L500,535"/>
+  </g>
+
+  <!-- 输出 -->
+  <rect x="200" y="535" width="600" height="60" rx="8" fill="#F0E6F6" stroke="#8E6BB8" stroke-width="1.4"/>
+  <text x="500" y="559" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#5B3E86">质量评价报告 + 改进建议</text>
+  <text x="500" y="581" text-anchor="middle" font-size="12" fill="#5B3E86">各属性得分与雷达图 / 重构方案、接口优化、评审整改项</text>
+</svg>

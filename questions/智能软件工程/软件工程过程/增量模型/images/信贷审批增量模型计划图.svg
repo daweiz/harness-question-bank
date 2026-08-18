@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="760" fill="#FFFFFF"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333333">信贷审批系统 · 增量模型开发计划图</text>
+
+  <!-- 需求与架构 -->
+  <rect x="120" y="50" width="760" height="66" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="500" y="72" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F4E79">总体需求分析 + 核心架构骨架（一次完成，功能分增量交付）</text>
+  <text x="500" y="96" text-anchor="middle" font-size="12" fill="#444444">需求按业务价值与依赖排序 → 核心架构先立骨架 → 各增量并行设计/编码/测试/交付，逐块成型</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,116 L500,150"/>
+  </g>
+
+  <!-- 四个增量 -->
+  <g>
+    <rect x="55"  y="152" width="205" height="300" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+    <rect x="280" y="152" width="205" height="300" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+    <rect x="505" y="152" width="205" height="300" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+    <rect x="730" y="152" width="205" height="300" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+  </g>
+  <g fill="#1F4E79" text-anchor="middle">
+    <text x="157" y="176" font-size="13" font-weight="bold">增量一 · 核心审批</text>
+    <text x="382" y="176" font-size="13" font-weight="bold">增量二 · 风控接入</text>
+    <text x="607" y="176" font-size="13" font-weight="bold">增量三 · 额度与还款</text>
+    <text x="832" y="176" font-size="13" font-weight="bold">增量四 · 运营与报表</text>
+  </g>
+  <g fill="#444444" text-anchor="middle" font-size="11">
+    <text x="157" y="202">优先级 P0</text>
+    <text x="382" y="202">优先级 P1</text>
+    <text x="607" y="202">优先级 P1</text>
+    <text x="832" y="202">优先级 P2</text>
+    <text x="157" y="226">申请受理、审批流</text>
+    <text x="382" y="226">征信查询、风控规则</text>
+    <text x="607" y="226">额度计算、还款计划</text>
+    <text x="832" y="226">运营看板、统计报表</text>
+    <text x="157" y="248">审批决策、消息通知</text>
+    <text x="382" y="248">黑名单、欺诈识别</text>
+    <text x="607" y="248">放款、展期与扣款</text>
+    <text x="832" y="248">逾期监控、数据导出</text>
+  </g>
+  <g stroke="#66A05F" stroke-width="1" fill="none" stroke-dasharray="4,3">
+    <path d="M70,266 L244,266"/>
+    <path d="M295,266 L469,266"/>
+    <path d="M520,266 L694,266"/>
+    <path d="M745,266 L919,266"/>
+  </g>
+  <g fill="#666666" text-anchor="middle" font-size="10.5">
+    <text x="157" y="290">交付物：可运行核心审批</text>
+    <text x="382" y="290">交付物：风控决策增强</text>
+    <text x="607" y="290">交付物：全流程闭环</text>
+    <text x="832" y="290">交付物：经营分析能力</text>
+    <text x="157" y="312">验收：审批 300 笔/日</text>
+    <text x="382" y="312">验收：欺诈拦截率 ≥ 95%</text>
+    <text x="607" y="312">验收：放款全流程在线</text>
+    <text x="832" y="312">验收：报表 T+1 更新</text>
+  </g>
+  <g fill="#2E7D32" text-anchor="middle" font-size="11">
+    <text x="157" y="402">每增量均含：设计 → 编码 → 测试 → 交付</text>
+    <text x="382" y="402">每增量均含：设计 → 编码 → 测试 → 交付</text>
+    <text x="607" y="402">每增量均含：设计 → 编码 → 测试 → 交付</text>
+    <text x="832" y="402">每增量均含：设计 → 编码 → 测试 → 交付</text>
+  </g>
+
+  <!-- 增量间连接 -->
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M260,300 L278,300"/>
+    <path d="M485,300 L503,300"/>
+    <path d="M710,300 L728,300"/>
+  </g>
+
+  <!-- 里程碑 -->
+  <rect x="250" y="470" width="500" height="56" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.4"/>
+  <text x="500" y="492" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#7A5B00">交付里程碑（每增量可运行、可测试、可验收）</text>
+  <text x="500" y="514" text-anchor="middle" font-size="12" fill="#7A5B00">增量间保持接口向后兼容 · 需求变更优先安排到后续增量，避免破坏已交付部分</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,526 L500,560"/>
+  </g>
+
+  <!-- 风险与时间轴 -->
+  <rect x="200" y="560" width="600" height="80" rx="8" fill="#F5F7FA" stroke="#8A94A6" stroke-width="1.3"/>
+  <text x="500" y="584" text-anchor="middle" font-size="13" font-weight="bold" fill="#333333">进度与风险安排</text>
+  <text x="500" y="607" text-anchor="middle" font-size="12" fill="#444444">第 1–2 周增量一 · 第 3–4 周增量二 · 第 5–6 周增量三 · 第 7–8 周增量四</text>
+  <text x="500" y="629" text-anchor="middle" font-size="12" fill="#444444">核心风险（数据模型、风控集成）前置到增量一、二尽早暴露与化解</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,640 L500,674"/>
+  </g>
+
+  <!-- 输出 -->
+  <rect x="250" y="674" width="500" height="60" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="500" y="698" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1F4E79">产出：逐块交付的完整信贷审批系统 + 过程反馈</text>
+  <text x="500" y="720" text-anchor="middle" font-size="12" fill="#444444">每增量尽早交付价值 · 以实际反馈调整后续增量优先级</text>
+</svg>

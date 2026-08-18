@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="680" viewBox="0 0 900 680" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="900" height="680" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">软件过程改进总体框架（GQM + PDCA + CMMI）</text>
+
+  <!-- 左：PDCA 面板 -->
+  <rect x="40" y="60" width="400" height="470" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="240" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2937">PDCA 过程改进循环</text>
+
+  <circle cx="240" cy="310" r="95" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="240" y="305" text-anchor="middle" font-size="14" font-weight="bold" fill="#475569">持续改进</text>
+  <text x="240" y="325" text-anchor="middle" font-size="11" fill="#64748b">由 GQM 度量驱动</text>
+
+  <!-- P 计划 -->
+  <rect x="160" y="160" width="160" height="46" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="240" y="180" text-anchor="middle" font-size="13" font-weight="bold" fill="#4338ca">P 计划</text>
+  <text x="240" y="197" text-anchor="middle" font-size="11" fill="#3730a3">评估现状 · 设定目标 · 制定计划</text>
+
+  <!-- D 实施 -->
+  <rect x="315" y="300" width="120" height="46" rx="8" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+  <text x="375" y="320" text-anchor="middle" font-size="13" font-weight="bold" fill="#0e7490">D 实施</text>
+  <text x="375" y="337" text-anchor="middle" font-size="11" fill="#155e75">培训 · 试点 · 推广</text>
+
+  <!-- C 检查 -->
+  <rect x="160" y="464" width="160" height="46" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+  <text x="240" y="484" text-anchor="middle" font-size="13" font-weight="bold" fill="#c2410c">C 检查</text>
+  <text x="240" y="501" text-anchor="middle" font-size="11" fill="#9a3412">度量采集 · 对照目标 · 审计</text>
+
+  <!-- A 处置 -->
+  <rect x="45" y="300" width="120" height="46" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="105" y="320" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">A 处置</text>
+  <text x="105" y="337" text-anchor="middle" font-size="11" fill="#14532d">标准化 · 识别新改进</text>
+
+  <!-- PDCA 循环箭头 -->
+  <path d="M 320 212 L 366 316" stroke="#6366f1" stroke-width="2"/>
+  <polygon points="364,316 370,324 360,322" fill="#6366f1"/>
+  <path d="M 372 348 L 248 458" stroke="#06b6d4" stroke-width="2"/>
+  <polygon points="245,455 239,463 250,460" fill="#06b6d4"/>
+  <path d="M 160 486 L 120 348" stroke="#f97316" stroke-width="2"/>
+  <polygon points="120,352 116,344 126,345" fill="#f97316"/>
+  <path d="M 112 300 L 156 214" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="158,218 166,210 154,210" fill="#22c55e"/>
+
+  <!-- 右：CMMI 面板 -->
+  <rect x="470" y="60" width="400" height="230" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="670" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#b45309">成熟度提升路线（CMMI）</text>
+
+  <rect x="490" y="104" width="360" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="670" y="127" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">L2 已管理：项目级过程管理（当前）</text>
+
+  <rect x="490" y="150" width="360" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="670" y="173" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">L3 已定义：组织级标准过程（本阶段目标）</text>
+
+  <rect x="490" y="196" width="360" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="670" y="219" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">L4 已量化：统计过程控制（远期）</text>
+
+  <rect x="490" y="242" width="360" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="670" y="265" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">L5 优化级：持续过程优化（远期）</text>
+
+  <!-- 提升箭头 -->
+  <path d="M 478 140 L 478 110" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="474,112 478,106 482,112" fill="#f59e0b"/>
+  <path d="M 478 186 L 478 156" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="474,158 478,152 482,158" fill="#f59e0b"/>
+  <path d="M 478 232 L 478 202" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="474,204 478,198 482,204" fill="#f59e0b"/>
+
+  <!-- 右：GQM 面板 -->
+  <rect x="470" y="320" width="400" height="260" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="670" y="346" text-anchor="middle" font-size="15" font-weight="bold" fill="#4338ca">度量驱动（GQM）</text>
+
+  <rect x="490" y="368" width="360" height="46" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="670" y="389" text-anchor="middle" font-size="12" font-weight="bold" fill="#3730a3">G（Goal）目标：交付不延期、缺陷不泄漏</text>
+  <text x="670" y="407" text-anchor="middle" font-size="11" fill="#475569">目标导向过程改进</text>
+
+  <path d="M 670 414 L 670 438" stroke="#6366f1" stroke-width="2"/>
+  <polygon points="666,436 670,442 674,436" fill="#6366f1"/>
+
+  <rect x="490" y="440" width="360" height="60" rx="6" fill="#c7d2fe" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="670" y="462" text-anchor="middle" font-size="12" font-weight="bold" fill="#3730a3">Q（Question）问题：过程是否稳定？</text>
+  <text x="670" y="482" text-anchor="middle" font-size="11" fill="#475569">缺陷为何泄漏？变更为何失控？</text>
+  <text x="670" y="498" text-anchor="middle" font-size="11" fill="#475569">由哪些根因导致？</text>
+
+  <path d="M 670 500 L 670 524" stroke="#6366f1" stroke-width="2"/>
+  <polygon points="666,522 670,528 674,522" fill="#6366f1"/>
+
+  <rect x="490" y="526" width="360" height="44" rx="6" fill="#a5b4fc" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="670" y="548" text-anchor="middle" font-size="12" font-weight="bold" fill="#312e81">M（Metric）度量：按时交付率 · 缺陷泄漏率</text>
+  <text x="670" y="565" text-anchor="middle" font-size="11" fill="#3730a3">需求变更率 · 返工成本占比</text>
+
+  <!-- 底部：改进推进机制 -->
+  <rect x="40" y="590" width="830" height="80" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="60" y="616" font-size="14" font-weight="bold" fill="#166534">改进推进机制（每季度一轮 PDCA 迭代）</text>
+  <text x="60" y="644" font-size="12" fill="#14532d">过程审计 → 缺陷根因分析 → 度量基线采集 → 改进例会评审 → 试点推广 → 制度化发布，并回到 P 进入下一轮改进。</text>
+  <text x="60" y="662" font-size="12" fill="#14532d">改进成效以 GQM 度量对照改进前基线验证；稳定后再向更高 CMMI 成熟度等级推进。</text>
+</svg>

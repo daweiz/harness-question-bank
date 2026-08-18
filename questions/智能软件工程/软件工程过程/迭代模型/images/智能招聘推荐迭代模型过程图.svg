@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+    <marker id="arrowFeedback" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9A825"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="720" fill="#FFFFFF"/>
+  <text x="500" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#333333">智能招聘推荐系统 · 迭代模型开发过程图</text>
+
+  <!-- 需求基线 -->
+  <rect x="180" y="46" width="640" height="60" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="500" y="68" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1F4E79">总体需求基线 + 核心架构骨架（一次确立，需求随迭代逐步精化）</text>
+  <text x="500" y="92" text-anchor="middle" font-size="12" fill="#444444">简历解析 · 候选匹配 · 推荐解释 · 反馈采集 · 核心数据模型</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,106 L500,138"/>
+  </g>
+
+  <!-- 三个迭代 -->
+  <g fill="#1F4E79" text-anchor="middle" font-size="13" font-weight="bold">
+    <text x="180" y="160">迭代一 · 第 1–2 周</text>
+    <text x="500" y="160">迭代二 · 第 3–4 周</text>
+    <text x="820" y="160">迭代三 · 第 5–6 周</text>
+  </g>
+  <g fill="none" stroke="#66A05F" stroke-width="1.2">
+    <rect x="50"  y="170" width="260" height="250" rx="8" fill="#E8F5E9"/>
+    <rect x="370" y="170" width="260" height="250" rx="8" fill="#E8F5E9"/>
+    <rect x="690" y="170" width="260" height="250" rx="8" fill="#E8F5E9"/>
+  </g>
+
+  <!-- 迭代内部活动步骤 -->
+  <g font-size="12" fill="#1F4E79" text-anchor="middle">
+    <!-- 列一 -->
+    <rect x="60" y="185" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="180" y="207">需求细化</text>
+    <rect x="60" y="227" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="180" y="249">设计</text>
+    <rect x="60" y="269" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="180" y="291">实现</text>
+    <rect x="60" y="311" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="180" y="333">测试</text>
+    <rect x="60" y="353" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="180" y="375">评估</text>
+    <!-- 列二 -->
+    <rect x="380" y="185" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="500" y="207">需求细化</text>
+    <rect x="380" y="227" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="500" y="249">设计</text>
+    <rect x="380" y="269" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="500" y="291">实现</text>
+    <rect x="380" y="311" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="500" y="333">测试</text>
+    <rect x="380" y="353" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="500" y="375">评估</text>
+    <!-- 列三 -->
+    <rect x="700" y="185" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="820" y="207">需求细化</text>
+    <rect x="700" y="227" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="820" y="249">设计</text>
+    <rect x="700" y="269" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="820" y="291">实现</text>
+    <rect x="700" y="311" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="820" y="333">测试</text>
+    <rect x="700" y="353" width="240" height="34" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="820" y="375">评估</text>
+  </g>
+
+  <!-- 步骤间向下的箭头 -->
+  <g stroke="#4A90D9" stroke-width="1.4" fill="none" marker-end="url(#arrow)">
+    <path d="M180,219 L180,225"/>
+    <path d="M180,261 L180,267"/>
+    <path d="M180,303 L180,309"/>
+    <path d="M180,345 L180,351"/>
+    <path d="M500,219 L500,225"/>
+    <path d="M500,261 L500,267"/>
+    <path d="M500,303 L500,309"/>
+    <path d="M500,345 L500,351"/>
+    <path d="M820,219 L820,225"/>
+    <path d="M820,261 L820,267"/>
+    <path d="M820,303 L820,309"/>
+    <path d="M820,345 L820,351"/>
+  </g>
+
+  <!-- 列内 评估→需求细化 反馈环（虚线） -->
+  <g stroke="#D9A825" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arrowFeedback)">
+    <path d="M302,372 C332,372 332,202 302,203"/>
+    <path d="M622,372 C652,372 652,202 622,203"/>
+    <path d="M942,372 C972,372 972,202 942,203"/>
+  </g>
+  <g font-size="10" fill="#7A5B00">
+    <text x="318" y="290" text-anchor="middle" transform="rotate(90 318 290)">评估反馈</text>
+    <text x="638" y="290" text-anchor="middle" transform="rotate(90 638 290)">评估反馈</text>
+    <text x="958" y="290" text-anchor="middle" transform="rotate(90 958 290)">评估反馈</text>
+  </g>
+
+  <!-- 迭代交付物 -->
+  <g fill="#666666" text-anchor="middle" font-size="11">
+    <text x="180" y="438">交付：V0.1 最小可用匹配原型</text>
+    <text x="500" y="438">交付：V0.2 特征与解释增强</text>
+    <text x="820" y="438">交付：V1.0 试点可用版本</text>
+  </g>
+
+  <!-- 版本里程碑 -->
+  <rect x="70" y="452" width="860" height="56" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.4"/>
+  <text x="500" y="476" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#7A5B00">版本里程碑（每轮末产出可运行、可评估版本，逐轮精化）</text>
+  <text x="500" y="498" text-anchor="middle" font-size="12" fill="#7A5B00">V0.1 匹配原型 → V0.2 特征/解释增强 → V1.0 试点交付 · 模型指标随版本持续追踪</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,508 L500,536"/>
+  </g>
+
+  <!-- 反馈闭环与收敛 -->
+  <rect x="70" y="536" width="860" height="110" rx="8" fill="#F5F7FA" stroke="#8A94A6" stroke-width="1.3"/>
+  <text x="500" y="560" text-anchor="middle" font-size="13" font-weight="bold" fill="#333333">反馈闭环与收敛机制</text>
+  <text x="500" y="584" text-anchor="middle" font-size="12" fill="#444444">每轮评估结果（录用转化率、推荐准确率、HR 反馈）→ 形成「改进清单」→ 反馈到下一轮需求细化</text>
+  <text x="500" y="606" text-anchor="middle" font-size="12" fill="#444444">需求与设计随迭代逐轮收敛，质量逐轮提高 · 时间盒固定，重大变更集中在迭代边界处理</text>
+  <text x="500" y="632" text-anchor="middle" font-size="12" fill="#666666">需求模糊/算法效果不确定是本系统核心风险，通过迭代评估闭环逐轮化解</text>
+</svg>

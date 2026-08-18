@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'PingFang SC','Microsoft YaHei','SimHei',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f2937">遗留核心系统——再工程三阶段过程图</text>
+
+  <!-- 起点：遗留系统 -->
+  <rect x="60" y="58" width="210" height="64" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="165" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">遗留系统现状</text>
+  <text x="165" y="102" text-anchor="middle" font-size="12" fill="#4b5563">COBOL/主机 · 紧耦合</text>
+  <text x="165" y="116" text-anchor="middle" font-size="12" fill="#4b5563">无测试 · 维护成本高</text>
+
+  <!-- 阶段0 评估 -->
+  <rect x="345" y="58" width="210" height="64" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="450" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">0. 评估与决策</text>
+  <text x="450" y="102" text-anchor="middle" font-size="12" fill="#4b5563">业务价值 × 系统质量矩阵</text>
+  <text x="450" y="116" text-anchor="middle" font-size="12" fill="#4b5563">高价值低质量 → 再工程</text>
+
+  <line x1="270" y1="90" x2="345" y2="90" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="555" y1="90" x2="630" y2="90" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 三阶段容器 -->
+  <rect x="60" y="150" width="780" height="270" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="450" y="176" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">再工程三阶段</text>
+
+  <!-- 阶段1 逆向工程 -->
+  <rect x="80" y="196" width="220" height="200" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="190" y="220" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2937">① 逆向工程</text>
+  <text x="190" y="244" text-anchor="middle" font-size="12" fill="#4b5563">静态解析源码/数据字典</text>
+  <text x="190" y="264" text-anchor="middle" font-size="12" fill="#4b5563">恢复架构视图与依赖图</text>
+  <text x="190" y="284" text-anchor="middle" font-size="12" fill="#4b5563">恢复数据模型与作业流</text>
+  <text x="190" y="304" text-anchor="middle" font-size="12" fill="#4b5563">AI 代码理解辅助注释/文档</text>
+  <text x="190" y="324" text-anchor="middle" font-size="12" fill="#4b5563">产出：抽象模型 / 现状基线</text>
+
+  <!-- 阶段2 重构 -->
+  <rect x="340" y="196" width="220" height="200" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="450" y="220" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2937">② 重构（不改变外部行为）</text>
+  <text x="450" y="244" text-anchor="middle" font-size="12" fill="#4b5563">数据重构与模块拆分</text>
+  <text x="450" y="264" text-anchor="middle" font-size="12" fill="#4b5563">去除复制粘贴与重复逻辑</text>
+  <text x="450" y="284" text-anchor="middle" font-size="12" fill="#4b5563">提取服务边界/接口契约</text>
+  <text x="450" y="304" text-anchor="middle" font-size="12" fill="#4b5563">消除紧耦合，补齐单测</text>
+  <text x="450" y="324" text-anchor="middle" font-size="12" fill="#4b5563">产出：可测试的中间形态</text>
+
+  <!-- 阶段3 正向工程 -->
+  <rect x="600" y="196" width="220" height="200" rx="8" fill="#e7f6ec" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="710" y="220" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2937">③ 正向工程</text>
+  <text x="710" y="244" text-anchor="middle" font-size="12" fill="#4b5563">现代技术栈重写关键模块</text>
+  <text x="710" y="264" text-anchor="middle" font-size="12" fill="#4b5563">微服务/云原生拆分部署</text>
+  <text x="710" y="284" text-anchor="middle" font-size="12" fill="#4b5563">绞杀者模式增量替换</text>
+  <text x="710" y="304" text-anchor="middle" font-size="12" fill="#4b5563">优先高价值低耦合模块</text>
+  <text x="710" y="324" text-anchor="middle" font-size="12" fill="#4b5563">产出：新系统增量上线</text>
+
+  <line x1="300" y1="296" x2="340" y2="296" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="560" y1="296" x2="600" y2="296" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 验证与回归 -->
+  <rect x="200" y="444" width="500" height="70" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="450" y="468" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2937">并行运行与回归验证（等价性保障）</text>
+  <text x="450" y="490" text-anchor="middle" font-size="12" fill="#4b5563">新旧系统双轨并行 · 黄金数据集对账比对 · 全量回归测试</text>
+  <text x="450" y="506" text-anchor="middle" font-size="12" fill="#4b5563">行为等价才切换流量，不一致时一键回退</text>
+
+  <!-- 三阶段到验证 -->
+  <line x1="190" y1="396" x2="300" y2="444" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="450" y1="396" x2="450" y2="444" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="710" y1="396" x2="600" y2="444" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 智能运维承接 -->
+  <line x1="700" y1="514" x2="700" y2="554" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="600" y="556" width="240" height="40" rx="8" fill="#f9fafb" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="720" y="578" text-anchor="middle" font-size="13" fill="#1f2937">智能运维承接：监控/日志/告警/A-B 路由</text>
+
+  <!-- 反馈回路 -->
+  <line x1="220" y1="514" x2="180" y2="396" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <text x="140" y="466" font-size="11" fill="#dc2626">发现问题回溯三阶段迭代</text>
+</svg>

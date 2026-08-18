@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" font-family="'PingFang SC','Microsoft YaHei','SimHei',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f2937">智能客服系统分层架构图（混合架构：分层 + 微服务 + 事件驱动）</text>
+
+  <!-- 接入渠道层 -->
+  <text x="80" y="68" font-size="14" font-weight="bold" fill="#374151">接入渠道层</text>
+  <g fill="#e8f0fe" stroke="#3b82f6" stroke-width="1.5">
+    <rect x="80" y="74" width="170" height="44" rx="6"/>
+    <rect x="270" y="74" width="170" height="44" rx="6"/>
+    <rect x="460" y="74" width="170" height="44" rx="6"/>
+    <rect x="650" y="74" width="170" height="44" rx="6"/>
+  </g>
+  <g fill="#1f2937" font-size="14" text-anchor="middle">
+    <text x="165" y="100">Web 客户端</text>
+    <text x="355" y="100">移动 APP</text>
+    <text x="545" y="100">微信公众号</text>
+    <text x="735" y="100">电话坐席</text>
+  </g>
+
+  <!-- 网关层 -->
+  <line x1="450" y1="118" x2="450" y2="146" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="80" y="142" font-size="14" font-weight="bold" fill="#374151">API 网关层</text>
+  <rect x="80" y="148" width="740" height="40" rx="6" fill="#fff4e5" stroke="#d97706" stroke-width="1.5"/>
+  <text x="450" y="173" text-anchor="middle" font-size="14" fill="#1f2937">API 网关：统一认证 · 限流 · 路由 · 熔断降级</text>
+
+  <!-- 业务服务层 -->
+  <line x1="450" y1="188" x2="450" y2="210" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="80" y="206" font-size="14" font-weight="bold" fill="#374151">业务服务层（微服务）</text>
+  <g fill="#e7f6ec" stroke="#16a34a" stroke-width="1.5">
+    <rect x="80" y="212" width="140" height="96" rx="6"/>
+    <rect x="220" y="212" width="140" height="96" rx="6"/>
+    <rect x="360" y="212" width="140" height="96" rx="6"/>
+    <rect x="500" y="212" width="140" height="96" rx="6"/>
+    <rect x="640" y="212" width="140" height="96" rx="6"/>
+  </g>
+  <g fill="#1f2937" font-size="14" text-anchor="middle">
+    <text x="150" y="256">会话服务</text>
+    <text x="290" y="256">工单服务</text>
+    <text x="430" y="256">知识库服务</text>
+    <text x="570" y="256">订单服务</text>
+    <text x="710" y="256">坐席服务</text>
+  </g>
+  <g fill="#4b5563" font-size="12" text-anchor="middle">
+    <text x="150" y="278">会话状态</text>
+    <text x="290" y="278">工单流转</text>
+    <text x="430" y="278">FAQ 检索</text>
+    <text x="570" y="278">订单查询</text>
+    <text x="710" y="278">转人工</text>
+  </g>
+
+  <!-- AI 模型服务层 -->
+  <line x1="450" y1="308" x2="450" y2="330" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="80" y="326" font-size="14" font-weight="bold" fill="#374151">AI 模型服务层（AI 原生能力封装）</text>
+  <g fill="#f3e8ff" stroke="#9333ea" stroke-width="1.5">
+    <rect x="70" y="332" width="175" height="96" rx="6"/>
+    <rect x="265" y="332" width="175" height="96" rx="6"/>
+    <rect x="460" y="332" width="175" height="96" rx="6"/>
+    <rect x="655" y="332" width="175" height="96" rx="6"/>
+  </g>
+  <g fill="#1f2937" font-size="14" text-anchor="middle">
+    <text x="157.5" y="372">LLM 网关</text>
+    <text x="352.5" y="372">提示词编排</text>
+    <text x="547.5" y="372">向量检索</text>
+    <text x="742.5" y="372">对话管理</text>
+  </g>
+  <g fill="#4b5563" font-size="12" text-anchor="middle">
+    <text x="157.5" y="394">模型路由/计费</text>
+    <text x="352.5" y="394">Prompt 模板</text>
+    <text x="547.5" y="394">语义检索</text>
+    <text x="742.5" y="394">多轮上下文</text>
+  </g>
+  <rect x="80" y="436" width="740" height="26" rx="6" fill="#fff7ed" stroke="#f97316" stroke-width="1.2" stroke-dasharray="5,3"/>
+  <text x="450" y="454" text-anchor="middle" font-size="12" fill="#9a3412">降级策略：AI 服务异常时切换为模板话术 + 人工坐席兜底，保障核心业务可用性</text>
+
+  <!-- 数据层 -->
+  <line x1="450" y1="462" x2="450" y2="486" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="80" y="482" font-size="14" font-weight="bold" fill="#374151">数据层</text>
+  <g fill="#eef2f7" stroke="#4b5563" stroke-width="1.5">
+    <rect x="70" y="488" width="175" height="76" rx="6"/>
+    <rect x="265" y="488" width="175" height="76" rx="6"/>
+    <rect x="460" y="488" width="175" height="76" rx="6"/>
+    <rect x="655" y="488" width="175" height="76" rx="6"/>
+  </g>
+  <g fill="#1f2937" font-size="14" text-anchor="middle">
+    <text x="157.5" y="522">关系数据库</text>
+    <text x="352.5" y="522">向量数据库</text>
+    <text x="547.5" y="522">分布式缓存</text>
+    <text x="742.5" y="522">对象存储</text>
+  </g>
+  <g fill="#4b5563" font-size="12" text-anchor="middle">
+    <text x="157.5" y="544">工单/订单数据</text>
+    <text x="352.5" y="544">知识库向量</text>
+    <text x="547.5" y="544">会话热数据</text>
+    <text x="742.5" y="544">附件/日志</text>
+  </g>
+
+  <!-- 横切关注 -->
+  <line x1="450" y1="564" x2="450" y2="590" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="80" y="586" font-size="14" font-weight="bold" fill="#374151">横切关注（贯穿各层）</text>
+  <rect x="80" y="592" width="740" height="44" rx="6" fill="#fef3e2" stroke="#b45309" stroke-width="1.5"/>
+  <text x="450" y="618" text-anchor="middle" font-size="14" fill="#1f2937">可观测性（链路追踪 · 日志 · 指标） | 配置中心 | 安全与权限 | 事件驱动消息总线</text>
+</svg>

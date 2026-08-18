@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="700" fill="#FFFFFF"/>
+  <text x="500" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#333333">智能风控规则系统 · 模型驱动工程（MDE）架构图</text>
+
+  <!-- 元模型层 -->
+  <rect x="200" y="44" width="600" height="64" rx="8" fill="#EDE7F6" stroke="#7B6BB8" stroke-width="1.4"/>
+  <text x="500" y="66" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#4A3C8C">元模型层 · 规则元模型（规则 / 条件 / 动作 / 评分）</text>
+  <text x="500" y="90" text-anchor="middle" font-size="12" fill="#444444">定义规则建模语法与语义约束 · 提供模型校验规则（字段引用、动作合法性）</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,108 L500,134"/>
+  </g>
+
+  <!-- PIM -->
+  <rect x="200" y="136" width="600" height="64" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="500" y="158" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1F4E79">平台无关模型 PIM · 业务规则模型（反欺诈 / 征信 / 额度）</text>
+  <text x="500" y="182" text-anchor="middle" font-size="12" fill="#444444">以业务语义表达规则，不依赖 Java / Drools / 批处理等任何运行平台</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,200 L500,226"/>
+  </g>
+
+  <!-- 模型转换层 -->
+  <rect x="200" y="228" width="600" height="64" rx="8" fill="#FFF3E0" stroke="#D9822B" stroke-width="1.4"/>
+  <text x="500" y="250" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#8A5A1B">模型转换层 · 转换规则库（PIM → 多 PSM 映射）</text>
+  <text x="500" y="274" text-anchor="middle" font-size="12" fill="#444444">模式匹配：条件 → when、动作 → then · 记录模型元素与生成物映射（可追溯）</text>
+
+  <!-- 转换分叉箭头 -->
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,292 L500,308"/>
+    <path d="M194,310 L194,330"/>
+    <path d="M500,310 L500,330"/>
+    <path d="M806,310 L806,330"/>
+  </g>
+
+  <!-- PSM 三列 -->
+  <g font-size="12.5">
+    <rect x="50" y="332" width="288" height="70" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.3"/>
+    <text x="194" y="356" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#2E7D32">Java 微服务 PSM</text>
+    <text x="194" y="378" text-anchor="middle" font-size="11" fill="#444444">服务接口 / 事务 / 数据访问</text>
+    <text x="194" y="394" text-anchor="middle" font-size="11" fill="#444444">平台相关实现细节</text>
+    <rect x="356" y="332" width="288" height="70" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.3"/>
+    <text x="500" y="356" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#2E7D32">Drools 规则引擎 PSM</text>
+    <text x="500" y="378" text-anchor="middle" font-size="11" fill="#444444">规则包 / 会话 / 激活组</text>
+    <text x="500" y="394" text-anchor="middle" font-size="11" fill="#444444">规则引擎特有模型</text>
+    <rect x="662" y="332" width="288" height="70" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.3"/>
+    <text x="806" y="356" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#2E7D32">批处理 / 实时链路 PSM</text>
+    <text x="806" y="378" text-anchor="middle" font-size="11" fill="#444444">离线批量 / 实时在线配置</text>
+    <text x="806" y="394" text-anchor="middle" font-size="11" fill="#444444">吞吐与延迟约束</text>
+  </g>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M194,402 L194,430"/>
+    <path d="M500,402 L500,430"/>
+    <path d="M806,402 L806,430"/>
+  </g>
+
+  <!-- 生成与运行层 -->
+  <g font-size="12.5">
+    <rect x="50" y="432" width="288" height="76" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.3"/>
+    <text x="194" y="454" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1F4E79">代码生成器</text>
+    <text x="194" y="476" text-anchor="middle" font-size="11" fill="#444444">生成 Java 微服务实现</text>
+    <text x="194" y="494" text-anchor="middle" font-size="11" fill="#444444">接口 / 实体 / 服务代码</text>
+    <rect x="356" y="432" width="288" height="76" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.3"/>
+    <text x="500" y="454" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1F4E79">规则编译器</text>
+    <text x="500" y="476" text-anchor="middle" font-size="11" fill="#444444">生成 Drools 规则包（drl）</text>
+    <text x="500" y="494" text-anchor="middle" font-size="11" fill="#444444">并完成规则编译校验</text>
+    <rect x="662" y="432" width="288" height="76" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.3"/>
+    <text x="806" y="454" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1F4E79">配置生成器</text>
+    <text x="806" y="476" text-anchor="middle" font-size="11" fill="#444444">生成批处理 / 实时链路配置</text>
+    <text x="806" y="494" text-anchor="middle" font-size="11" fill="#444444">任务调度 / 参数配置</text>
+  </g>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M194,508 L194,534"/>
+    <path d="M500,508 L500,534"/>
+    <path d="M806,508 L806,534"/>
+  </g>
+
+  <!-- 运行平台 -->
+  <rect x="200" y="536" width="600" height="62" rx="8" fill="#F5F7FA" stroke="#8A94A6" stroke-width="1.3"/>
+  <text x="500" y="558" text-anchor="middle" font-size="13" font-weight="bold" fill="#333333">运行平台：Java 微服务 · Drools 规则引擎 · 批处理/实时双链路</text>
+  <text x="500" y="580" text-anchor="middle" font-size="12" fill="#444444">同一业务规则 PIM 一处维护，各平台实现自动生成并保持一致</text>
+
+  <!-- 可追溯性 -->
+  <g stroke="#D9A825" stroke-width="1.5" fill="none" stroke-dasharray="5,4">
+    <path d="M944,136 L944,508"/>
+  </g>
+  <text x="962" y="330" text-anchor="middle" font-size="11" fill="#7A5B00" transform="rotate(90 962 330)">模型—代码可追溯（modelId 双向映射）</text>
+  <text x="48" y="330" text-anchor="middle" font-size="11" fill="#7A5B00" transform="rotate(-90 48 330)">模型校验前置：不合格 PIM 禁止进入转换流水线</text>
+</svg>

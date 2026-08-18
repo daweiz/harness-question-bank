@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+    <marker id="arrowFeedback" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="700" fill="#FFFFFF"/>
+  <text x="500" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#333333">医疗器械软件项目 · 配置审计流程图</text>
+
+  <!-- 顶部基线 -->
+  <rect x="160" y="42" width="680" height="58" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="500" y="62" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1F4E79">配置库 + 已批准基线（需求 / 设计 / 代码 / 产品基线）</text>
+  <text x="500" y="86" text-anchor="middle" font-size="12" fill="#444444">审计以已批准基线为权威依据，逐项核验配置项一致性</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,100 L500,116"/>
+    <path d="M270,116 L270,132"/>
+    <path d="M730,116 L730,132"/>
+  </g>
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none">
+    <path d="M270,116 L730,116"/>
+  </g>
+
+  <!-- FCA 列 -->
+  <rect x="60" y="134" width="420" height="40" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="270" y="158" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1F4E79">功能配置审计 FCA（做得对：实现符合需求/设计）</text>
+  <g font-size="12.5">
+    <rect x="60" y="186" width="420" height="44" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="270" y="212" text-anchor="middle" fill="#1F4E79">提取需求 / 设计批准基线，建立需求追溯矩阵</text>
+    <rect x="60" y="246" width="420" height="44" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="270" y="272" text-anchor="middle" fill="#1F4E79">核验实现的功能与需求、设计逐项一致</text>
+    <rect x="60" y="306" width="420" height="44" rx="6" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.2"/>
+    <text x="270" y="332" text-anchor="middle" fill="#1F4E79">核验测试证据覆盖 + 无未批准功能</text>
+    <rect x="60" y="366" width="420" height="44" rx="6" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.2"/>
+    <text x="270" y="392" text-anchor="middle" fill="#2E7D32">输出 FCA 报告（实现 / 证据 / 偏差清单）</text>
+  </g>
+  <g stroke="#4A90D9" stroke-width="1.4" fill="none" marker-end="url(#arrow)">
+    <path d="M270,230 L270,244"/>
+    <path d="M270,290 L270,304"/>
+    <path d="M270,350 L270,364"/>
+  </g>
+
+  <!-- PCA 列 -->
+  <rect x="520" y="134" width="420" height="40" rx="8" fill="#FFF3E0" stroke="#D9822B" stroke-width="1.4"/>
+  <text x="730" y="158" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#8A5A1B">物理配置审计 PCA（交得全：交付与产品基线一致）</text>
+  <g font-size="12.5">
+    <rect x="520" y="186" width="420" height="44" rx="6" fill="#FFFFFF" stroke="#D9822B" stroke-width="1.2"/>
+    <text x="730" y="212" text-anchor="middle" fill="#8A5A1B">提取产品基线 + 配置项清单（源码/产物/文档）</text>
+    <rect x="520" y="246" width="420" height="44" rx="6" fill="#FFFFFF" stroke="#D9822B" stroke-width="1.2"/>
+    <text x="730" y="272" text-anchor="middle" fill="#8A5A1B">配置项 → 版本 → 哈希 客观比对（可复现构建）</text>
+    <rect x="520" y="306" width="420" height="44" rx="6" fill="#FFFFFF" stroke="#D9822B" stroke-width="1.2"/>
+    <text x="730" y="332" text-anchor="middle" fill="#8A5A1B">核验无遗漏、无多余、无未批准内容</text>
+    <rect x="520" y="366" width="420" height="44" rx="6" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.2"/>
+    <text x="730" y="392" text-anchor="middle" fill="#2E7D32">输出 PCA 报告（清单 / 版本 / 漂移项）</text>
+  </g>
+  <g stroke="#D9822B" stroke-width="1.4" fill="none" marker-end="url(#arrow)">
+    <path d="M730,230 L730,244"/>
+    <path d="M730,290 L730,304"/>
+    <path d="M730,350 L730,364"/>
+  </g>
+
+  <!-- 汇合 -->
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M270,410 L270,438"/>
+    <path d="M730,410 L730,438"/>
+  </g>
+
+  <!-- 偏差整改闭环 -->
+  <rect x="160" y="440" width="680" height="78" rx="8" fill="#FDECEA" stroke="#D9534F" stroke-width="1.4"/>
+  <text x="500" y="462" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#B03A2E">偏差整改闭环（FCA / PCA 发现偏差统一处理，复审计直至清零）</text>
+  <text x="500" y="486" text-anchor="middle" font-size="12" fill="#B03A2E">记录偏差 → 走正式变更流程 → 更新基线与配置项 → 复审计</text>
+  <text x="500" y="506" text-anchor="middle" font-size="12" fill="#B03A2E">含「灰色改动」排查：有代码改动但无变更请求者一律列入整改</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,518 L500,544"/>
+  </g>
+
+  <!-- 审计报告 -->
+  <rect x="160" y="546" width="680" height="72" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.4"/>
+  <text x="500" y="569" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#7A5B00">审计报告（FCA + PCA + 整改记录）→ 签字批准发布</text>
+  <text x="500" y="593" text-anchor="middle" font-size="12" fill="#7A5B00">作为正式版本发布与医疗器械注册申报的配置管理依据</text>
+  <text x="500" y="611" text-anchor="middle" font-size="12" fill="#7A5B00">审计结果可量化、可追溯、可复现</text>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="660" viewBox="0 0 1000 660" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+    <marker id="arrowD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8E6BB8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="660" fill="#FFFFFF"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333333">极限编程（XP）实施过程结构图</text>
+
+  <!-- 规划游戏 -->
+  <rect x="150" y="48" width="700" height="48" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="500" y="77" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F4E79">规划游戏：编写用户故事 → 发布计划（按价值与风险排序）</text>
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,96 L500,135"/>
+  </g>
+
+  <!-- 迭代容器 -->
+  <rect x="120" y="135" width="760" height="390" rx="12" fill="#F5F9FF" stroke="#4A90D9" stroke-width="1.2" stroke-dasharray="8,4"/>
+  <text x="140" y="160" font-size="14" font-weight="bold" fill="#4A90D9">迭代循环（每 1–2 周，逐次循环）</text>
+
+  <!-- 左列：迭代内活动 -->
+  <g>
+    <rect x="200" y="168" width="400" height="56" rx="8" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.4"/>
+    <rect x="200" y="240" width="400" height="56" rx="8" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.4"/>
+    <rect x="200" y="312" width="400" height="56" rx="8" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.4"/>
+    <rect x="200" y="384" width="400" height="56" rx="8" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.4"/>
+    <rect x="200" y="456" width="400" height="56" rx="8" fill="#FFFFFF" stroke="#4A90D9" stroke-width="1.4"/>
+  </g>
+  <g fill="#333333" text-anchor="middle" font-size="13.5">
+    <text x="400" y="200">迭代计划会议（选故事 · 拆任务 · 估工作量）</text>
+    <text x="400" y="272">TDD 测试驱动开发（红 → 绿 → 重构）</text>
+    <text x="400" y="344">结对编程 + 持续集成（提交即触发构建与测试）</text>
+    <text x="400" y="416">现场客户验收测试（验收测试驱动开发）</text>
+    <text x="400" y="488">小版本发布（可运行增量交付）</text>
+  </g>
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M400,224 L400,240"/>
+    <path d="M400,296 L400,312"/>
+    <path d="M400,368 L400,384"/>
+    <path d="M400,440 L400,456"/>
+  </g>
+
+  <!-- 左列循环回边 -->
+  <g stroke="#8E6BB8" stroke-width="1.4" stroke-dasharray="6,4" fill="none" marker-end="url(#arrow)">
+    <path d="M200,484 L128,484 L128,196 L200,196"/>
+  </g>
+  <text x="122" y="340" text-anchor="middle" font-size="11.5" fill="#5B3E86" transform="rotate(-90 122 340)">下一迭代</text>
+
+  <!-- 右列：XP 支柱 -->
+  <text x="750" y="160" text-anchor="middle" font-size="14" font-weight="bold" fill="#7A5B00">XP 工程支柱 / 价值观</text>
+  <g>
+    <rect x="660" y="168" width="180" height="52" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.3"/>
+    <rect x="660" y="232" width="180" height="52" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.3"/>
+    <rect x="660" y="296" width="180" height="52" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.3"/>
+    <rect x="660" y="360" width="180" height="52" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.3"/>
+    <rect x="660" y="424" width="180" height="52" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.3"/>
+  </g>
+  <g fill="#7A5B00" text-anchor="middle" font-size="13">
+    <text x="750" y="199">简单设计</text>
+    <text x="750" y="263">持续重构</text>
+    <text x="750" y="327">集体代码所有权</text>
+    <text x="750" y="391">编码规范</text>
+    <text x="750" y="455">可持续节奏（40h/周）</text>
+  </g>
+
+  <!-- 发布与反馈 -->
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M400,512 L400,552"/>
+  </g>
+  <rect x="250" y="552" width="500" height="50" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+  <text x="500" y="574" text-anchor="middle" font-size="13" font-weight="bold" fill="#2E7D32">产品发布 → 客户反馈</text>
+  <text x="500" y="594" text-anchor="middle" font-size="12" fill="#2E7D32">收集新用户故事，更新发布计划</text>
+
+  <g stroke="#8E6BB8" stroke-width="1.4" stroke-dasharray="6,4" fill="none" marker-end="url(#arrow)">
+    <path d="M750,577 L900,577 L900,78 L850,78"/>
+  </g>
+  <text x="908" y="330" text-anchor="middle" font-size="11.5" fill="#5B3E86" transform="rotate(-90 908 330)">反馈驱动发布计划更新</text>
+</svg>

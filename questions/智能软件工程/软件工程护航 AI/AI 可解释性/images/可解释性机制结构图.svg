@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 660" font-family="'PingFang SC','Microsoft YaHei','SimHei',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f2937">肺癌 CT 筛查 AI 辅助诊断系统——可解释性机制结构图</text>
+
+  <!-- 顶部：诊断主链路 -->
+  <text x="80" y="66" font-size="14" font-weight="bold" fill="#374151">诊断主链路</text>
+  <rect x="80" y="72" width="180" height="60" rx="6" fill="#e8f0fe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="170" y="102" text-anchor="middle" font-size="14" fill="#1f2937">输入：CT 影像 + 临床特征</text>
+  <line x1="260" y1="102" x2="318" y2="102" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="320" y="72" width="200" height="60" rx="6" fill="#f3e8ff" stroke="#9333ea" stroke-width="1.5"/>
+  <text x="420" y="102" text-anchor="middle" font-size="14" fill="#1f2937">AI 诊断模型（黑盒）</text>
+  <text x="420" y="120" text-anchor="middle" font-size="12" fill="#4b5563">输出：肺癌风险评分</text>
+  <line x1="520" y1="102" x2="578" y2="102" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="580" y="72" width="240" height="60" rx="6" fill="#e7f6ec" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="700" y="102" text-anchor="middle" font-size="14" fill="#1f2937">诊断结论（风险等级）</text>
+
+  <!-- 从模型下引出解释需求 -->
+  <line x1="420" y1="132" x2="420" y2="158" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="430" y="152" font-size="12" fill="#6b7280">触发生成解释</text>
+
+  <!-- 可解释性机制容器 -->
+  <rect x="60" y="162" width="780" height="400" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="450" y="188" text-anchor="middle" font-size="16" font-weight="bold" fill="#9a3412">可解释性机制</text>
+
+  <!-- 阶段1 解释需求配置 -->
+  <rect x="80" y="206" width="160" height="120" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="160" y="230" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">解释需求配置</text>
+  <text x="160" y="252" text-anchor="middle" font-size="12" fill="#4b5563">受众：医生 / 监管 / 患者</text>
+  <text x="160" y="272" text-anchor="middle" font-size="12" fill="#4b5563">时机：事前 / 事后</text>
+  <text x="160" y="292" text-anchor="middle" font-size="12" fill="#4b5563">粒度：全局 / 局部</text>
+  <text x="160" y="312" text-anchor="middle" font-size="12" fill="#4b5563">程度：合规要求分级</text>
+  <line x1="240" y1="266" x2="298" y2="266" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 阶段2 解释方法库 -->
+  <rect x="300" y="206" width="160" height="120" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="380" y="230" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">解释方法库</text>
+  <text x="380" y="254" text-anchor="middle" font-size="12" fill="#4b5563">LIME（局部特征贡献）</text>
+  <text x="380" y="274" text-anchor="middle" font-size="12" fill="#4b5563">SHAP（Shapley 值）</text>
+  <text x="380" y="294" text-anchor="middle" font-size="12" fill="#4b5563">Grad-CAM 热力图</text>
+  <text x="380" y="314" text-anchor="middle" font-size="12" fill="#4b5563">规则 / 自然语言摘要</text>
+  <line x1="460" y1="266" x2="518" y2="266" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 阶段3 解释生成引擎 -->
+  <rect x="520" y="206" width="160" height="120" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="600" y="230" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">解释生成引擎</text>
+  <text x="600" y="256" text-anchor="middle" font-size="12" fill="#4b5563">局部解释</text>
+  <text x="600" y="276" text-anchor="middle" font-size="12" fill="#4b5563">（本例影像病灶区域）</text>
+  <text x="600" y="300" text-anchor="middle" font-size="12" fill="#4b5563">全局解释</text>
+  <text x="600" y="320" text-anchor="middle" font-size="12" fill="#4b5563">（特征重要性总览）</text>
+  <line x1="680" y1="266" x2="738" y2="266" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 阶段4 解释呈现与集成 -->
+  <rect x="740" y="206" width="90" height="120" rx="6" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="785" y="230" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">解释呈现</text>
+  <text x="785" y="254" text-anchor="middle" font-size="12" fill="#4b5563">影像热力图</text>
+  <text x="785" y="274" text-anchor="middle" font-size="12" fill="#4b5563">叠加</text>
+  <text x="785" y="296" text-anchor="middle" font-size="12" fill="#4b5563">自然语言</text>
+  <text x="785" y="316" text-anchor="middle" font-size="12" fill="#4b5563">摘要</text>
+
+  <!-- 呈现下箭头到审计评估 -->
+  <line x1="785" y1="326" x2="785" y2="368" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 阶段5 审计与质量评估 -->
+  <rect x="200" y="370" width="560" height="110" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="480" y="394" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">解释审计与质量评估</text>
+  <text x="480" y="418" text-anchor="middle" font-size="12" fill="#4b5563">解释留痕存储：解释记录 · 模型版本 · 输入快照（供监管追溯）</text>
+  <text x="480" y="440" text-anchor="middle" font-size="12" fill="#4b5563">质量指标：忠实度（fidelity） · 稳定性 · 可理解性</text>
+  <text x="480" y="462" text-anchor="middle" font-size="12" fill="#4b5563">评估结果反馈：不达标时触发解释方法调整或模型复核</text>
+
+  <!-- 反馈回路 -->
+  <line x1="300" y1="480" x2="380" y2="326" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <text x="338" y="410" text-anchor="middle" font-size="11" fill="#dc2626" transform="rotate(-64 338 410)">评估反馈</text>
+
+  <!-- 底部：医生端交互 -->
+  <rect x="60" y="590" width="780" height="46" rx="6" fill="#f9fafb" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="450" y="618" text-anchor="middle" font-size="14" fill="#1f2937">医生端集成：可展开/收起解释 · 解释生成超时降级为「提示人工复核」 · 解释不改变模型诊断逻辑</text>
+</svg>

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="700" fill="#FFFFFF"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333333">智能客服系统 · 会话管理模块编程实现结构图</text>
+
+  <!-- 实现流程 -->
+  <text x="500" y="56" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F4E79">实现策略流程（接口先行 · 增量实现 · 自测护航）</text>
+
+  <g>
+    <rect x="40"  y="70"  width="160" height="64" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.3"/>
+    <rect x="220" y="70"  width="160" height="64" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.3"/>
+    <rect x="400" y="70"  width="160" height="64" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.3"/>
+    <rect x="580" y="70"  width="160" height="64" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.3"/>
+    <rect x="760" y="70"  width="200" height="64" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.3"/>
+  </g>
+  <g fill="#1F4E79" text-anchor="middle">
+    <text x="120" y="94" font-size="12.5" font-weight="bold">1 定义接口契约</text>
+    <text x="300" y="94" font-size="12.5" font-weight="bold">2 骨架代码</text>
+    <text x="480" y="94" font-size="12.5" font-weight="bold">3 增量填充</text>
+    <text x="660" y="94" font-size="12.5" font-weight="bold">4 单元自测</text>
+    <text x="860" y="94" font-size="12.5" font-weight="bold">5 集成与重构</text>
+  </g>
+  <g fill="#444444" text-anchor="middle" font-size="11">
+    <text x="120" y="118">会话接口、DTO、异常契约</text>
+    <text x="300" y="118">签名与边界先就位</text>
+    <text x="480" y="118">按功能块逐段实现</text>
+    <text x="660" y="118">驱动用例先行验证</text>
+    <text x="860" y="118">联调、评审、消除坏味道</text>
+  </g>
+  <g stroke="#4A90D9" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <path d="M200,102 L218,102"/>
+    <path d="M380,102 L398,102"/>
+    <path d="M560,102 L578,102"/>
+    <path d="M740,102 L758,102"/>
+  </g>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,134 L500,170"/>
+  </g>
+
+  <!-- 模块组件结构 -->
+  <text x="500" y="160" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F4E79"/>
+  <rect x="330" y="172" width="340" height="50" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+  <text x="500" y="194" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#2E7D32">会话管理模块（模块门面 SessionManager）</text>
+  <text x="500" y="212" text-anchor="middle" font-size="11.5" fill="#2E7D32">统一对外接口：createSession / routeSession / persistSession / closeSession</text>
+
+  <g stroke="#4A90D9" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <path d="M300,222 L170,250"/>
+    <path d="M390,222 L300,250"/>
+    <path d="M500,222 L500,250"/>
+    <path d="M610,222 L700,250"/>
+    <path d="M700,222 L830,250"/>
+  </g>
+
+  <g>
+    <rect x="60"  y="252" width="190" height="150" rx="8" fill="#F5F7FA" stroke="#8A94A6" stroke-width="1.3"/>
+    <rect x="270" y="252" width="190" height="150" rx="8" fill="#F5F7FA" stroke="#8A94A6" stroke-width="1.3"/>
+    <rect x="480" y="252" width="190" height="150" rx="8" fill="#F5F7FA" stroke="#8A94A6" stroke-width="1.3"/>
+    <rect x="690" y="252" width="190" height="150" rx="8" fill="#F5F7FA" stroke="#8A94A6" stroke-width="1.3"/>
+  </g>
+  <g fill="#333333" text-anchor="middle">
+    <text x="155" y="276" font-size="12.5" font-weight="bold">会话创建</text>
+    <text x="365" y="276" font-size="12.5" font-weight="bold">会话路由</text>
+    <text x="575" y="276" font-size="12.5" font-weight="bold">会话持久化</text>
+    <text x="785" y="276" font-size="12.5" font-weight="bold">会话清理</text>
+  </g>
+  <g fill="#444444" text-anchor="middle" font-size="11">
+    <text x="155" y="300">创建唯一会话 ID</text>
+    <text x="365" y="300">按规则分配服务节点</text>
+    <text x="575" y="300">状态存取（Redis/DB）</text>
+    <text x="785" y="300">超时会话回收</text>
+    <text x="155" y="322">初始化上下文与状态</text>
+    <text x="365" y="322">负载均衡策略接入</text>
+    <text x="575" y="322">消息队列可靠写入</text>
+    <text x="785" y="322">过期标记与资源释放</text>
+    <text x="155" y="344">记录创建时间与来源</text>
+    <text x="365" y="344">故障转移重路由</text>
+    <text x="575" y="344">幂等写入 / 重试</text>
+    <text x="785" y="344">清理审计日志</text>
+  </g>
+  <g fill="#8A94A6" text-anchor="middle" font-size="11">
+    <text x="155" y="380">接口：createSession()</text>
+    <text x="365" y="380">接口：routeSession()</text>
+    <text x="575" y="380">接口：persistSession()</text>
+    <text x="785" y="380">接口：closeSession()</text>
+  </g>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,402 L500,438"/>
+  </g>
+
+  <!-- 配套保障 -->
+  <rect x="200" y="440" width="600" height="70" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.4"/>
+  <text x="500" y="464" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#7A5B00">实现配套保障</text>
+  <text x="500" y="487" text-anchor="middle" font-size="12" fill="#7A5B00">防御式编程：参数校验、空值与异常前置检查、安全默认值</text>
+  <text x="500" y="505" text-anchor="middle" font-size="12" fill="#7A5B00">单元测试覆盖核心路径 · 圈复杂度控制与代码评审 · 命名与注释遵循编码规范</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,510 L500,546"/>
+  </g>
+
+  <!-- 输出 -->
+  <rect x="200" y="548" width="600" height="60" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="500" y="572" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1F4E79">可编译、可测试、可集成的会话管理模块实现</text>
+  <text x="500" y="594" text-anchor="middle" font-size="12" fill="#444444">接口契约文档 + 组件实现代码 + 单元测试 + 集成自测报告</text>
+</svg>

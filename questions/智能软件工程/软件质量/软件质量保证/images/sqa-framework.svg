@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="620" fill="#ffffff"/>
+
+  <text x="480" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1f2937">软件质量保证（SQA）体系框架</text>
+
+  <!-- 质量目标 -->
+  <rect x="60" y="56" width="840" height="54" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="480" y="80" font-size="14" font-weight="bold" text-anchor="middle" fill="#075985">质量目标：以可度量的质量属性定义质量目标</text>
+  <text x="480" y="100" font-size="13" text-anchor="middle" fill="#075985">功能性 · 可靠性 · 可用性 · 效率 · 可维护性 · 可移植性</text>
+
+  <!-- 目标到三支柱箭头 -->
+  <line x1="195" y1="110" x2="195" y2="164" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="110" x2="480" y2="164" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="765" y1="110" x2="765" y2="164" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 支柱一：过程保证 -->
+  <rect x="60" y="170" width="270" height="190" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="195" y="198" font-size="15" font-weight="bold" text-anchor="middle" fill="#065f46">过程保证（预防）</text>
+  <text x="82" y="230" font-size="13" fill="#065f46">过程与编码规范</text>
+  <text x="82" y="258" font-size="13" fill="#065f46">人员培训与认证</text>
+  <text x="82" y="286" font-size="13" fill="#065f46">过程与配置审计</text>
+  <text x="82" y="314" font-size="13" fill="#065f46">供应商质量保证</text>
+
+  <!-- 支柱二：技术评审 -->
+  <rect x="345" y="170" width="270" height="190" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="480" y="198" font-size="15" font-weight="bold" text-anchor="middle" fill="#92400e">技术评审（发现）</text>
+  <text x="367" y="230" font-size="13" fill="#92400e">需求与设计评审</text>
+  <text x="367" y="258" font-size="13" fill="#92400e">代码走查 / 检查</text>
+  <text x="367" y="286" font-size="13" fill="#92400e">测试用例评审</text>
+  <text x="367" y="314" font-size="13" fill="#92400e">里程碑技术评审</text>
+
+  <!-- 支柱三：验证与确认 -->
+  <rect x="630" y="170" width="270" height="190" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="765" y="198" font-size="15" font-weight="bold" text-anchor="middle" fill="#5b21b6">验证与确认（验证）</text>
+  <text x="652" y="230" font-size="13" fill="#5b21b6">单元 / 集成 / 系统测试</text>
+  <text x="652" y="258" font-size="13" fill="#5b21b6">静态分析与审查</text>
+  <text x="652" y="286" font-size="13" fill="#5b21b6">验收与独立 V&amp;V</text>
+  <text x="652" y="314" font-size="13" fill="#5b21b6">自动化回归验证</text>
+
+  <!-- 质量度量 -->
+  <rect x="60" y="396" width="840" height="56" rx="8" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="480" y="424" font-size="14" font-weight="bold" text-anchor="middle" fill="#0f766e">质量度量：缺陷密度 · 缺陷去除率 · 测试覆盖率 · 千行缺陷率</text>
+  <text x="480" y="444" font-size="12" text-anchor="middle" fill="#0f766e">度量结果对照质量目标评估达成度，识别薄弱环节</text>
+
+  <!-- 缺陷管理 -->
+  <rect x="60" y="468" width="840" height="56" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="480" y="496" font-size="14" font-weight="bold" text-anchor="middle" fill="#991b1b">缺陷管理闭环：记录 → 分析 → 修复 → 回归验证 → 预防</text>
+  <text x="480" y="516" font-size="12" text-anchor="middle" fill="#991b1b">缺陷数据反馈给过程保证与技术评审，驱动持续改进</text>
+
+  <!-- 持续改进回路 -->
+  <line x1="925" y1="524" x2="925" y2="118" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="944" y="330" font-size="13" font-weight="bold" fill="#475569" transform="rotate(-90 944 330)">持续改进</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="760" fill="#FFFFFF"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333333">账户系统概要设计 · 正式技术评审（FTR）流程结构图</text>
+
+  <!-- 阶段 1 评审准备 -->
+  <rect x="250" y="50" width="500" height="78" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="500" y="72" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F4E79">阶段一 · 评审准备</text>
+  <text x="500" y="95" text-anchor="middle" font-size="12" fill="#444444">选定评审对象与评审员 → 指定主持人/记录员 → 制作评审检查单 → 提前分发材料（作者不主导）</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,128 L500,162"/>
+  </g>
+
+  <!-- 阶段 2 评审会议 -->
+  <rect x="250" y="162" width="500" height="92" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="500" y="184" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F4E79">阶段二 · 评审会议</text>
+  <text x="500" y="207" text-anchor="middle" font-size="12" fill="#444444">作者引导逐模块走查 → 评审员依检查单逐项核对（结构/接口/边界）</text>
+  <text x="500" y="230" text-anchor="middle" font-size="12" fill="#444444">记录员如实登记缺陷（只记录、不在会上修改）→ 每处缺陷给出级别与位置</text>
+  <text x="500" y="250" text-anchor="middle" font-size="12" fill="#444444">结论：通过 / 条件通过 / 不通过（返工后复审）</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,254 L500,288"/>
+  </g>
+
+  <!-- 阶段 3 缺陷分级与修复计划 -->
+  <rect x="250" y="288" width="500" height="78" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.4"/>
+  <text x="500" y="310" text-anchor="middle" font-size="14" font-weight="bold" fill="#7A5B00">阶段三 · 缺陷分级与修复计划</text>
+  <text x="500" y="333" text-anchor="middle" font-size="12" fill="#7A5B00">重大（影响接口/安全，必须返工）· 一般（功能不完整）· 轻微（文档/风格）</text>
+  <text x="500" y="356" text-anchor="middle" font-size="12" fill="#7A5B00">作者制定修复计划：责任人、修改方案、完成期限、影响范围评估</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,366 L500,400"/>
+  </g>
+
+  <!-- 阶段 4 修复与复审 -->
+  <rect x="250" y="400" width="500" height="78" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+  <text x="500" y="422" text-anchor="middle" font-size="14" font-weight="bold" fill="#2E7D32">阶段四 · 缺陷修复与复审</text>
+  <text x="500" y="445" text-anchor="middle" font-size="12" fill="#2E7D32">作者按计划修改 → 主持人复核清单逐项确认 → 未闭环项跟踪</text>
+  <text x="500" y="468" text-anchor="middle" font-size="12" fill="#2E7D32">复审未通过 → 回到修改；通过 → 评审闭环、评审结论生效</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,478 L500,512"/>
+  </g>
+
+  <!-- 阶段 5 评审度量与归档 -->
+  <rect x="250" y="512" width="500" height="78" rx="8" fill="#F0E6F6" stroke="#8E6BB8" stroke-width="1.4"/>
+  <text x="500" y="534" text-anchor="middle" font-size="14" font-weight="bold" fill="#5B3E86">阶段五 · 评审度量与归档</text>
+  <text x="500" y="557" text-anchor="middle" font-size="12" fill="#5B3E86">缺陷密度 = 缺陷数 / 千行设计 · 评审效率 = 评审工作量 / 缺陷数 · 检查单命中率</text>
+  <text x="500" y="580" text-anchor="middle" font-size="12" fill="#5B3E86">归档：评审记录、缺陷清单、结论与度量 → 反哺下一轮评审</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,590 L500,624"/>
+  </g>
+
+  <!-- 输出 -->
+  <rect x="250" y="624" width="500" height="60" rx="8" fill="#FDECEA" stroke="#D9534F" stroke-width="1.4"/>
+  <text x="500" y="648" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#A03020">评审输出</text>
+  <text x="500" y="670" text-anchor="middle" font-size="12" fill="#A03020">缺陷清单（分级可跟踪）· 评审结论 · 修复验证记录 · 评审度量报告</text>
+
+  <!-- 侧边角色说明 -->
+  <rect x="30" y="50" width="180" height="230" rx="8" fill="#F5F7FA" stroke="#8A94A6" stroke-width="1.3"/>
+  <text x="120" y="74" text-anchor="middle" font-size="13" font-weight="bold" fill="#333333">评审角色分工</text>
+  <text x="120" y="100" text-anchor="middle" font-size="12" fill="#444444">主持人：控制节奏与结论</text>
+  <text x="120" y="122" text-anchor="middle" font-size="12" fill="#444444">记录员：如实登记缺陷</text>
+  <text x="120" y="144" text-anchor="middle" font-size="12" fill="#444444">评审员：核对检查单</text>
+  <text x="120" y="166" text-anchor="middle" font-size="12" fill="#444444">作者：引导走查与修复</text>
+  <text x="120" y="188" text-anchor="middle" font-size="12" fill="#444444">关键约束</text>
+  <text x="120" y="210" text-anchor="middle" font-size="11.5" fill="#666666">· 作者不担任主持人</text>
+  <text x="120" y="230" text-anchor="middle" font-size="11.5" fill="#666666">· 会中只记录不修改</text>
+  <text x="120" y="250" text-anchor="middle" font-size="11.5" fill="#666666">· 缺陷必须闭环跟踪</text>
+</svg>

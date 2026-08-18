@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+    <marker id="arrowFeedback" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="700" fill="#FFFFFF"/>
+  <text x="500" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#333333">分布式电商订单系统 · 代码调试流程图</text>
+
+  <!-- 故障现场 -->
+  <rect x="280" y="42" width="440" height="40" rx="8" fill="#FDECEA" stroke="#D9534F" stroke-width="1.4"/>
+  <text x="500" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#B03A2E">故障现场：高并发下偶发「订单状态回退 / 库存重复扣减」</text>
+  <text x="500" y="78" text-anchor="middle" font-size="11" fill="#B03A2E">低峰期无法稳定复现，重启节点后现象暂时消失</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,84 L500,106"/>
+  </g>
+
+  <!-- 阶段一 -->
+  <rect x="240" y="108" width="520" height="92" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="500" y="130" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1F4E79">阶段一 · 问题复现（可复现优先）</text>
+  <text x="500" y="154" text-anchor="middle" font-size="12" fill="#444444">构造并发压测场景、限定库存与节点、缩小触发时间窗口</text>
+  <text x="500" y="174" text-anchor="middle" font-size="12" fill="#444444">产出：最小可复现用例 / 复现概率报告</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,200 L500,224"/>
+  </g>
+
+  <!-- 阶段二 -->
+  <rect x="240" y="226" width="520" height="92" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="500" y="248" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1F4E79">阶段二 · 数据收集（可观测）</text>
+  <text x="500" y="272" text-anchor="middle" font-size="12" fill="#444444">traceId 全链路追踪（跨订单/库存/支付透传）、增强日志埋点</text>
+  <text x="500" y="292" text-anchor="middle" font-size="12" fill="#444444">线程转储、数据库/缓存快照，完整采集故障现场</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,318 L500,342"/>
+  </g>
+
+  <!-- 阶段三 -->
+  <rect x="240" y="344" width="520" height="92" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="500" y="366" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1F4E79">阶段三 · 定位分析（假设驱动 + 二分）</text>
+  <text x="500" y="390" text-anchor="middle" font-size="12" fill="#444444">状态回退/重复扣减两类假设 → 二分定位到具体代码路径</text>
+  <text x="500" y="410" text-anchor="middle" font-size="12" fill="#444444">故障隔离（摘流可疑节点）+ 复现用例验证，确认根因</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,436 L500,460"/>
+  </g>
+
+  <!-- 阶段四 -->
+  <rect x="240" y="462" width="520" height="92" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+  <text x="500" y="484" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#2E7D32">阶段四 · 修复验证（修复 + 回归）</text>
+  <text x="500" y="508" text-anchor="middle" font-size="12" fill="#444444">状态机禁止回退 + 幂等扣库存等修复落地，单元/集成/回归测试</text>
+  <text x="500" y="528" text-anchor="middle" font-size="12" fill="#444444">灰度放量、监控观察，验证修复且无回归</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,554 L500,578"/>
+  </g>
+
+  <!-- 结论 -->
+  <rect x="240" y="580" width="520" height="60" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.4"/>
+  <text x="500" y="603" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#7A5B00">调试闭环：修复验证通过 → 沉淀回归用例 → 恢复全量服务</text>
+  <text x="500" y="625" text-anchor="middle" font-size="12" fill="#7A5B00">以确定性复现与回归用例防止间歇缺陷复发</text>
+
+  <!-- 反馈回路 -->
+  <g stroke="#D9534F" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arrowFeedback)">
+    <path d="M806,390 L806,154"/>
+    <path d="M850,516 L850,390"/>
+  </g>
+  <g font-size="10.5" fill="#B03A2E">
+    <text x="846" y="272" text-anchor="middle" transform="rotate(90 846 272)">假设证伪 / 无法复现 → 返回复现与收集</text>
+    <text x="890" y="452" text-anchor="middle" transform="rotate(90 890 452)">回归不通过 → 返回定位分析</text>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="620" viewBox="0 0 760 620" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="760" height="620" fill="#ffffff"/>
+  <text x="380" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">微服务系统集成测试策略示意图</text>
+
+  <!-- 左列自底向上箭头 -->
+  <path d="M 24 500 L 24 120" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="20,122 24,116 28,122" fill="#94a3b8"/>
+  <text x="14" y="310" font-size="13" fill="#475569" transform="rotate(-90 14 310)">自底向上集成</text>
+
+  <!-- 端到端集成 -->
+  <rect x="40" y="120" width="520" height="56" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="60" y="144" font-size="14" font-weight="bold" fill="#4338ca">端到端集成测试</text>
+  <text x="60" y="166" font-size="12" fill="#3730a3">CI 流水线 · 测试环境 · 真实依赖跑通全链路</text>
+
+  <path d="M 300 176 L 300 226" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="296,224 300,230 304,224" fill="#94a3b8"/>
+
+  <!-- 服务间集成 -->
+  <rect x="40" y="228" width="520" height="56" rx="8" fill="#cffafe" stroke="#06b6d4" stroke-width="2"/>
+  <text x="60" y="252" font-size="14" font-weight="bold" fill="#0e7490">服务间集成测试</text>
+  <text x="60" y="274" font-size="12" fill="#155e75">契约测试（CDC）· 接口契约验证 · 数据传递正确性</text>
+
+  <path d="M 300 284 L 300 334" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="296,332 300,338 304,332" fill="#94a3b8"/>
+
+  <!-- 服务内集成 -->
+  <rect x="40" y="336" width="520" height="56" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="60" y="360" font-size="14" font-weight="bold" fill="#166534">服务内集成</text>
+  <text x="60" y="382" font-size="12" fill="#14532d">自底向上合并模块 · 驱动（Driver）与桩（Stub）</text>
+
+  <path d="M 300 392 L 300 442" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="296,440 300,446 304,440" fill="#94a3b8"/>
+
+  <!-- 单元测试 -->
+  <rect x="40" y="444" width="520" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="60" y="468" font-size="14" font-weight="bold" fill="#b45309">单元测试</text>
+  <text x="60" y="490" font-size="12" fill="#92400e">开发自测 · 模块内部逻辑（集成测试的前提基线）</text>
+
+  <!-- 右侧测试替身 -->
+  <rect x="600" y="120" width="150" height="380" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="675" y="144" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">测试替身</text>
+  <line x1="612" y1="154" x2="738" y2="154" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="612" y="176" font-size="12" fill="#334155">• 外部大模型 → 桩</text>
+  <text x="612" y="200" font-size="12" fill="#334155">   （固定/流式响应）</text>
+  <text x="612" y="228" font-size="12" fill="#334155">• 底层模块 → 驱动</text>
+  <text x="612" y="256" font-size="12" fill="#334155">• 消息队列/缓存 →</text>
+  <text x="612" y="276" font-size="12" fill="#334155">   Mock 替身</text>
+  <text x="612" y="304" font-size="12" fill="#334155">• 服务间接口 →</text>
+  <text x="612" y="324" font-size="12" fill="#334155">   消费者契约桩</text>
+  <text x="612" y="352" font-size="12" fill="#334155">• 未就绪服务 → 桩</text>
+  <text x="612" y="380" font-size="12" fill="#334155">• 网关/路由 →</text>
+  <text x="612" y="400" font-size="12" fill="#334155">   测试配置替身</text>
+
+  <!-- 通过准则 -->
+  <rect x="40" y="530" width="710" height="70" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="60" y="554" font-size="13" font-weight="bold" fill="#166534">集成测试通过准则</text>
+  <text x="60" y="576" font-size="12" fill="#14532d">契约测试全部通过 · 跨服务数据无丢失/重复 · 新集成用例纳入 CI · 缺陷泄漏率低于基线</text>
+  <text x="60" y="592" font-size="12" fill="#14532d">任一准则不满足即阻断合并，修复后重新执行对应层级测试。</text>
+</svg>

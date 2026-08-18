@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="660" viewBox="0 0 1060 660" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="1060" height="660" fill="#ffffff"/>
+  <text x="530" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">智能题库管理系统 E-R 图</text>
+
+  <!-- E1 课程 -->
+  <rect x="40" y="70" width="160" height="110" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="120" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#4338ca">课程</text>
+  <line x1="50" y1="102" x2="190" y2="102" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="56" y="124" font-size="12" text-decoration="underline" fill="#3730a3">课程ID（PK）</text>
+  <text x="56" y="144" font-size="12" fill="#3730a3">课程名称</text>
+  <text x="56" y="164" font-size="12" fill="#3730a3">课程描述</text>
+
+  <!-- E2 知识领域 -->
+  <rect x="250" y="70" width="160" height="110" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="330" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#0369a1">知识领域</text>
+  <line x1="260" y1="102" x2="400" y2="102" stroke="#bae6fd" stroke-width="1"/>
+  <text x="266" y="124" font-size="12" text-decoration="underline" fill="#0c4a6e">领域ID（PK）</text>
+  <text x="266" y="144" font-size="12" fill="#0c4a6e">课程ID（FK）</text>
+  <text x="266" y="164" font-size="12" fill="#0c4a6e">领域名称</text>
+
+  <!-- E3 知识点 -->
+  <rect x="460" y="70" width="160" height="110" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="540" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#166534">知识点</text>
+  <line x1="470" y1="102" x2="610" y2="102" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="476" y="124" font-size="12" text-decoration="underline" fill="#14532d">知识点ID（PK）</text>
+  <text x="476" y="144" font-size="12" fill="#14532d">领域ID（FK）</text>
+  <text x="476" y="164" font-size="12" fill="#14532d">知识点名称</text>
+
+  <!-- E4 试题 -->
+  <rect x="700" y="70" width="300" height="160" rx="8" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+  <text x="850" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#0e7490">试题</text>
+  <line x1="710" y1="102" x2="990" y2="102" stroke="#a5f3fc" stroke-width="1"/>
+  <text x="716" y="124" font-size="12" text-decoration="underline" fill="#155e75">试题ID（PK）</text>
+  <text x="716" y="144" font-size="12" fill="#155e75">知识点ID（FK）</text>
+  <text x="716" y="164" font-size="12" fill="#155e75">题型</text>
+  <text x="716" y="184" font-size="12" fill="#155e75">难度（1–5）</text>
+  <text x="716" y="204" font-size="12" fill="#155e75">hash（内容去重，唯一）</text>
+  <text x="716" y="224" font-size="12" fill="#155e75">题干</text>
+
+  <!-- E5 试题选项 -->
+  <rect x="700" y="300" width="300" height="140" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+  <text x="850" y="322" text-anchor="middle" font-size="14" font-weight="bold" fill="#c2410c">试题选项</text>
+  <line x1="710" y1="332" x2="990" y2="332" stroke="#fed7aa" stroke-width="1"/>
+  <text x="716" y="354" font-size="12" text-decoration="underline" fill="#9a3412">选项ID（PK）</text>
+  <text x="716" y="374" font-size="12" fill="#9a3412">试题ID（FK）</text>
+  <text x="716" y="394" font-size="12" fill="#9a3412">选项号（A/B/C/D）</text>
+  <text x="716" y="414" font-size="12" fill="#9a3412">内容</text>
+  <text x="716" y="434" font-size="12" fill="#9a3412">是否答案</text>
+
+  <!-- E6 试题图片 -->
+  <rect x="700" y="480" width="300" height="110" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="850" y="502" text-anchor="middle" font-size="14" font-weight="bold" fill="#b45309">试题图片</text>
+  <line x1="710" y1="512" x2="990" y2="512" stroke="#fde68a" stroke-width="1"/>
+  <text x="716" y="534" font-size="12" text-decoration="underline" fill="#92400e">图片ID（PK）</text>
+  <text x="716" y="554" font-size="12" fill="#92400e">试题ID（FK）</text>
+  <text x="716" y="574" font-size="12" fill="#92400e">文件名 / 相对路径（images/…）</text>
+
+  <!-- E7 试卷 -->
+  <rect x="40" y="280" width="170" height="130" rx="8" fill="#fdf4ff" stroke="#d946ef" stroke-width="2"/>
+  <text x="125" y="302" text-anchor="middle" font-size="14" font-weight="bold" fill="#86198f">试卷</text>
+  <line x1="50" y1="312" x2="200" y2="312" stroke="#f5d0fe" stroke-width="1"/>
+  <text x="56" y="334" font-size="12" text-decoration="underline" fill="#701a75">试卷ID（PK）</text>
+  <text x="56" y="354" font-size="12" fill="#701a75">组卷规则（JSON）</text>
+  <text x="56" y="374" font-size="12" fill="#701a75">总分</text>
+
+  <!-- E8 试卷题目 -->
+  <rect x="260" y="280" width="170" height="130" rx="8" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="345" y="302" text-anchor="middle" font-size="14" font-weight="bold" fill="#6d28d9">试卷题目</text>
+  <line x1="270" y1="312" x2="420" y2="312" stroke="#ddd6fe" stroke-width="1"/>
+  <text x="276" y="334" font-size="12" fill="#5b21b6">试卷ID（FK）</text>
+  <text x="276" y="354" font-size="12" fill="#5b21b6">试题ID（FK）</text>
+  <text x="276" y="374" font-size="12" fill="#5b21b6">序号</text>
+  <text x="276" y="394" font-size="12" fill="#5b21b6">分值</text>
+
+  <!-- E9 答题记录 -->
+  <rect x="260" y="460" width="200" height="150" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="360" y="482" text-anchor="middle" font-size="14" font-weight="bold" fill="#b91c1c">答题记录</text>
+  <line x1="270" y1="492" x2="450" y2="492" stroke="#fecaca" stroke-width="1"/>
+  <text x="276" y="514" font-size="12" text-decoration="underline" fill="#991b1b">记录ID（PK）</text>
+  <text x="276" y="534" font-size="12" fill="#991b1b">试卷题目ID（FK）</text>
+  <text x="276" y="554" font-size="12" fill="#991b1b">用户ID</text>
+  <text x="276" y="574" font-size="12" fill="#991b1b">作答内容</text>
+  <text x="276" y="594" font-size="12" fill="#991b1b">得分 / 答题时间</text>
+
+  <!-- 关系：课程 1—N 知识领域 -->
+  <path d="M 200 115 L 248 115" stroke="#6366f1" stroke-width="2"/>
+  <text x="204" y="105" font-size="12" font-weight="bold" fill="#4338ca">1</text>
+  <text x="238" y="105" font-size="12" font-weight="bold" fill="#4338ca">N</text>
+
+  <!-- 关系：知识领域 1—N 知识点 -->
+  <path d="M 410 115 L 458 115" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="414" y="105" font-size="12" font-weight="bold" fill="#0369a1">1</text>
+  <text x="448" y="105" font-size="12" font-weight="bold" fill="#0369a1">N</text>
+
+  <!-- 关系：知识点 1—N 试题 -->
+  <path d="M 620 115 L 698 115" stroke="#22c55e" stroke-width="2"/>
+  <text x="624" y="105" font-size="12" font-weight="bold" fill="#166534">1</text>
+  <text x="686" y="105" font-size="12" font-weight="bold" fill="#166534">N</text>
+
+  <!-- 关系：试题 1—N 试题选项 -->
+  <path d="M 760 230 L 760 298" stroke="#f97316" stroke-width="2"/>
+  <polygon points="756,296 760,302 764,296" fill="#f97316"/>
+  <text x="768" y="242" font-size="12" font-weight="bold" fill="#c2410c">1</text>
+  <text x="768" y="290" font-size="12" font-weight="bold" fill="#c2410c">N</text>
+
+  <!-- 关系：试题 1—N 试题图片（右侧绕行） -->
+  <path d="M 1000 130 L 1030 130 L 1030 535 L 1002 535" fill="none" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="1000,531 1000,539 1008,535" fill="#f59e0b"/>
+  <text x="1010" y="122" font-size="12" font-weight="bold" fill="#b45309">1</text>
+  <text x="1010" y="548" font-size="12" font-weight="bold" fill="#b45309">N</text>
+
+  <!-- 关系：试卷 1—N 试卷题目 -->
+  <path d="M 210 345 L 258 345" stroke="#d946ef" stroke-width="2"/>
+  <text x="214" y="335" font-size="12" font-weight="bold" fill="#86198f">1</text>
+  <text x="248" y="335" font-size="12" font-weight="bold" fill="#86198f">N</text>
+
+  <!-- 关系：试卷题目 N—1 试题（向上绕行） -->
+  <path d="M 345 280 L 345 255 L 700 255 L 700 232" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+  <polygon points="696,230 700,236 704,230" fill="#8b5cf6"/>
+  <text x="345" y="268" font-size="12" font-weight="bold" fill="#6d28d9">N</text>
+  <text x="704" y="220" font-size="12" font-weight="bold" fill="#6d28d9">1</text>
+
+  <!-- 关系：试卷题目 1—N 答题记录 -->
+  <path d="M 345 410 L 345 458" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="341,456 345,462 349,456" fill="#ef4444"/>
+  <text x="353" y="420" font-size="12" font-weight="bold" fill="#b91c1c">1</text>
+  <text x="353" y="452" font-size="12" font-weight="bold" fill="#b91c1c">N</text>
+
+  <!-- 图例 -->
+  <line x1="60" y1="640" x2="1000" y2="640" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="626" font-size="12" fill="#475569">说明：带下划线为主键（PK），标注（FK）为外键；线条两端的 1/N 表示一对多关系；实体框内仅列关键字段，完整字段见数据字典表。</text>
+  <text x="60" y="648" font-size="12" fill="#475569">试题通过内容 hash 唯一去重；试卷与试题经「试卷题目」关联实体构成多对多关系；答题记录记录每名用户对每道试卷题目的作答与得分。</text>
+</svg>

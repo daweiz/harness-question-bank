@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'PingFang SC','Microsoft YaHei','SimHei',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f2937">订单通知模块——设计模式重构结构图</text>
+
+  <!-- 顶部：业务事件源 -->
+  <text x="60" y="64" font-size="14" font-weight="bold" fill="#374151">业务事件源（领域层）</text>
+  <rect x="60" y="72" width="210" height="52" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="165" y="102" text-anchor="middle" font-size="14" fill="#1f2937">下单事件（OrderPlaced）</text>
+  <rect x="345" y="72" width="210" height="52" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="450" y="102" text-anchor="middle" font-size="14" fill="#1f2937">支付事件（PaymentSuccess）</text>
+  <rect x="630" y="72" width="210" height="52" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="735" y="102" text-anchor="middle" font-size="14" fill="#1f2937">退款事件（RefundFinished）</text>
+
+  <!-- 事件到事件总线 -->
+  <line x1="165" y1="124" x2="245" y2="168" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="450" y1="124" x2="450" y2="168" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="735" y1="124" x2="655" y2="168" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 观察者：事件总线 -->
+  <rect x="255" y="172" width="390" height="76" rx="8" fill="#e7f6ec" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="450" y="198" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2937">事件总线 · 观察者模式</text>
+  <text x="450" y="220" text-anchor="middle" font-size="12" fill="#4b5563">业务只发布事件（Publish），不感知通知实现</text>
+  <text x="450" y="238" text-anchor="middle" font-size="12" fill="#4b5563">通知监听器订阅事件（Subscribe），可动态增减</text>
+
+  <!-- 事件总线到通知服务 -->
+  <line x1="450" y1="248" x2="450" y2="292" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 通知服务：编排 -->
+  <rect x="255" y="296" width="390" height="76" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="450" y="322" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2937">通知服务（编排层）</text>
+  <text x="450" y="344" text-anchor="middle" font-size="12" fill="#4b5563">多渠道组合 · 失败重试 · 熔断降级</text>
+  <text x="450" y="362" text-anchor="middle" font-size="12" fill="#4b5563">模板方法模式统一通知流程</text>
+
+  <!-- 通知服务到接口 -->
+  <line x1="450" y1="372" x2="450" y2="416" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- NotificationChannel 接口 -->
+  <rect x="270" y="420" width="360" height="52" rx="6" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="450" y="442" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">«接口» NotificationChannel</text>
+  <text x="450" y="462" text-anchor="middle" font-size="12" fill="#4b5563">send(Message message)：统一通道契约（策略模式）</text>
+
+  <!-- 接口到三个实现 -->
+  <line x1="450" y1="472" x2="160" y2="520" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="450" y1="472" x2="450" y2="520" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="450" y1="472" x2="740" y2="520" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 三个实现 -->
+  <rect x="60" y="524" width="200" height="52" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="160" y="546" text-anchor="middle" font-size="14" fill="#1f2937">邮件通知器</text>
+  <text x="160" y="566" text-anchor="middle" font-size="12" fill="#4b5563">EmailChannel</text>
+  <rect x="350" y="524" width="200" height="52" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="450" y="546" text-anchor="middle" font-size="14" fill="#1f2937">短信通知器</text>
+  <text x="450" y="566" text-anchor="middle" font-size="12" fill="#4b5563">SmsChannel</text>
+  <rect x="640" y="524" width="200" height="52" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="740" y="546" text-anchor="middle" font-size="14" fill="#1f2937">微信通知器</text>
+  <text x="740" y="566" text-anchor="middle" font-size="12" fill="#4b5563">WeChatChannel</text>
+
+  <!-- ChannelFactory（抽象工厂） -->
+  <rect x="300" y="124" width="300" height="36" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="450" y="147" text-anchor="middle" font-size="13" font-weight="bold" fill="#b91c1c">ChannelFactory（抽象工厂：按配置创建通道）</text>
+  <line x1="300" y1="142" x2="170" y2="524" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <line x1="450" y1="160" x2="450" y2="420" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="600" y1="142" x2="730" y2="524" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <text x="568" y="196" font-size="11" fill="#dc2626">新增渠道仅加实现 + 注册，核心代码不动（开闭原则）</text>
+
+  <!-- 底部说明 -->
+  <rect x="60" y="586" width="780" height="0" rx="6" fill="#f9fafb" stroke="#9ca3af" stroke-width="1.5"/>
+</svg>

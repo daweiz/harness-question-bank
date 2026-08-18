@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="620" viewBox="0 0 820 620" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="820" height="620" fill="#ffffff"/>
+  <text x="410" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">在线考试系统服务接口设计示意图</text>
+
+  <!-- 前端应用 -->
+  <rect x="300" y="60" width="240" height="64" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="420" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#4338ca">前端应用（考试端）</text>
+  <text x="420" y="110" text-anchor="middle" font-size="12" fill="#3730a3">Web · App · 小程序</text>
+
+  <!-- 组卷服务 -->
+  <rect x="300" y="172" width="240" height="96" rx="8" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+  <text x="420" y="196" text-anchor="middle" font-size="15" font-weight="bold" fill="#0e7490">组卷服务</text>
+  <text x="420" y="220" text-anchor="middle" font-size="12" fill="#155e75">组卷策略 · 试卷模板</text>
+  <text x="420" y="240" text-anchor="middle" font-size="12" fill="#155e75">权限控制 · 状态管理</text>
+
+  <!-- 题库服务 -->
+  <rect x="40" y="172" width="210" height="96" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="145" y="196" text-anchor="middle" font-size="15" font-weight="bold" fill="#166534">题库服务</text>
+  <text x="145" y="220" text-anchor="middle" font-size="12" fill="#14532d">试题维护 · 检索</text>
+  <text x="145" y="240" text-anchor="middle" font-size="12" fill="#14532d">哈希去重 · 题型/知识点组织</text>
+
+  <!-- 评测服务 -->
+  <rect x="600" y="172" width="210" height="96" rx="8" fill="#fdf4ff" stroke="#d946ef" stroke-width="2"/>
+  <text x="705" y="196" text-anchor="middle" font-size="15" font-weight="bold" fill="#86198f">评测服务</text>
+  <text x="705" y="220" text-anchor="middle" font-size="12" fill="#701a75">答案评测 · 计分</text>
+  <text x="705" y="240" text-anchor="middle" font-size="12" fill="#701a75">批改规则引擎 · 学情统计</text>
+
+  <!-- 接口连线 -->
+  <path d="M 420 124 L 420 170" stroke="#6366f1" stroke-width="2"/>
+  <polygon points="416,168 420,174 424,168" fill="#6366f1"/>
+
+  <path d="M 250 210 L 298 210" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="296,206 302,210 296,214" fill="#22c55e"/>
+
+  <path d="M 540 210 L 598 210" stroke="#d946ef" stroke-width="2"/>
+  <polygon points="596,206 602,210 596,214" fill="#d946ef"/>
+
+  <!-- 接口编号 -->
+  <circle cx="420" cy="147" r="12" fill="#6366f1"/>
+  <text x="420" y="151" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">①</text>
+  <circle cx="274" cy="210" r="12" fill="#22c55e"/>
+  <text x="274" y="214" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">②</text>
+  <circle cx="569" cy="210" r="12" fill="#d946ef"/>
+  <text x="569" y="214" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">③</text>
+
+  <!-- 接口契约清单 -->
+  <rect x="40" y="300" width="740" height="150" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="60" y="326" font-size="14" font-weight="bold" fill="#1f2937">接口契约清单（与编号对应）</text>
+  <line x1="60" y1="336" x2="760" y2="336" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="60" y="360" font-size="12" fill="#334155">① 前端 ⇄ 组卷服务：POST /v1/papers · GET /v1/papers/{id} · DELETE /v1/papers/{id}</text>
+  <text x="60" y="384" font-size="12" fill="#334155">② 组卷服务 ⇄ 题库服务：POST /v1/questions/batch · GET /v1/questions/{id} · POST /v1/questions/import</text>
+  <text x="60" y="408" font-size="12" fill="#334155">③ 组卷服务 ⇄ 评测服务：POST /v1/evaluations · POST /v1/answers · GET /v1/answers/{id}</text>
+  <text x="60" y="432" font-size="12" fill="#475569">统一契约要素：REST + JSON DTO · URL 版本 v1 · 错误码 BIZ-xxxx · Idempotency-Key 幂等键 · 超时 3 s / 重试 2 次 · trace 透传</text>
+
+  <!-- 版本化与兼容策略 -->
+  <rect x="40" y="470" width="740" height="110" rx="8" fill="#f0f9ff" stroke="#38bdf8" stroke-width="2"/>
+  <text x="60" y="496" font-size="14" font-weight="bold" fill="#0369a1">接口版本化与兼容策略</text>
+  <line x1="60" y1="506" x2="760" y2="506" stroke="#bae6fd" stroke-width="1"/>
+  <text x="60" y="530" font-size="12" fill="#0c4a6e">• 向后兼容：新增字段可选，不删除、不改变既有字段语义</text>
+  <text x="60" y="552" font-size="12" fill="#0c4a6e">• 版本策略：URL 前缀 v1/v2，破坏性变更升级主版本并保留旧版本过渡期</text>
+  <text x="60" y="574" font-size="12" fill="#0c4a6e">• 契约先行：以 OpenAPI 文档为单一事实源，各端据此生成客户端与测试桩</text>
+</svg>

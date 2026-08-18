@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="700" viewBox="0 0 1120 700" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1120" height="700" fill="#FFFFFF"/>
+  <text x="560" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333333">电商核心服务 · DevOps 持续交付流水线结构图</text>
+
+  <!-- 流水线标题 -->
+  <text x="560" y="60" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F4E79">自动化流水线（提交 → 构建 → 测试 → 部署 → 监控 → 反馈）</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M560,68 L560,96"/>
+  </g>
+
+  <!-- 阶段 1 -->
+  <rect x="25"  y="96" width="170" height="150" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="110" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F4E79">1 代码提交</text>
+  <text x="110" y="144" text-anchor="middle" font-size="11" fill="#444444">Git 分支策略</text>
+  <text x="110" y="164" text-anchor="middle" font-size="11" fill="#444444">主干开发 / 特性分支</text>
+  <text x="110" y="184" text-anchor="middle" font-size="11" fill="#444444">MR 触发流水线</text>
+  <text x="110" y="210" text-anchor="middle" font-size="10.5" fill="#8A94A6">Git / GitLab CI</text>
+
+  <!-- 阶段 2 -->
+  <rect x="213" y="96" width="170" height="150" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="298" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F4E79">2 检查与单测</text>
+  <text x="298" y="144" text-anchor="middle" font-size="11" fill="#444444">静态扫描</text>
+  <text x="298" y="164" text-anchor="middle" font-size="11" fill="#444444">单元测试（覆盖率门槛）</text>
+  <text x="298" y="184" text-anchor="middle" font-size="11" fill="#444444">质量门禁拦截</text>
+  <text x="298" y="210" text-anchor="middle" font-size="10.5" fill="#8A94A6">SonarQube / JUnit</text>
+
+  <!-- 阶段 3 -->
+  <rect x="401" y="96" width="170" height="150" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="486" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F4E79">3 构建与镜像</text>
+  <text x="486" y="144" text-anchor="middle" font-size="11" fill="#444444">自动化构建</text>
+  <text x="486" y="164" text-anchor="middle" font-size="11" fill="#444444">生成不可变镜像</text>
+  <text x="486" y="184" text-anchor="middle" font-size="11" fill="#444444">镜像安全扫描</text>
+  <text x="486" y="210" text-anchor="middle" font-size="10.5" fill="#8A94A6">Maven + Docker</text>
+
+  <!-- 阶段 4 -->
+  <rect x="589" y="96" width="170" height="150" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="674" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F4E79">4 集成与验收</text>
+  <text x="674" y="144" text-anchor="middle" font-size="11" fill="#444444">自动化集成测试</text>
+  <text x="674" y="164" text-anchor="middle" font-size="11" fill="#444444">接口/端到端测试</text>
+  <text x="674" y="184" text-anchor="middle" font-size="11" fill="#444444">测试环境部署</text>
+  <text x="674" y="210" text-anchor="middle" font-size="10.5" fill="#8A94A6">TestNG / 自动化脚本</text>
+
+  <!-- 阶段 5 -->
+  <rect x="777" y="96" width="170" height="150" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.4"/>
+  <text x="862" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#7A5B00">5 部署与发布</text>
+  <text x="862" y="144" text-anchor="middle" font-size="11" fill="#7A5B00">Dev→Test→Staging→Prod</text>
+  <text x="862" y="164" text-anchor="middle" font-size="11" fill="#7A5B00">金丝雀/蓝绿发布</text>
+  <text x="862" y="184" text-anchor="middle" font-size="11" fill="#7A5B00">一键回滚能力</text>
+  <text x="862" y="210" text-anchor="middle" font-size="10.5" fill="#8A94A6">K8s + ArgoCD</text>
+
+  <!-- 阶段 6 -->
+  <rect x="965" y="96" width="130" height="150" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+  <text x="1030" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#2E7D32">6 监控与反馈</text>
+  <text x="1030" y="144" text-anchor="middle" font-size="11" fill="#2E7D32">指标/日志/链路追踪</text>
+  <text x="1030" y="164" text-anchor="middle" font-size="11" fill="#2E7D32">告警与值班</text>
+  <text x="1030" y="184" text-anchor="middle" font-size="11" fill="#2E7D32">故障复盘反哺</text>
+  <text x="1030" y="210" text-anchor="middle" font-size="10.5" fill="#8A94A6">Prometheus / Grafana</text>
+
+  <!-- 阶段间箭头 -->
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M195,171 L211,171"/>
+    <path d="M383,171 L399,171"/>
+    <path d="M571,171 L587,171"/>
+    <path d="M759,171 L775,171"/>
+    <path d="M947,171 L963,171"/>
+  </g>
+
+  <!-- 反馈闭环 -->
+  <path d="M1030,246 L1030,330 L60,330 L60,246" stroke="#D9534F" stroke-width="1.6" fill="none" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="545" y="324" text-anchor="middle" font-size="12" font-weight="bold" fill="#A03020">监控反馈闭环：线上指标与缺陷 → 复盘 → 驱动新一轮提交，持续改进</text>
+
+  <!-- 环境与发布策略 -->
+  <rect x="25"  y="360" width="520" height="120" rx="8" fill="#F5F7FA" stroke="#8A94A6" stroke-width="1.3"/>
+  <text x="285" y="384" text-anchor="middle" font-size="13" font-weight="bold" fill="#333333">环境规划与发布策略</text>
+  <text x="285" y="408" text-anchor="middle" font-size="11.5" fill="#444444">Dev / Test / Staging / Production 四级环境，逐级晋升</text>
+  <text x="285" y="430" text-anchor="middle" font-size="11.5" fill="#444444">金丝雀：先切 5% 流量，观察指标平滑后全量</text>
+  <text x="285" y="452" text-anchor="middle" font-size="11.5" fill="#444444">蓝绿：新老环境双运行，一键切换与回滚</text>
+  <text x="285" y="474" text-anchor="middle" font-size="11.5" fill="#444444">发布审批 + 变更记录留痕，满足审计要求</text>
+
+  <!-- 度量与工具链 -->
+  <rect x="565" y="360" width="530" height="120" rx="8" fill="#F0E6F6" stroke="#8E6BB8" stroke-width="1.3"/>
+  <text x="830" y="384" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B3E86">DevOps 度量指标与工具链</text>
+  <text x="830" y="408" text-anchor="middle" font-size="11.5" fill="#5B3E86">部署频率、变更前置时间、变更失败率、MTTR（恢复时间）</text>
+  <text x="830" y="430" text-anchor="middle" font-size="11.5" fill="#5B3E86">工具链：Git/GitLab CI · SonarQube · Docker · Kubernetes</text>
+  <text x="830" y="452" text-anchor="middle" font-size="11.5" fill="#5B3E86">ArgoCD · Prometheus · Grafana · 日志平台</text>
+  <text x="830" y="474" text-anchor="middle" font-size="11.5" fill="#5B3E86">目标：部署频率高、失败率低、MTTR 短、反馈快</text>
+
+  <!-- 底部目标 -->
+  <rect x="250" y="500" width="620" height="56" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+  <text x="560" y="522" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1F4E79">DevOps 目标：开发与运维协作、全流程自动化、快速安全交付</text>
+  <text x="560" y="544" text-anchor="middle" font-size="12" fill="#444444">从「提交到上线」到「监控反馈」形成自动闭环，缩短交付周期、降低变更风险</text>
+</svg>

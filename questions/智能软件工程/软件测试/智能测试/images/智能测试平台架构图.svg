@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="660" viewBox="0 0 1000 660" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+    <marker id="arrowD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8E6BB8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="660" fill="#FFFFFF"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333333">智能测试平台整体架构图</text>
+
+  <g fill="#8A94A6" font-size="12" text-anchor="end">
+    <text x="60" y="83">输入层</text>
+    <text x="60" y="290">智能测试核心模块层</text>
+    <text x="60" y="482">执行与反馈层</text>
+    <text x="60" y="572">数据存储层</text>
+  </g>
+
+  <!-- 输入层 -->
+  <g fill="#F5F7FA" stroke="#8A94A6" stroke-width="1.3">
+    <rect x="70"  y="55" width="260" height="50" rx="8"/>
+    <rect x="370" y="55" width="260" height="50" rx="8"/>
+    <rect x="670" y="55" width="260" height="50" rx="8"/>
+  </g>
+  <g fill="#333333" text-anchor="middle" font-size="13.5">
+    <text x="200" y="83">代码仓库（版本 / 变更）</text>
+    <text x="500" y="83">需求与规格说明</text>
+    <text x="800" y="83">历史缺陷数据</text>
+  </g>
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M200,105 L200,160"/>
+    <path d="M500,105 L500,160"/>
+    <path d="M800,105 L800,160"/>
+  </g>
+
+  <!-- 核心模块层 -->
+  <g>
+    <g>
+      <rect x="70"  y="160" width="260" height="240" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+      <rect x="70"  y="160" width="260" height="36" rx="8" fill="#4A90D9"/>
+      <text x="200" y="184" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#FFFFFF">测试用例智能生成模块</text>
+    </g>
+    <g>
+      <rect x="370" y="160" width="260" height="240" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+      <rect x="370" y="160" width="260" height="36" rx="8" fill="#4A90D9"/>
+      <text x="500" y="184" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#FFFFFF">回归测试智能选择模块</text>
+    </g>
+    <g>
+      <rect x="670" y="160" width="260" height="240" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+      <rect x="670" y="160" width="260" height="36" rx="8" fill="#4A90D9"/>
+      <text x="800" y="184" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#FFFFFF">缺陷预测分析模块</text>
+    </g>
+  </g>
+  <g fill="#444444" text-anchor="middle" font-size="12.5">
+    <text x="200" y="226">● LLM 需求 → 用例生成</text>
+    <text x="500" y="226">● 变更影响分析</text>
+    <text x="800" y="226">● 代码度量特征提取</text>
+    <text x="200" y="258">● 代码路径 / 分支覆盖分析</text>
+    <text x="500" y="258">● 历史失败聚类</text>
+    <text x="800" y="258">● 缺陷预测模型训练</text>
+    <text x="200" y="290">● 变异测试增强用例</text>
+    <text x="500" y="290">● 用例优先级排序</text>
+    <text x="800" y="290">● 缺陷热点与风险报告</text>
+    <text x="200" y="322">● 边界与异常场景补全</text>
+    <text x="500" y="322">● 最小回归集选择</text>
+    <text x="800" y="322">● 修复建议推送</text>
+  </g>
+  <g fill="#1F4E79" text-anchor="middle" font-size="11.5">
+    <text x="200" y="366">生成用例入库</text>
+    <text x="500" y="366">回归集送执行引擎</text>
+    <text x="800" y="366">报告送质量看板</text>
+  </g>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M200,400 L398,455"/>
+    <path d="M500,400 L500,455"/>
+    <path d="M800,400 L602,455"/>
+  </g>
+
+  <!-- 执行与反馈层 -->
+  <rect x="300" y="455" width="400" height="50" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.4"/>
+  <text x="500" y="478" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#7A5B00">测试执行引擎</text>
+  <text x="500" y="497" text-anchor="middle" font-size="12" fill="#7A5B00">单元测试 / 集成测试 / 端到端测试</text>
+
+  <rect x="730" y="455" width="240" height="50" rx="8" fill="#F0E6F6" stroke="#8E6BB8" stroke-width="1.4"/>
+  <text x="850" y="478" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#5B3E86">结果反馈与模型更新</text>
+  <text x="850" y="497" text-anchor="middle" font-size="11.5" fill="#5B3E86">执行结果回流、模型校准</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M700,480 L730,480"/>
+  </g>
+  <g stroke="#8E6BB8" stroke-width="1.4" stroke-dasharray="6,4" fill="none" marker-end="url(#arrow)">
+    <path d="M850,455 L960,455 L960,280 L932,280"/>
+  </g>
+  <text x="976" y="366" text-anchor="middle" font-size="11" fill="#5B3E86" transform="rotate(-90 976 366)">反馈闭环</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,505 L500,545"/>
+  </g>
+
+  <!-- 存储层 -->
+  <rect x="70" y="545" width="900" height="50" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+  <text x="520" y="575" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#2E7D32">数据存储层：测试用例库 / 缺陷库 / 模型库 / 执行日志库</text>
+</svg>

@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="660" viewBox="0 0 1000 660" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+    <marker id="arrowD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8E6BB8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="660" fill="#FFFFFF"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333333">大型制造企业 SOA 集成平台总体架构图</text>
+
+  <!-- 左：横切支撑 -->
+  <rect x="30" y="55" width="220" height="390" rx="10" fill="#F0E6F6" stroke="#8E6BB8" stroke-width="1.5"/>
+  <text x="140" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#5B3E86">横切支撑</text>
+  <g fill="#5B3E86" font-size="12.5">
+    <text x="45" y="112">● 服务注册中心（UDDI）</text>
+    <text x="45" y="152">● 统一身份认证与授权</text>
+    <text x="45" y="192">● 接口安全（WSS / HTTPS）</text>
+    <text x="45" y="232">● 调用审计与日志</text>
+    <text x="45" y="272">● 服务监控与治理</text>
+    <text x="45" y="312">● 服务降级与熔断</text>
+    <text x="45" y="352">● 限流与配额</text>
+    <text x="45" y="412" font-size="11.5">（贯穿各层、全局生效）</text>
+  </g>
+
+  <!-- 层标签 -->
+  <g fill="#666666" font-size="12" text-anchor="end">
+    <text x="270" y="82">展现层</text>
+    <text x="270" y="162">业务流程层</text>
+    <text x="270" y="242">服务层</text>
+    <text x="270" y="327">ESB 总线</text>
+    <text x="270" y="412">系统适配层</text>
+    <text x="270" y="492">异构系统层</text>
+  </g>
+
+  <!-- 展现层 -->
+  <g fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.3">
+    <rect x="290" y="55" width="200" height="50" rx="8"/>
+    <rect x="520" y="55" width="200" height="50" rx="8"/>
+    <rect x="750" y="55" width="200" height="50" rx="8"/>
+  </g>
+  <g fill="#1F4E79" text-anchor="middle" font-size="13.5">
+    <text x="390" y="84">企业门户</text>
+    <text x="620" y="84">桌面客户端</text>
+    <text x="850" y="84">移动端</text>
+  </g>
+
+  <!-- 业务流程层 -->
+  <g fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.3">
+    <rect x="290" y="135" width="200" height="50" rx="8"/>
+    <rect x="520" y="135" width="200" height="50" rx="8"/>
+    <rect x="750" y="135" width="200" height="50" rx="8"/>
+  </g>
+  <g fill="#1F4E79" text-anchor="middle" font-size="13">
+    <text x="390" y="163">采购流程编排</text>
+    <text x="620" y="163">生产计划编排</text>
+    <text x="850" y="163">订单履行编排</text>
+  </g>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M390,105 L390,135"/>
+    <path d="M620,105 L620,135"/>
+    <path d="M850,105 L850,135"/>
+    <path d="M390,185 L475,215"/>
+    <path d="M620,185 L618,215"/>
+    <path d="M850,185 L885,215"/>
+  </g>
+
+  <!-- 服务层 -->
+  <g fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.3">
+    <rect x="285" y="215" width="120" height="50" rx="8"/>
+    <rect x="420" y="215" width="120" height="50" rx="8"/>
+    <rect x="555" y="215" width="120" height="50" rx="8"/>
+    <rect x="690" y="215" width="120" height="50" rx="8"/>
+    <rect x="825" y="215" width="120" height="50" rx="8"/>
+  </g>
+  <g fill="#1F4E79" text-anchor="middle" font-size="13">
+    <text x="345" y="243">订单服务</text>
+    <text x="480" y="243">库存服务</text>
+    <text x="615" y="243">客户服务</text>
+    <text x="750" y="243">生产服务</text>
+    <text x="885" y="243">设备服务</text>
+  </g>
+
+  <!-- ESB -->
+  <rect x="280" y="295" width="690" height="60" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.6"/>
+  <text x="625" y="323" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#7A5B00">企业服务总线（ESB）</text>
+  <text x="625" y="345" text-anchor="middle" font-size="12" fill="#7A5B00">消息路由 · 协议转换 · 服务编排 · 可靠传输 · 事务管理</text>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M345,265 L345,295"/>
+    <path d="M480,265 L480,295"/>
+    <path d="M615,265 L615,295"/>
+    <path d="M750,265 L750,295"/>
+    <path d="M885,265 L885,295"/>
+    <path d="M355,355 L355,385"/>
+    <path d="M530,355 L530,385"/>
+    <path d="M705,355 L705,385"/>
+    <path d="M880,355 L880,385"/>
+  </g>
+
+  <!-- 系统适配层 -->
+  <g fill="#E8F5E9" stroke="#66A05F" stroke-width="1.3">
+    <rect x="280" y="385" width="150" height="50" rx="8"/>
+    <rect x="455" y="385" width="150" height="50" rx="8"/>
+    <rect x="630" y="385" width="150" height="50" rx="8"/>
+    <rect x="805" y="385" width="150" height="50" rx="8"/>
+  </g>
+  <g fill="#2E7D32" text-anchor="middle" font-size="12.5">
+    <text x="355" y="413">ERP 适配器</text>
+    <text x="530" y="413">CRM 适配器</text>
+    <text x="705" y="413">MES 适配器</text>
+    <text x="880" y="413">数据库适配器</text>
+  </g>
+
+  <!-- 异构系统层 -->
+  <g fill="#E8F5E9" stroke="#66A05F" stroke-width="1.3">
+    <rect x="280" y="465" width="150" height="50" rx="8"/>
+    <rect x="455" y="465" width="150" height="50" rx="8"/>
+    <rect x="630" y="465" width="150" height="50" rx="8"/>
+    <rect x="805" y="465" width="150" height="50" rx="8"/>
+  </g>
+  <g fill="#2E7D32" text-anchor="middle" font-size="13">
+    <text x="355" y="493">ERP 系统</text>
+    <text x="530" y="493">CRM 系统</text>
+    <text x="705" y="493">MES 系统</text>
+    <text x="880" y="493">异构数据库</text>
+  </g>
+
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M355,435 L355,465"/>
+    <path d="M530,435 L530,465"/>
+    <path d="M705,435 L705,465"/>
+    <path d="M880,435 L880,465"/>
+  </g>
+
+  <!-- 横切支撑连接 -->
+  <g stroke="#8E6BB8" stroke-width="1.3" stroke-dasharray="5,4" fill="none" marker-end="url(#arrowD)">
+    <path d="M250,82 L290,82"/>
+    <path d="M250,160 L290,160"/>
+    <path d="M250,240 L285,240"/>
+    <path d="M250,327 L280,327"/>
+    <path d="M250,410 L280,410"/>
+    <path d="M250,490 L280,490"/>
+    <path d="M140,445 L140,560"/>
+  </g>
+
+  <!-- 底部治理策略 -->
+  <rect x="30" y="560" width="940" height="60" rx="8" fill="#F0E6F6" stroke="#8E6BB8" stroke-width="1.5"/>
+  <text x="500" y="586" text-anchor="middle" font-size="14" font-weight="bold" fill="#5B3E86">服务治理与安全策略</text>
+  <text x="500" y="608" text-anchor="middle" font-size="12" fill="#5B3E86">服务契约（WSDL）统一规范 / 服务注册与发现 / 统一认证授权 / 调用审计与监控</text>
+</svg>

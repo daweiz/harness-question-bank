@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/>
+    </marker>
+    <marker id="arrowFeedback" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="700" fill="#FFFFFF"/>
+  <text x="500" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#333333">智慧校园导航系统 · AI 辅助设计流程图</text>
+
+  <!-- 五个阶段（横向主流程） -->
+  <g>
+    <rect x="10"  y="88" width="176" height="96" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+    <text x="98"  y="112" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1F4E79">① 设计任务与约束</text>
+    <text x="98"  y="136" text-anchor="middle" font-size="11" fill="#444444">设计目标 · 约束</text>
+    <text x="98"  y="156" text-anchor="middle" font-size="11" fill="#444444">校园数据输入（POI/路网）</text>
+    <text x="98"  y="176" text-anchor="middle" font-size="11" fill="#444444">架构 / 接口 / 数据设计任务</text>
+
+    <rect x="210" y="88" width="176" height="96" rx="8" fill="#FFF3E0" stroke="#D9822B" stroke-width="1.4"/>
+    <text x="298" y="112" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#8A5A1B">② 知识注入与提示词</text>
+    <text x="298" y="136" text-anchor="middle" font-size="11" fill="#444444">提示词模板 + 知识注入</text>
+    <text x="298" y="156" text-anchor="middle" font-size="11" fill="#444444">校园真实数据 / 设计规范</text>
+    <text x="298" y="176" text-anchor="middle" font-size="11" fill="#444444">相似系统方案检索</text>
+
+    <rect x="410" y="88" width="176" height="96" rx="8" fill="#EDE7F6" stroke="#7B6BB8" stroke-width="1.4"/>
+    <text x="498" y="112" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#4A3C8C">③ AI 生成候选设计</text>
+    <text x="498" y="136" text-anchor="middle" font-size="11" fill="#444444">LLM 生成候选架构</text>
+    <text x="498" y="156" text-anchor="middle" font-size="11" fill="#444444">模块 / 接口 / 数据草案</text>
+    <text x="498" y="176" text-anchor="middle" font-size="11" fill="#444444">一次生成多套候选方案</text>
+
+    <rect x="610" y="88" width="176" height="96" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+    <text x="698" y="112" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#2E7D32">④ 人工评审 + 校验</text>
+    <text x="698" y="136" text-anchor="middle" font-size="11" fill="#444444">校验器自动核对规范</text>
+    <text x="698" y="156" text-anchor="middle" font-size="11" fill="#444444">需求覆盖 / 接口一致性</text>
+    <text x="698" y="176" text-anchor="middle" font-size="11" fill="#444444">设计师关键决策把关</text>
+
+    <rect x="810" y="88" width="176" height="96" rx="8" fill="#FFF8E1" stroke="#D9A825" stroke-width="1.4"/>
+    <text x="898" y="112" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#7A5B00">⑤ 评审通过 · 入库</text>
+    <text x="898" y="136" text-anchor="middle" font-size="11" fill="#444444">评审组批准设计入库</text>
+    <text x="898" y="156" text-anchor="middle" font-size="11" fill="#444444">记录模型版本与输入知识</text>
+    <text x="898" y="176" text-anchor="middle" font-size="11" fill="#444444">设计过程可追溯</text>
+  </g>
+
+  <!-- 主流程箭头 -->
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M186,136 L206,136"/>
+    <path d="M386,136 L406,136"/>
+    <path d="M586,136 L606,136"/>
+    <path d="M786,136 L806,136"/>
+  </g>
+
+  <!-- 反馈回路：校验/评审不通过 → 返回 AI 重新生成 -->
+  <g stroke="#D9534F" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arrowFeedback)">
+    <path d="M698,184 L698,220 L498,220 L498,186"/>
+  </g>
+  <g stroke="#D9534F" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arrowFeedback)">
+    <path d="M898,184 L898,248 L98,248 L98,186"/>
+  </g>
+  <g font-size="10.5" fill="#B03A2E">
+    <text x="598" y="212" text-anchor="middle">校验不通过 / 评审不通过 → 反馈回 AI 重新生成（最多 N 轮）</text>
+    <text x="498" y="268" text-anchor="middle">约束或数据缺失 → 返回设计任务补充输入</text>
+  </g>
+
+  <!-- 人机协同分工 -->
+  <rect x="60" y="300" width="880" height="96" rx="8" fill="#F5F7FA" stroke="#8A94A6" stroke-width="1.3"/>
+  <text x="500" y="324" text-anchor="middle" font-size="13" font-weight="bold" fill="#333333">人机协同分工（AI 是设计加速器，人工是设计决策者）</text>
+  <g font-size="12" fill="#444444" text-anchor="middle">
+    <text x="180" y="352">LLM 助手：批量生成候选方案</text>
+    <text x="180" y="376">扩大设计空间、快速出草案</text>
+    <text x="430" y="352">知识库：校园数据 / 设计规范</text>
+    <text x="430" y="376">约束 AI 输出、降低幻觉风险</text>
+    <text x="680" y="352">校验器：自动核对规范一致性</text>
+    <text x="680" y="376">模式检查 / 需求覆盖检查</text>
+    <text x="880" y="352">设计师 + 评审组：评审把关</text>
+    <text x="880" y="376">做关键决策、批准设计入库</text>
+  </g>
+
+  <!-- 决策可追溯 -->
+  <rect x="60" y="420" width="880" height="78" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.3"/>
+  <text x="500" y="444" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F4E79">设计决策可追溯、可复现、可审计</text>
+  <text x="500" y="468" text-anchor="middle" font-size="12" fill="#444444">每次 AI 生成记录：提示词 + 输入知识 + 模型版本 + 生成结果</text>
+  <text x="500" y="490" text-anchor="middle" font-size="12" fill="#444444">评审意见与最终设计决策一并归档，作为设计依据与审计凭证</text>
+</svg>

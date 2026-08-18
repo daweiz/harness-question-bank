@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A6FA5"/>
+    </marker>
+    <marker id="arrowD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8E6BB8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="680" fill="#FFFFFF"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333333">智能信贷审批系统 · 需求管理过程结构图</text>
+
+  <!-- 需求来源 -->
+  <g fill="#EAF1F8" stroke="#7A9CC6" stroke-width="1.2">
+    <rect x="40"  y="55" width="200" height="56" rx="8"/>
+    <rect x="260" y="55" width="200" height="56" rx="8"/>
+    <rect x="480" y="55" width="200" height="56" rx="8"/>
+    <rect x="700" y="55" width="200" height="56" rx="8"/>
+  </g>
+  <g fill="#333333" font-size="15">
+    <text x="140" y="88" text-anchor="middle">业务部门需求</text>
+    <text x="360" y="88" text-anchor="middle">监管合规需求</text>
+    <text x="580" y="88" text-anchor="middle">AI 风控模型需求</text>
+    <text x="800" y="88" text-anchor="middle">用户反馈</text>
+  </g>
+  <text x="500" y="47" text-anchor="middle" font-size="13" fill="#666666">需求来源（多源输入）</text>
+
+  <!-- 来源到登记的箭头 -->
+  <g stroke="#4A6FA5" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <path d="M140,111 L432,160"/>
+    <path d="M360,111 L492,160"/>
+    <path d="M580,111 L508,160"/>
+    <path d="M800,111 L568,160"/>
+  </g>
+
+  <!-- 左：需求制品库 -->
+  <rect x="40" y="160" width="260" height="432" rx="10" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.5"/>
+  <text x="170" y="186" text-anchor="middle" font-size="15" font-weight="bold" fill="#2E7D32">需求制品库</text>
+  <g fill="#2E7D32" font-size="12.5">
+    <text x="55" y="220">● 《需求规格说明书》</text>
+    <text x="55" y="252">● 需求条目库（需求 ID / 状态）</text>
+    <text x="55" y="284">● 需求追踪矩阵表</text>
+    <text x="55" y="316">● 变更记录台账（审计留痕）</text>
+  </g>
+  <g stroke="#66A05F" stroke-width="1.3" stroke-dasharray="5,4" fill="none" marker-end="url(#arrow)">
+    <path d="M380,188 L300,188"/>
+    <path d="M380,458 L300,458"/>
+  </g>
+
+  <!-- 中：主流程 -->
+  <g>
+    <rect x="380" y="160" width="240" height="56" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+    <rect x="380" y="240" width="240" height="56" rx="8" fill="#E3F0FB" stroke="#4A90D9" stroke-width="1.4"/>
+    <rect x="380" y="320" width="240" height="56" rx="8" fill="#FDF3D0" stroke="#D9A825" stroke-width="1.4"/>
+    <rect x="380" y="420" width="240" height="72" rx="8" fill="#E8F5E9" stroke="#66A05F" stroke-width="1.4"/>
+    <rect x="380" y="536" width="240" height="56" rx="8" fill="#F0E6F6" stroke="#8E6BB8" stroke-width="1.4"/>
+  </g>
+  <g fill="#333333" text-anchor="middle">
+    <text x="500" y="182" font-size="14.5" font-weight="bold">需求登记与分类</text>
+    <text x="500" y="203" font-size="12" fill="#555555">（功能 / 非功能 / 约束）</text>
+    <text x="500" y="262" font-size="14.5" font-weight="bold">优先级评估（MoSCoW）</text>
+    <text x="500" y="283" font-size="12" fill="#555555">Must / Should / Could / Won't</text>
+    <text x="500" y="342" font-size="14.5" font-weight="bold">需求基线 V1.0</text>
+    <text x="500" y="363" font-size="12" fill="#555555">（评审通过后冻结）</text>
+    <text x="500" y="446" font-size="14.5" font-weight="bold">需求追踪矩阵 RTM</text>
+    <text x="500" y="468" font-size="12" fill="#555555">需求 ↔ 设计 ↔ 编码 ↔ 测试</text>
+    <text x="500" y="486" font-size="12" fill="#555555">全程双向可追溯</text>
+    <text x="500" y="558" font-size="14.5" font-weight="bold">审计与追溯</text>
+    <text x="500" y="579" font-size="12" fill="#555555">（变更全程留痕、可审计）</text>
+  </g>
+  <g stroke="#4A90D9" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500,216 L500,240"/>
+    <path d="M500,296 L500,320"/>
+    <path d="M500,376 L500,420"/>
+    <path d="M500,492 L500,536"/>
+  </g>
+
+  <!-- 右：变更控制流程 -->
+  <text x="820" y="178" text-anchor="middle" font-size="15" font-weight="bold" fill="#C05621">变更控制流程（CCB）</text>
+  <g>
+    <rect x="670" y="200" width="300" height="52" rx="8" fill="#FDEBD0" stroke="#E67E22" stroke-width="1.4"/>
+    <rect x="670" y="262" width="300" height="52" rx="8" fill="#FDEBD0" stroke="#E67E22" stroke-width="1.4"/>
+    <rect x="670" y="324" width="300" height="52" rx="8" fill="#FDEBD0" stroke="#E67E22" stroke-width="1.4"/>
+    <rect x="670" y="386" width="300" height="52" rx="8" fill="#FDEBD0" stroke="#E67E22" stroke-width="1.4"/>
+    <rect x="670" y="448" width="300" height="52" rx="8" fill="#FDEBD0" stroke="#E67E22" stroke-width="1.4"/>
+  </g>
+  <g fill="#6E2F00" text-anchor="middle" font-size="13.5">
+    <text x="820" y="226">变更申请（提交变更请求）</text>
+    <text x="820" y="288">影响分析（成本 / 风险 / 关联项）</text>
+    <text x="820" y="350">CCB 评审（批准 / 拒绝）</text>
+    <text x="820" y="412">批准 → 更新需求基线</text>
+    <text x="820" y="474">拒绝 → 需求归档备查</text>
+  </g>
+  <g stroke="#E67E22" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M820,252 L820,262"/>
+    <path d="M820,314 L820,324"/>
+    <path d="M820,376 L820,386"/>
+    <path d="M820,438 L820,448"/>
+  </g>
+
+  <!-- 基线与变更控制的联动 -->
+  <g stroke="#B97B1E" stroke-width="1.4" stroke-dasharray="6,4" fill="none" marker-end="url(#arrow)">
+    <path d="M620,348 L672,226"/>
+    <path d="M670,412 L622,348"/>
+  </g>
+  <text x="656" y="294" font-size="11" fill="#B97B1E">变更触发</text>
+  <text x="622" y="392" text-anchor="end" font-size="11" fill="#B97B1E">版本更新</text>
+
+  <!-- 图注 -->
+  <text x="500" y="642" text-anchor="middle" font-size="12" fill="#666666">说明：需求一经基线冻结即进入受控状态；任何变更必须经 CCB 评审通过后，才能更新基线与追踪矩阵。</text>
+</svg>
